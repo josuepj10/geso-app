@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
@@ -19,22 +20,40 @@ export function Navbar() {
   const menuItems = [
     { label: "Inicio", href: "/dfgd" },
     { label: "Proyectos", href: "/gdrgdr" },
-    { label: "Recursos", href: "/ytn" },
+    { label: "Testimonios", href: "/gdrgdfgdr" },
+    { 
+      label: "Recursos", href: "/ytn", 
+      
+      children: [
+        { label: "Debates", href: "/nyufgn" },
+        { label: "Entrevistas", href: "/dbyhfrg" },
+        { label: "Archivos", href: "/ytfgtyh" },
+      ],
+    
+    },
+
     {
       label: "Nosotros", href: "/gdfgtr",
       
       children: [
-        { label: "Equipo", href: "/nyun" },
-        { label: "Historia", href: "/dfrg" },
-        { label: "Misión y visión", href: "/yttyh" },
+        { label: "Misión y visión", href: "/nyun" },
+        { label: "Equipo", href: "/dfrg" },
+        { label: "Historia", href: "/yttyh" },
       ],
     },
-    { label: "Dona", href: "/8kjiu" },
+    { label: "Apóyanos", href: "/8kjiu" },
   ]
   return (
     <header className="w-full border-b p-4 flex items-center justify-between">
-      {/* Logo */}
-      <span className="font-bold text-lg">GESO</span>
+      <Link href="/" className="flex items-center gap-2">
+        <Image src="/logo.png" alt="Logo Fundación" width={60} height={60} priority />
+        <div className="flex flex-col leading-none">
+          <span className="font-bold text-lg">Fundación GESO</span>
+          <span className="text-sm text-gray-500">GENTE QUE CONSTRUYE SOCIEDAD</span>
+        </div>
+      </Link>
+      
+      
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6">
@@ -42,14 +61,14 @@ export function Navbar() {
           const isActive = pathname === item.href
 
           if (item.children) {
-            // Dropdown para "Nosotros"
+            // Dropdown 
             return (
-    <DropdownMenu key={item.href}>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          className={`flex items-center gap-1 text-sm font-medium ${
-            isActive ? "text-primary underline" : "text-muted-foreground"
+           <DropdownMenu key={item.href}>
+           <DropdownMenuTrigger asChild>
+           <Button
+             variant="ghost"
+             className={`flex items-center gap-1 text-sm font-medium ${
+             isActive ? "text-primary underline" : "text-muted-foreground"
           }`}
         >
           {item.label}

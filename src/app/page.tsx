@@ -1,5 +1,6 @@
-'import { Navbar } from "d:/Documentos/PaginaGESO/C\u00F3digo/geso-app/src/components/navbar"'
-// import Navbar from "@/components/navbar";
+
+
+import { Navbar } from "@/components/navbar";
 
 
 export default function Home() {
