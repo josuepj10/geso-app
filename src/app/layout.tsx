@@ -14,9 +14,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>
+      <body className="antialiased bg-white text-gray-900">
+        {/* Navbar fijo en todas las páginas */}
         <Navbar />
-        <main className="p-6">{children}</main>
+
+        {/* Contenido de cada página */}
+        <main>{children}</main>
+
+        <footer>
+          <h1> </h1>
+
+        </footer>
+
       </body>
     </html>
   )

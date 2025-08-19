@@ -1,5 +1,6 @@
 "use client"
 
+import { Search } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -18,30 +19,32 @@ export function Navbar() {
   const pathname = usePathname()
 
   const menuItems = [
-    { label: "Inicio", href: "/dfgd" },
-    { label: "Proyectos", href: "/gdrgdr" },
-    { label: "Testimonios", href: "/gdrgdfgdr" },
-    { 
-      label: "Recursos", href: "/ytn", 
+    { label: "Inicio", href: "/" },
+    {
+      label: "Nosotros", href: "/nosotros",
       
       children: [
-        { label: "Debates", href: "/nyufgn" },
-        { label: "Entrevistas", href: "/dbyhfrg" },
-        { label: "Archivos", href: "/ytfgtyh" },
+        { label: "Misión y visión", href: "/nosotros/mision-vision" },
+        { label: "Equipo", href: "/nosotros/equipo" },
+        { label: "Historia", href: "/nosotros/historia" },
+      ],
+    },
+    { label: "Proyectos", href: "/proyecto" },
+
+    { 
+      label: "Recursos", href: "/recursos", 
+      
+      children: [
+        { label: "Debates", href: "/recursos/debates" },
+        { label: "Entrevistas", href: "/recursos/entrevistas" },
+        { label: "Archivos", href: "/recursos/archivos" },
       ],
     
     },
-
-    {
-      label: "Nosotros", href: "/gdfgtr",
-      
-      children: [
-        { label: "Misión y visión", href: "/nyun" },
-        { label: "Equipo", href: "/dfrg" },
-        { label: "Historia", href: "/yttyh" },
-      ],
-    },
-    { label: "Apóyanos", href: "/8kjiu" },
+    { label: "Actualidad", href: "/actualidad" },
+    { label: "Impacto", href: "/impacto" },
+    { label: "Apóyanos", href: "/apoyo" },
+    { label: "Contacto", href: "/contacto" },
   ]
   return (
     <header className="w-full border-b p-4 flex items-center justify-between">
@@ -57,6 +60,7 @@ export function Navbar() {
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6">
+        
         {menuItems.map((item) => {
           const isActive = pathname === item.href
 
@@ -67,7 +71,7 @@ export function Navbar() {
            <DropdownMenuTrigger asChild>
            <Button
              variant="ghost"
-             className={`flex items-center gap-1 text-sm font-medium ${
+             className={`flex items-center px-2.5 gap-1 text-sm font-medium ${
              isActive ? "text-primary underline" : "text-muted-foreground"
           }`}
         >
@@ -103,15 +107,26 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium hover:text-primary ${
+              className={`inline-flex items-center px-2.5 text-sm font-medium hover:text-primary ${
                 isActive ? "text-primary underline" : "text-muted-foreground"
               }`}
             >
               {item.label}
+
             </Link>
           )
         })}
       </nav>
+
+        {/* Barra de búsqueda */}
+        <div className="hidden md:flex items-center border rounded-md px-3 py-2 w-48 md:w-64 bg-white shadow-sm">
+          <Search className="w-4 h-4 text-gray-500 mr-2" />
+          <input
+            type="text"
+            placeholder="Buscar"
+            className="w-full outline-none text-sm text-gray-700 placeholder-gray-400"
+          />
+        </div>
 
         {/* Mobile Menu */}
       <div className="md:hidden">
@@ -125,6 +140,17 @@ export function Navbar() {
             <SheetHeader>
               <SheetTitle>Menú</SheetTitle>
             </SheetHeader>
+
+            {/* Barra de búsqueda en mobile */}
+            <div className="flex items-center border rounded-md px-3 py-2 w-40 mt-4 bg-white shadow-sm ml-2">
+              <Search className="w-4 h-4 text-gray-500 mr-2" />
+              <input
+                type="text"
+                placeholder="Buscar"
+                className="w-full outline-none text-sm text-gray-700 placeholder-gray-400"
+              />
+            </div>
+
             <nav className="flex flex-col gap-4 mt-4">
               {menuItems.map((item) => {
                 const isActive = pathname === item.href
@@ -133,14 +159,14 @@ export function Navbar() {
                   <div key={item.href} className="flex flex-col">
                     <Link
                       href={item.href}
-                      className={`text-lg font-medium hover:text-primary ${
+                      className={`ml-2 text-lg font-medium hover:text-primary ${
                         isActive ? "text-primary underline" : "text-muted-foreground"
                       }`}
                     >
                       {item.label}
                     </Link>
                     {item.children && (
-                      <div className="ml-4 mt-2 flex flex-col gap-2">
+                      <div className="ml-6 mt-2 flex flex-col gap-2">
                         {item.children.map((child) => {
                           const isChildActive = pathname === child.href
                           return (

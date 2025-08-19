@@ -1,4 +1,4 @@
-export default function contactoPage() {
+export default function nosotrosPage() {
   return (
     <div>
       <h1>Contacto</h1>
