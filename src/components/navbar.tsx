@@ -25,11 +25,24 @@ export function Navbar() {
       
       children: [
         { label: "Misión y visión", href: "/nosotros/mision-vision" },
-        { label: "Equipo", href: "/nosotros/equipo" },
         { label: "Historia", href: "/nosotros/historia" },
+        { label: "Equipo", href: "/nosotros/equipo" },
+        { label: "Principios", href: "/nosotros/principios" },
       ],
     },
-    { label: "Proyectos", href: "/proyecto" },
+    
+    { 
+      label: "Proyectos", href: "/proyecto", 
+      
+      children: [
+        { label: "MUJERES SIN FRONTERAS", href: "/proyecto/mujeres-sin-fronteras" },
+        { label: "Migración", href: "/proyecto/migracion" },
+        { label: "Violencia de género", href: "/proyecto/violencia-de-genero" },
+        { label: "Medios", href: "/proyecto/medios" },
+        { label: "Ciudadanía", href: "/proyecto/ciudadania" },
+      ],
+    
+    },
 
     { 
       label: "Recursos", href: "/recursos", 

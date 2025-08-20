@@ -18,12 +18,12 @@ const slides = [
   },
   {
     image: "/images/ejemplo2.jpg",
-    title: "Presentaciones",
+    title: "Fotografía de FB GESO",
     href: "/lugar-presentaciones",
   },
   {
     image: "/images/ejemplo3.jpg",
-    title: "Equipo",
+    title: "Fotografía de FB GESO",
     href: "/equipo-GESO",
   },
 ]
