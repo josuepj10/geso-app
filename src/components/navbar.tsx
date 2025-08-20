@@ -36,6 +36,7 @@ export function Navbar() {
       
       children: [
         { label: "MUJERES SIN FRONTERAS", href: "/proyecto/mujeres-sin-fronteras" },
+        { label: "Destacados", href: "/proyecto/destacados" },
         { label: "Migración", href: "/proyecto/migracion" },
         { label: "Violencia de género", href: "/proyecto/violencia-de-genero" },
         { label: "Medios", href: "/proyecto/medios" },
