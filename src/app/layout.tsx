@@ -1,6 +1,7 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
+import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "GESO",
@@ -21,10 +22,8 @@ export default function RootLayout({
         {/* Contenido de cada página */}
         <main>{children}</main>
 
-        <footer>
-          <h1> </h1>
-
-        </footer>
+        {/* Footer fijo en todas las páginas */}
+        <Footer />
 
       </body>
     </html>

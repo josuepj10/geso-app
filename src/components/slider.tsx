@@ -14,17 +14,17 @@ const slides = [
   {
     image: "/images/ejemplo1.jpg",
     title: "Lucha por los derechos",
-    href: "/proyecto-manifestar",
+    href: "/..",
   },
   {
     image: "/images/ejemplo2.jpg",
     title: "Fotografía de FB GESO",
-    href: "/lugar-presentaciones",
+    href: "/...",
   },
   {
     image: "/images/ejemplo3.jpg",
     title: "Fotografía de FB GESO",
-    href: "/equipo-GESO",
+    href: "/....",
   },
 ]
 
