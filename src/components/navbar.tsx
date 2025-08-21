@@ -7,22 +7,17 @@ import { usePathname } from "next/navigation"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Menu, ChevronDown } from "lucide-react"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
 
 export function Navbar() {
   const pathname = usePathname()
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   const menuItems = [
     { label: "Inicio", href: "/" },
     {
       label: "Nosotros", href: "/nosotros",
-      
       children: [
         { label: "Misión y visión", href: "/nosotros/mision-vision" },
         { label: "Historia", href: "/nosotros/historia" },
@@ -30,37 +25,24 @@ export function Navbar() {
         { label: "Principios", href: "/nosotros/principios" },
       ],
     },
-    
-    { 
-      label: "Proyectos", href: "/proyecto", 
-      
-      children: [
-        { label: "Destacados", href: "/proyecto/destacados" },
-        { label: "Migración", href: "/proyecto/migracion" },
-        { label: "Violencia de género", href: "/proyecto/violencia-de-genero" },
-        { label: "Medios", href: "/proyecto/medios" },
-        { label: "Ciudadanía", href: "/proyecto/ciudadania" },
-      ],
-    
-    },
-
+    { label: "Proyectos", href: "/proyecto" },
+  
     { 
       label: "Recursos", href: "/recursos", 
-      
       children: [
-        { label: "Debates", href: "/recursos/debates" },
         { label: "Entrevistas", href: "/recursos/entrevistas" },
-        { label: "Archivos", href: "/recursos/archivos" },
+        { label: "Publicaciones", href: "/recursos/publicaciones" },
       ],
-    
     },
-    { label: "Actualidad", href: "/actualidad" },
+    { label: "GESO en medios", href: "/geso-en-medios" },
     { label: "Impacto", href: "/impacto" },
     { label: "Apóyanos", href: "/apoyo" },
     { label: "Contacto", href: "/contacto" },
   ]
+
   return (
     <header className="w-full border-b p-4 flex items-center justify-between">
+      {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <Image src="/logo.png" alt="Logo Fundación" width={60} height={60} priority />
         <div className="flex flex-col leading-none">
@@ -68,50 +50,57 @@ export function Navbar() {
           <span className="text-sm text-gray-500">GENTE QUE CONSTRUYE SOCIEDAD</span>
         </div>
       </Link>
-      
-      
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6">
-        
         {menuItems.map((item) => {
           const isActive = pathname === item.href
 
           if (item.children) {
-            // Dropdown 
             return (
-           <DropdownMenu key={item.href}>
-           <DropdownMenuTrigger asChild>
-           <Button
-             variant="ghost"
-             className={`flex items-center px-2.5 gap-1 text-sm font-medium ${
-             isActive ? "text-primary underline" : "text-muted-foreground"
-          }`}
-        >
-          {item.label}
-          <ChevronDown className="w-4 h-4" /> 
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        {item.children.map((child) => {
-          const isChildActive = pathname === child.href
-          return (
-            <DropdownMenuItem key={child.href} asChild>
-              <Link
-                href={child.href}
-                className={`${
-                  isChildActive
-                    ? "text-primary font-semibold"
-                    : "text-muted-foreground"
-                }`}
+              <div
+                key={item.href}
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(item.href)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
-                {child.label}
-              </Link>
-            </DropdownMenuItem>
-          )
-        })}
-      </DropdownMenuContent>
-    </DropdownMenu>
+                <button
+                  className={`flex items-center px-2.5 gap-1 text-sm font-medium ${
+                    isActive ? "text-primary" : "text-muted-foreground"
+                  }`}
+                >
+                  {item.label} <ChevronDown className="w-4 h-4" />
+                </button>
+
+                <AnimatePresence>
+                  {openDropdown === item.href && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.25 }}
+                      className="absolute top-full left-0 bg-white shadow-md rounded-md py-2 mt-1 min-w-[200px] z-10"
+                    >
+                      {item.children.map((child) => {
+                        const isChildActive = pathname === child.href
+                        return (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={`block px-4 py-2 text-sm ${
+                              isChildActive
+                                ? "text-primary font-semibold"
+                                : "text-gray-700 hover:bg-gray-100"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        )
+                      })}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             )
           }
 
@@ -120,28 +109,27 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`inline-flex items-center px-2.5 text-sm font-medium hover:text-primary ${
-                isActive ? "text-primary underline" : "text-muted-foreground"
+              className={`inline-flex items-center nav-item text-sm font-medium ${
+                isActive ? "active text-primary" : "text-muted-foreground"
               }`}
             >
               {item.label}
-
             </Link>
           )
         })}
       </nav>
 
-        {/* Barra de búsqueda */}
-        <div className="hidden md:flex items-center border rounded-md px-3 py-2 w-48 md:w-64 bg-white shadow-sm">
-          <Search className="w-4 h-4 text-gray-500 mr-2" />
-          <input
-            type="text"
-            placeholder="Buscar"
-            className="w-full outline-none text-sm text-gray-700 placeholder-gray-400"
-          />
-        </div>
+      {/* Barra de búsqueda */}
+      <div className="hidden md:flex items-center border rounded-md px-3 py-2 w-48 md:w-64 bg-white shadow-sm transition-all duration-300 focus-within:w-64">
+        <Search className="w-4 h-4 text-gray-500 mr-2" />
+        <input
+          type="text"
+          placeholder="Buscar"
+          className="w-full outline-none text-sm text-gray-700 placeholder-gray-400"
+        />
+      </div>
 
-        {/* Mobile Menu */}
+      {/* Mobile Menu */}
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>

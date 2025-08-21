@@ -30,7 +30,7 @@ const slides = [
 
 export default function Slider() {
   return (
-    <div className="w-full max-w-5xl mx-auto my-8">
+    <div className="pl-5 pr-5 w-full mx-auto my-8">
       <Swiper
         modules={[Pagination, Autoplay]}   
         spaceBetween={30}
@@ -51,12 +51,13 @@ export default function Slider() {
                   priority={index === 0}
                 />
 
-                {/* Texto con animación */}
+                {/* Barra negra */}
                 <motion.div
                   initial={{ y: -50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="absolute top-4 left-1/2 transform -translate-x-1/2 w-4/5 bg-black/50 text-white p-4 text-lg font-semibold text-center rounded-md shadow-md"
+                  className="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/5 bg-black/25 text-white p-4 
+                  text-lg font-semibold text-center rounded-md shadow-md"
                 >
                   {slide.title}
                 </motion.div>
