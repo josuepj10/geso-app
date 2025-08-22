@@ -1,4 +1,4 @@
-export default function apoyoPage() {
+ export default function apoyoPage() {
   return (
     <div>
       
@@ -6,3 +6,5 @@ export default function apoyoPage() {
     </div>
   );
 }
+
+
