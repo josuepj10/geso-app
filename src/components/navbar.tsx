@@ -43,7 +43,7 @@ export function Navbar() {
 
   return (
     <header className="w-full border-b p-4 flex flex-col md:flex-row items-start md:items-center 
-      justify-between gap-4 md:gap-0">
+      justify-between gap-4 md:gap-0 lg:flex flex-wrap">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <Image src="/logo.png" alt="Logo Fundación" width={60} height={60} priority />
@@ -54,7 +54,7 @@ export function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:flex gap-6">
+      <nav className="hidden md:flex gap-6 lg:flex flex-wrap">
         {menuItems.map((item) => {
           const isActive = pathname === item.href
 
