@@ -151,8 +151,8 @@ export default function Footer() {
 
       {/* Logos patrocinadores */}
       <div className="flex justify-center flex-wrap gap-8 py-4">
-        <Image src="/images/AACROM.png" alt="aacrom" className="h-12" />
-        <Image src="/images/ACNUR.png" alt="ACNUR" className="h-12" />
+        <Image src="/images/AACROM.png" alt="aacrom" className="h-12" width={50} height={50} />
+        <Image src="/images/ACNUR.png" alt="ACNUR" className="h-12" width={50} height={50} />
       </div>
     </footer>
   );
