@@ -17,6 +17,20 @@ export function Navbar() {
 
   const menuItems = [
     { label: "Inicio", href: "/" },
+    
+    { label: "Proyectos", href: "/proyecto" },
+  
+    
+    { label: "GESO en medios", href: "/geso-en-medios" },
+    { label: "Impacto", href: "/impacto" },
+    { 
+      label: "Recursos", href: "/recursos", 
+      children: [
+        { label: "Entrevistas", href: "/recursos/entrevistas" },
+        { label: "Publicaciones", href: "/recursos/publicaciones" },
+      ],
+    },
+
     {
       label: "Nosotros", href: "/nosotros",
       children: [
@@ -26,31 +40,17 @@ export function Navbar() {
         { label: "Principios", href: "/nosotros/principios" },
       ],
     },
-    { label: "Proyectos", href: "/proyecto" },
-  
-    { 
-      label: "Recursos", href: "/recursos", 
-      children: [
-        { label: "Entrevistas", href: "/recursos/entrevistas" },
-        { label: "Publicaciones", href: "/recursos/publicaciones" },
-      ],
-    },
-    { label: "GESO en medios", href: "/geso-en-medios" },
-    { label: "Impacto", href: "/impacto" },
+
     { label: "Apóyanos", href: "/apoyo" },
-    { label: "Contacto", href: "/contacto" },
   ]
 
   return (
     <header className="w-full border-b p-4 flex flex-col md:flex-row items-start md:items-center 
       justify-between gap-4 md:gap-0">
+
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/images/logo.png" alt="Logo Fundación" width={60} height={60} priority />
-        <div className="flex flex-col leading-none">
-          <span className="font-bold text-lg">Fundación GESO</span>
-          <span className="text-sm text-gray-500">GENTE QUE CONSTRUYE SOCIEDAD</span>
-        </div>
+        <Image src="/images/logo.png" alt="Logo Fundación" width={45} height={45} priority />
       </Link>
 
       {/* Desktop Menu */}
@@ -67,11 +67,13 @@ export function Navbar() {
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button
-                  className={`flex items-center px-2.5 gap-1 text-sm font-medium ${
-                    isActive ? "text-primary" : "text-muted-foreground"
+                  className={`px-6 flex items-center py-1.5 rounded-md border transition-colors text-sm font-medium
+                   ${isActive 
+                     ? "bg-purple-600 text-white border-purple-700 hover:bg-purple-700" 
+                     : "bg-purple-800 text-gray-700 hover:bg-gray-100"
                   }`}
                 >
-                  {item.label} <ChevronDown className="w-4 h-4" />
+                  {item.label} <ChevronDown className="w-4 h-4 " />
                 </button>
 
                 <AnimatePresence>
@@ -81,7 +83,7 @@ export function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.25 }}
-                      className="absolute top-full left-0 bg-white shadow-md rounded-md py-2 mt-1 min-w-[200px] z-20"
+                      className="absolute top-full left-0 bg-purple-400 shadow-md rounded-md py-2 mt-1 min-w-[200px] z-20"
                     >
                       {item.children.map((child) => {
                         const isChildActive = pathname === child.href
@@ -111,9 +113,11 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`nav-item text-sm font-medium ${
-                isActive ? "active text-primary" : "text-muted-foreground"
-              }`}
+              className={`px-3 py-1.5 rounded-md border text-sm font-medium transition-colors
+                ${pathname === item.href
+                  ? "bg-purple-400 text-white"
+                  : "text-gray-700 hover:bg-purple-400 hover:text-white"
+                }`}
             >
               {item.label}
             </Link>
