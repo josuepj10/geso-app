@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="antialiased bg-white text-gray-900">
+      <body className="antialiased bg-white text-gray-900 supress suppressHydrationWarning">
         {/* Navbar fijo en todas las páginas */}
         <Navbar />
 

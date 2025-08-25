@@ -46,7 +46,7 @@ export function Navbar() {
       justify-between gap-4 md:gap-0">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/logo.png" alt="Logo Fundación" width={60} height={60} priority />
+        <Image src="/images/logo.png" alt="Logo Fundación" width={60} height={60} priority />
         <div className="flex flex-col leading-none">
           <span className="font-bold text-lg">Fundación GESO</span>
           <span className="text-sm text-gray-500">GENTE QUE CONSTRUYE SOCIEDAD</span>
