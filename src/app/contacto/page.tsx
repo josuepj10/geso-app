@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
-// 1Esquema de validación
+// Esquema de validación
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "El nombre debe tener al menos 2 caracteres.",
@@ -31,7 +31,7 @@ const formSchema = z.object({
   }),
 })
 
-// 2️⃣ Tipo de los valores del formulario
+// Tipo de los valores del formulario
 type FormValues = z.infer<typeof formSchema>
 
 export default function ContactPage() {

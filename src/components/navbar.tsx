@@ -1,6 +1,6 @@
 "use client"
 
-import { Search } from "lucide-react"
+
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
+import SearchBar from "./searchbar" 
 
 export function Navbar() {
   const pathname = usePathname()
@@ -41,7 +42,8 @@ export function Navbar() {
   ]
 
   return (
-    <header className="w-full border-b p-4 flex items-center justify-between">
+    <header className="w-full border-b p-4 flex flex-col md:flex-row items-start md:items-center 
+      justify-between gap-4 md:gap-0">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <Image src="/logo.png" alt="Logo Fundación" width={60} height={60} priority />
@@ -79,7 +81,7 @@ export function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.25 }}
-                      className="absolute top-full left-0 bg-white shadow-md rounded-md py-2 mt-1 min-w-[200px] z-10"
+                      className="absolute top-full left-0 bg-white shadow-md rounded-md py-2 mt-1 min-w-[200px] z-20"
                     >
                       {item.children.map((child) => {
                         const isChildActive = pathname === child.href
@@ -109,7 +111,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`inline-flex items-center nav-item text-sm font-medium ${
+              className={`nav-item text-sm font-medium ${
                 isActive ? "active text-primary" : "text-muted-foreground"
               }`}
             >
@@ -120,17 +122,13 @@ export function Navbar() {
       </nav>
 
       {/* Barra de búsqueda */}
-      <div className="hidden md:flex items-center border rounded-md px-3 py-2 w-48 md:w-64 bg-white shadow-sm transition-all duration-300 focus-within:w-64">
-        <Search className="w-4 h-4 text-gray-500 mr-2" />
-        <input
-          type="text"
-          placeholder="Buscar"
-          className="w-full outline-none text-sm text-gray-700 placeholder-gray-400"
-        />
+      <div className="hidden sm:block">
+        <SearchBar />
       </div>
 
+
       {/* Mobile Menu */}
-      <div className="md:hidden">
+      <div className="sm:hidden">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon">
@@ -143,13 +141,8 @@ export function Navbar() {
             </SheetHeader>
 
             {/* Barra de búsqueda en mobile */}
-            <div className="flex items-center border rounded-md px-3 py-2 w-40 mt-4 bg-white shadow-sm ml-2">
-              <Search className="w-4 h-4 text-gray-500 mr-2" />
-              <input
-                type="text"
-                placeholder="Buscar"
-                className="w-full outline-none text-sm text-gray-700 placeholder-gray-400"
-              />
+            <div className="block sm:hidden mt-4">
+              <SearchBar />
             </div>
 
             <nav className="flex flex-col gap-4 mt-4">

@@ -5,52 +5,91 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 
-export default function proyectoPage() {
+export default function misionPage() {
   return (
+
+
     <div>
       
-      <h1>Esta es la página de proyectos. </h1> <br />
-      <p>Se debe agregar cuadros con imagenes dentro y un título, para subdividir en (ciudadania, medios, migracion, violencia de género) </p>
 
-      <Card>
+      {/* Botones */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 place-items-center my-10 ">
         
-        <CardContent>
-          
 
-          
-          <Link href="historia">
+        {/* Efecto de react tilt */}
+        
+
+        <Link href="ciudadania">
           <motion.div 
             whileHover={{ scale: 1.05, rotate: 0 }}
             transition={{ type: "spring", stiffness: 250 }}
-            
+            className="w-60 h-60 bg-purple-600 text-white rounded-2xl shadow  hover:bg-purple-500
+                       flex flex-col justify-between items-center p-4 cursor-pointer"
           >
             
             <Image src="/images/logo.png" alt="logo" width={170} height={170} />
-           
+            <span className="mt-4 text-xl">Historia</span>  
           </motion.div>  
           
         </Link>
-          
-          
-          {/*<p>Card Content</p>*/}
-        </CardContent>
-        <CardFooter>
-          <p>Migración</p>
-        </CardFooter>
-      </Card>
+
+        
+
+        <Link href="destacados">
+          <motion.div 
+            whileHover={{ scale: 1.05, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 250 }}
+            className="w-60 h-60 bg-purple-600 text-white rounded-2xl shadow  hover:bg-purple-500
+                       flex flex-col justify-between items-center p-4 cursor-pointer"
+          >
+            <Image src="/images/logo.png" alt="logo" width={170} height={170} />
+            <span className="mt-4 text-xl">Destacados</span>  
+          </motion.div>
+        </Link>
+        
+        <Link href="medios">
+          <motion.div 
+            whileHover={{ scale: 1.05, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 250 }}
+            className="w-60 h-60 bg-purple-600 text-white rounded-2xl shadow  hover:bg-purple-500
+                       flex flex-col justify-between items-center p-4 cursor-pointer"
+          >
+            <Image src="/images/logo.png" alt="logo" width={170} height={170} />
+            <span className="mt-4 text-xl">Medios</span>  
+          </motion.div>
+        </Link>
+
+        <Link href="migracion">
+          <motion.div 
+            whileHover={{ scale: 1.05, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 250 }}
+            className="w-60 h-60 bg-purple-600 text-white rounded-2xl shadow  hover:bg-purple-500
+                       flex flex-col justify-between items-center p-4 cursor-pointer"
+          >
+            <Image src="/images/logo.png" alt="logo" width={170} height={170} />
+            <span className="mt-4 text-xl">Migración</span>  
+          </motion.div>
+        </Link>
+
+        <Link href="violencia-de-genero">
+          <motion.div 
+            whileHover={{ scale: 1.05, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 250 }}
+            className="w-60 h-60 bg-purple-600 text-white rounded-2xl shadow  hover:bg-purple-500
+                       flex flex-col justify-between items-center p-4 cursor-pointer"
+          >
+            <Image src="/images/logo.png" alt="logo" width={170} height={170} />
+            <span className="mt-4 text-xl">Violencia de género</span>  
+          </motion.div>
+        </Link>
 
 
 
+      </div>
+      <div className="flex justify-center gap-4 mt-8">
+
+    </div>
       
     </div>
   );
