@@ -122,9 +122,9 @@ export function Navbar() {
       </nav>
 
       {/* Barra de búsqueda */}
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <SearchBar />
-      </div>
+      </div> */}
 
 
       {/* Mobile Menu */}
@@ -141,9 +141,9 @@ export function Navbar() {
             </SheetHeader>
 
             {/* Barra de búsqueda en mobile */}
-            <div className="block sm:hidden mt-4">
+            {/* <div className="block sm:hidden mt-4">
               <SearchBar />
-            </div>
+            </div> */}
 
             <nav className="flex flex-col gap-4 mt-4">
               {menuItems.map((item) => {

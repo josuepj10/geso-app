@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
-      <body className="antialiased bg-white text-gray-900 supress suppressHydrationWarning">
+    <html lang="es" suppressHydrationWarning>
+      <body className="antialiased bg-white text-gray-900" suppressHydrationWarning>
         {/* Navbar fijo en todas las páginas */}
         <Navbar />
 
