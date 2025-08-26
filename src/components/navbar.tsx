@@ -46,12 +46,12 @@ export function Navbar() {
   ]
 
   return (
-    <header className="w-full border-b p-4 flex flex-col md:flex-row items-start md:items-center 
+    <header className="max-w-screen-xl mx-auto w-full p-2 px-9 flex flex-col md:flex-row items-start md:items-center 
       justify-between gap-4 md:gap-0">
 
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/images/logo.png" alt="Logo Fundación" width={45} height={45} priority />
+        <Image src="/images/logo.png" alt="Logo Fundación" width={40} height={40} priority />
       </Link>
 
       {/* Desktop Menu */}
@@ -70,9 +70,9 @@ export function Navbar() {
             >
               <button
                 className={`px-3 py-1.5 flex items-center rounded-2xl text-sm font-medium transition-colors
-                  ${isActive ? "text-purple-700" : "text-gray-800"}
-                  group-hover:bg-purple-700 group-hover:text-white
-                `}
+                ? "bg-purplePrimary text-white" 
+                : "text-gray-700 hover:bg-purplePrimary hover:text-white"
+              `}
               >
                 {item.label}
                 <ChevronDown className="w-4 h-4 ml-1" />
@@ -86,7 +86,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.25 }}
-                    className="absolute top-full left-0 bg-purple-400 shadow-md rounded-2xl py-2 mt-1 min-w-[130px] z-20"
+                    className="absolute top-full left-0 bg-purpleHover shadow-md rounded-2xl py-2 mt-1 min-w-[150px] z-20"
                   >
                     {item.children.map((child) => {
                       const isChildActive = pathname === child.href
@@ -97,13 +97,13 @@ export function Navbar() {
                           className={`block px-4 py-2 text-sm rounded-2xl transition-colors
                             ${
                               isChildActive
-                                ? "bg-purple-700 text-white font-semibold"
-                                : "text-white hover:bg-purple-700"
+                                ? "bg-purplePrimary text-white font-semibold"
+                                : "text-white bg-purpleHover hover:text-purplePrimary hover:bg-purplePrimary"
                             }
-                          `}
+                         `}
                         >
-                          {child.label}
-                        </Link>
+                         {child.label}
+                      </Link>
                       )
                     })}
                   </motion.div>

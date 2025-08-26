@@ -1,6 +1,6 @@
 "use client"
 
-import { Reveal } from "@/components/reveal"
+
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"

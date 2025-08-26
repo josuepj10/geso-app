@@ -1,6 +1,6 @@
 "use client"
 
-import { Reveal } from "@/components/reveal"
+
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -15,21 +15,21 @@ export default function misionPage() {
         Misión
       </h1>
       <br></br>
-      <Reveal>
+      
        <p>Promover y desarrollar proyectos sociales y culturales que, incorporando la perspectiva de 
        género, promuevan la equidad social.
        </p>
        <br></br>
-      </Reveal>
+      
       <h1>
         Visión
       </h1>
       <br></br>
-      <Reveal> 
+      
         <p>Ser una entidad reconocida a nivel nacional e internacional, por la calidad de los proyectos sociales 
          y culturales que realiza y el rigor con que incorpora la perspectiva de equidad de género tanto en el plano conceptual como metodológico.
         </p>
-      </Reveal>
+      
       <br></br>
       <h1>
         Más sobre nosotros:
