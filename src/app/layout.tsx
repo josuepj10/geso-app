@@ -1,7 +1,7 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { Navbar } from "@/components/navbar"
 import Footer from "@/components/footer"
+import BarHeader from "@/components/barheader"
 
 export const metadata: Metadata = {
   title: "GESO",
@@ -17,7 +17,13 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body className="antialiased bg-white text-gray-900" suppressHydrationWarning>
         {/* Navbar fijo en todas las páginas */}
-        <Navbar />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <BarHeader />
 
         {/* Contenido de cada página */}
         <main>{children}</main>

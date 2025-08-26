@@ -86,7 +86,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.25 }}
-                    className="absolute top-full left-0 bg-purple-400 shadow-md rounded-2xl py-2 mt-1 min-w-[200px] z-20"
+                    className="absolute top-full left-0 bg-purple-400 shadow-md rounded-2xl py-2 mt-1 min-w-[130px] z-20"
                   >
                     {item.children.map((child) => {
                       const isChildActive = pathname === child.href
