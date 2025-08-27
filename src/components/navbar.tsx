@@ -56,7 +56,7 @@ export function Navbar() {
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6">
-      {menuItems.map((item) => {
+        {menuItems.map((item) => {
         const isActive = pathname === item.href
 
         // Link con hijos (dropdown)
@@ -69,7 +69,7 @@ export function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`px-3 py-1.5 flex items-center rounded-2xl text-sm font-medium transition-colors
+                className={`px-3 py-1.5 flex items-center rounded-2xl text-lg font-medium transition-colors 
                 ? "bg-purplePrimary text-white" 
                 : "text-gray-700 hover:bg-purplePrimary hover:text-white"
               `}
@@ -86,7 +86,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.25 }}
-                    className="absolute top-full left-0 bg-purpleHover shadow-md rounded-2xl py-2 mt-1 min-w-[150px] z-20"
+                    className="absolute top-full left-0 bg-purpleHover shadow-md rounded-2xl py-2 mt-1 min-w-[170px] z-20"
                   >
                     {item.children.map((child) => {
                       const isChildActive = pathname === child.href
@@ -94,7 +94,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className={`block px-4 py-2 text-sm rounded-2xl transition-colors
+                          className={`block px-4 py-2 text-lg rounded-2xl transition-colors
                             ${
                               isChildActive
                                 ? "bg-purplePrimary text-white font-semibold"
@@ -115,6 +115,7 @@ export function Navbar() {
 
         // Link normal
         return (
+          
           <NavbarButton 
             key={item.href} 
             href={item.href} 
@@ -122,6 +123,7 @@ export function Navbar() {
           >
             {item.label}
           </NavbarButton>
+          
         )
       })}
     </nav>

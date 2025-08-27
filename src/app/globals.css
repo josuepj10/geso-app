@@ -15,7 +15,7 @@ h2 {
 }
 
 h1, h2 {
-  @apply text-center max-w-6xl mx-auto my-2 text-purple-800
+  @apply text-center max-w-6xl mx-auto my-2
 }
 
 @keyframes pulsoTexto {
@@ -78,6 +78,7 @@ h1, h2 {
 .border-purpleHover {
   border-color: #8C339D;
 }
+
 
 
 @custom-variant dark (&:is(.dark *));

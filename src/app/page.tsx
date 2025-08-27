@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Slider />
-      <section className="max-w-4xl mx-auto p-6 text-center">
+      <section className="max-w-4xl mx-auto p-6 text-center text-4xl">
         
         <h2>Presentación institucional</h2>
         <Reveal>
