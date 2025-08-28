@@ -1,13 +1,16 @@
 import { Reveal } from "@/components/reveal"
 import Slider from "@/components/slider"
 
-
 export default function Home() {
   return (
     <>
+      {/* Slider full width */}
+     
       <Slider />
-      <section className="max-w-4xl mx-auto p-6 text-center text-4xl">
-        
+      
+
+      
+      <section className="max-w-4xl mx-auto w-full p-6 text-center text-4xl">
         <h2>Presentación institucional</h2>
         <Reveal>
           <p>
@@ -17,7 +20,6 @@ export default function Home() {
             incorporando la perspectiva de género, promuevan la equidad social.
           </p>
         </Reveal>
-        
       </section>
     </>
   )

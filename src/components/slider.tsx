@@ -12,16 +12,14 @@ import "swiper/css/pagination"
 
 const slides = [
   
-  { image: "/images/ejemplo2.jpg" },
-  { image: "/images/ejemplo3.jpg" }
+  { image: "/images/img1.wepb" },
+  { image: "/images/ejemplo2.jpg" }
+  
 ]
 
 export default function Slider() {
   return (
-    <div className=" -mt-20 top-0 left-0 w-full mx-auto my-0 relative">
-      
-
-      {/* pl-5 pr-5 */}
+    <div className="relative -mt-22 left-1/2 right-1/2 -mx-[50vw] max-w-screen overflow-hidden">
 
       <Swiper
         modules={[Pagination, Autoplay]}
@@ -33,7 +31,7 @@ export default function Slider() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-screen overflow-hidden shadow-lg">
+            <div className="relative w-full h-screen overflow-hidden">
               <Image
                 src={slide.image}
                 alt={`Slide ${index + 1}`}

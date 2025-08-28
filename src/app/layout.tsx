@@ -15,17 +15,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className="antialiased text-base bg-white text-gray-900" suppressHydrationWarning>
-        {/* Navbar fijo en todas las páginas */}
-          <BarHeader/>
-  
+      <body className="antialiased text-base bg-white text-gray-900 overflow-x-hidden " suppressHydrationWarning>
+
+
+        <nav className="max-w-[75%] mx-auto px-4">
         
+          {/* Navbar fijo en todas las páginas */}
 
-        {/* Contenido de cada página */}
-        <main className="pt-20">
-          {children}</main>
 
-        {/* Footer fijo en todas las páginas */}
+            <BarHeader/>
+    
+          
+
+          {/* Contenido de cada página */}
+          <main className="pt-32">
+            {children}</main>
+
+          {/* Footer fijo en todas las páginas */}
+          
+
+        </nav>
         <Footer />
 
       </body>

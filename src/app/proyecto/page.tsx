@@ -26,29 +26,36 @@ export default function misionPage() {
       {/* cards */}
 
     
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 place-items-center my-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 place-items-center my-10 ">
 
         
         <Card
-          title="Ciudadanía"
+          title="Democracia de género y participación ciudadana"
           image="/images/ejemplo2.jpg"
           href="/proyecto/ciudadania"
         />
 
         <Card
-          title="Medios"
+          title="Género y comercio internacional"
           image="/images/ejemplo2.jpg"
-          href="/proyecto/medios"
+          href="/proyecto/g-y-comercio"
         />
 
         <Card
-          title="Migración"
+          title="Migración y derechos humanos"
           image="/images/ejemplo2.jpg"
           href="/proyecto/migracion"
         />
 
         <Card
-          title="Violencia de género"
+          title="Medios de comunicación y cultura"
+          image="/images/ejemplo2.jpg"
+          href="/proyecto/medios"
+        />
+
+       
+        <Card
+          title="Violencia de género y prevención"
           image="/images/ejemplo2.jpg"
           href="/proyecto/violencia-de-genero"
         />

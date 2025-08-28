@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -67,7 +66,7 @@ export default function ContactPage() {
               <FormItem>
                 <FormLabel className="mb-3">Nombre</FormLabel>
                 <FormControl>
-                  <Input placeholder="Tu nombre" {...field} />
+                  <Input placeholder="" {...field} />
                 </FormControl>
                 {/*<FormDescription>Este será tu nombre público</FormDescription>*/}
                 <FormMessage />
@@ -83,7 +82,7 @@ export default function ContactPage() {
               <FormItem>
                 <FormLabel className="mb-3">Correo electrónico</FormLabel>
                 <FormControl>
-                  <Input placeholder="Escribe tu correo" {...field} />
+                  <Input placeholder="" {...field} />
                 </FormControl>
                 {/*<FormDescription>Usaremos este correo para contactarte</FormDescription>*/}
                 <FormMessage />
@@ -101,7 +100,7 @@ export default function ContactPage() {
                 
                 <FormControl>
                   <Textarea
-                    placeholder="Escribe tu mensaje"
+                    placeholder="Dejanos saber tu opinión"
                     className="resize-none h-32" // <- altura de 32 (puedes ajustarla)
                     {...field}
                   />
@@ -113,7 +112,7 @@ export default function ContactPage() {
           />
 
           {/* Botón de envío */}
-          <Button type="submit" className="w-full flex items-center gap-2  bg-purple-600  hover:bg-purple-500">
+          <Button type="submit" className="w-full flex items-center gap-2  bg-[#5B1780] hover:bg-[#8C339D] cursor-pointer ">
             <Send className="w-4 h-4" />
             Enviar
           </Button>
