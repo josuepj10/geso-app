@@ -1,8 +1,14 @@
+import Image from "next/image"
+
 export default function impactoPage() {
   return (
     <div>
       
-      <p>Esta es la página de impacto.</p>
+      <div className="flex justify-center my-20">
+        <Image src="/images/development.png" alt="Construyendo" width={1000} height={1000} priority />
+      </div>
+
+
     </div>
   );
 }

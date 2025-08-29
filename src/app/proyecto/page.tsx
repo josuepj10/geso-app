@@ -10,14 +10,13 @@ export default function misionPage() {
     <div>
       
       <br></br>
-      <h1>
+      <h1 className="flex justify-center">
         Proyectos GESO
       </h1>
       <br></br>
       
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium earum quam quia natus 
-        dignissimos quidem consectetur. Est dignissimos eveniet minus veniam, impedit laboriosam repudiandae, 
-        rerum architecto, esse eius et doloribus?
+       <p className="flex justify-center">"Impulsamos iniciativas que promueven la participación ciudadana, la equidad de género, los derechos humanos y 
+        el desarrollo local, apoyando a comunidades con enfoque inclusivo y sostenible."
        </p>
        <br></br>
       
@@ -26,7 +25,7 @@ export default function misionPage() {
       {/* cards */}
 
     
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 place-items-center my-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center my-10 justify-center ">
 
         
         <Card

@@ -38,7 +38,6 @@ export function Navbar() {
       label: "Nosotros", href: "/nosotros",
       children: [
         { label: "Misión y visión", href: "/nosotros/mision-vision" },
-        { label: "Historia", href: "/nosotros/historia" },
         { label: "Competencias y capacidades", href: "/nosotros/competencias-y-cap" },
         { label: "Principios", href: "/nosotros/principios" },
         { label: "Alianzas", href: "/nosotros/alianzas" },
@@ -59,7 +58,7 @@ export function Navbar() {
     </Link>
 
     {/* Desktop Menu */}
-    <nav className="hidden md:flex gap-6">
+    <nav className="hidden min-[1500px]:flex gap-6">
       {menuItems.map((item) => {
         const isActive = pathname === item.href
 
@@ -72,7 +71,8 @@ export function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`px-3 py-1.5 flex items-center rounded-2xl text-lg font-medium transition-colors ${
+                className={`px-3 py-1.5 flex items-center rounded-2xl text-lg font-medium transition-colors
+                       text-gray-700 hover:bg-purplePrimary hover:text-white ${
                   isActive
                     ? "bg-purplePrimary text-white"
                     : "text-gray-700 hover:bg-purplePrimary hover:text-white"
@@ -124,10 +124,10 @@ export function Navbar() {
     </nav>
 
     {/* Mobile Menu */}
-    <div className="sm:hidden">
+    <div className="hidden max-[1500px]:block">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon">
+          <Button size="icon" className="bg-[#5B1780] text-white hover:bg-[#7a2c97]">
             <Menu className="h-5 w-5" />
           </Button>
         </SheetTrigger>

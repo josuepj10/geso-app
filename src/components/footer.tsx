@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6 py-12 px-6 ">
           <h2 className="text-3xl md:text-4xl font-bold text-white">Subscríbete a nuestro boletín</h2>
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-            <span>Acá irá el input cuando funcione el código</span>
+            <span>..... Acá irá el input .....</span>
             {/*<Input placeholder="Correo electrónico" variant="outline" /> */}
             <Button variant="ghost" className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A] ">Subscribir</Button>
           </div>
