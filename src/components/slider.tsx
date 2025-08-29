@@ -2,37 +2,28 @@
 
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay } from "swiper/modules"
+import { Pagination, Autoplay } from "swiper/modules"
 import Image from "next/image"
-import Link from "next/link"
+import BarSlider from "@/components/barheader"
+import Link from "next/link";
 
-// Importar los estilos de Swiper
+// Importar estilos de Swiper
 import "swiper/css"
 import "swiper/css/pagination"
 
 const slides = [
-  {
-    image: "/images/ejemplo1.jpg",
-    title: "Lucha por los derechos",
-    href: "/..",
-  },
-  {
-    image: "/images/ejemplo2.jpg",
-    title: "Fotografía de FB GESO",
-    href: "/...",
-  },
-  {
-    image: "/images/ejemplo3.jpg",
-    title: "Fotografía de FB GESO",
-    href: "/....",
-  },
+  
+  { image: "/images/img1.webp" }
+  
+  
 ]
 
 export default function Slider() {
   return (
-    <div className="pl-5 pr-5 w-full mx-auto my-8">
+    <div className="relative -mt-22 left-1/2 right-1/2 -mx-[50vw] max-w-screen overflow-hidden ">
+
       <Swiper
-        modules={[Pagination, Autoplay]}   
+        modules={[Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         pagination={{ clickable: true }}
@@ -41,29 +32,38 @@ export default function Slider() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <Link href={slide.href}>
-              <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
-                />
+            <div className="relative w-full h-screen overflow-hidden">
+              <Image
+                src={slide.image}
+                alt={`Slide ${index + 1}`}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+              {/* Card sobre la imagen */}
+              <div
+                className="absolute top-1/2 left-[12.5%] transform -translate-y-1/2
+                          w-[90%] max-w-[770px] sm:h-auto p-10 flex flex-col justify-between"
+              >
+                <h2 className="text-[40px] font-semibold text-[#5B1780] mb-4">
+                  Democracia de género y participación ciudadana
+                </h2>
 
-                {/* Barra negra */}
-                <motion.div
-                  initial={{ y: -50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/5 bg-black/25 text-white p-4 
-                  text-lg font-semibold text-center rounded-md shadow-md"
+                <p className="text-[#374151] text-base sm:text-lg mb-4">
+                  Iniciativas que promueven la igualdad en la toma de decisiones y en las políticas públicas locales y nacionales.
+                </p>
+                
+                <Link 
+                  href="/proyecto"
+                  className="self-start mt-2 px-10 py-4 text-lg bg-[#5B1780] text-white rounded-4xl hover:bg-[#7a2c97] inline-block text-center"
                 >
-                  {slide.title}
-                </motion.div>
+                  Leer más
+                </Link>
               </div>
-            </Link>
+            </div>
           </SwiperSlide>
+
+            
         ))}
       </Swiper>
     </div>
