@@ -9,28 +9,26 @@ export default function Footer() {
     <footer className="w-full bg-[#5B1780] text-white" >
       
       
-      <div className="max-w-[75%] mx-auto">
+      <div className="lg:max-w-[75%] max-w-[95%] mx-auto px-6 py-8">
         
-        
-        <div className="flex flex-col items-center gap-6 py-12 px-6 ">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Subscríbete a nuestro boletín</h2>
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-            <span>..... Acá irá el input .....</span>
-            {/*<Input placeholder="Correo electrónico" variant="outline" /> */}
-            <Button variant="ghost" className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A] ">Subscribir</Button>
+        <div className="flex flex-col md:flex-row ">
+
+          
+          <div className="flex-shrink-0 mr-10 mb-8 gap-10">
+            <Link href="/">
+              <Image src="/images/logo.png" alt="Logo Fundación" width={80} height={80} priority />
+            </Link>
           </div>
-        </div>
-          <div className="flex flex-col md:flex-row px-6 py-8">
+
+          <div className="
+           grid grid-cols-1 gap-10
+           sm:grid-cols-2 
+           md:grid-cols-2 
+           lg:grid-cols-4 
+           flex-1 w-full">
 
             
-            <div className="flex-shrink-0 mr-10">
-              <Link href="/">
-                <Image src="/images/logo.png" alt="Logo Fundación" width={80} height={80} priority />
-              </Link>
-            </div>
-
-            
-            <div className="flex flex-col gap-2 mx-12 ">
+            <div className="flex flex-col gap-2">
               <span className="font-bold mb-2 text-xl text-white">Nosotros</span>
               <Link href="/nosotros/alianzas" className="hover:underline">Alianzas</Link>
               <Link href="/nosotros/competencias-y-cap" className="hover:underline">Competencias y capacidades</Link>
@@ -40,7 +38,7 @@ export default function Footer() {
             </div>
 
             
-            <div className="flex flex-col gap-2 mx-12">
+            <div className="flex flex-col gap-2">
               <span className="font-semibold mb-2 text-xl text-white">Enlaces rápidos</span>
               <Link href="/" className="hover:underline">Inicio</Link>
               <Link href="/proyecto" className="hover:underline">Proyectos</Link>
@@ -51,31 +49,39 @@ export default function Footer() {
             </div>
 
             
-            <div className="flex flex-col gap-2 mx-auto">
+            <div className="flex flex-col gap-2 ">
               <span className="font-semibold mb-2 text-xl text-white">Identidad legal</span>
               <p>Fundación Género y Sociedad - GESO.</p>
               <p>Fundación sin fines de lucro registrada en Costa Rica.</p>
+              
             </div>
 
             
-            <div className="flex flex-col gap-2 mx-12 ml-auto text-left ">
+            <div className="flex flex-col gap-2 text-left "> {/* lg:justify-self-end acomodo a la derecha, problemas de gap con responsive*/}
               <span className="font-semibold mb-2 text-xl  text-white">Contacto</span>
-              <p>Oficina: Curridabat, Abedules II, No. 14-,  </p>
-              <p>San José, Costa Rica.</p>
+              <p>Oficina: Curridabat, Abedules II, </p>
+              <p>No. 14-, San José, Costa Rica.</p>
               <p>Teléfono: (506) 2271-2247</p>
               <p>Email: info@generoysociedad.com</p>
-
-           </div>
+            
+            </div>
+          </div>
 
         </div>
 
         
-        <hr className="border-t border-white mx-6 my-8" />
+        <hr className="border-t border-white my-8 w-full" />
 
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 pb-12">
-          
-          
+
+        <div className="
+          grid grid-cols-1 
+          sm:grid-cols-2 
+          lg:grid-cols-3
+          gap-14 pb-12 
+          w-full">
+            
+            
           <div className="flex flex-col gap-4">
             <span className="font-semibold text-xl text-white">Redes</span>
             <div className="flex gap-4 space-x-6 ">
@@ -92,30 +98,30 @@ export default function Footer() {
           </div>
 
           
-          <div className="flex flex-col gap-4 -ml-30">
+          <div className="flex flex-col gap-4 ">
             <span className="font-semibold text-xl text-white">Nuestros aliados</span>
-            <div className="flex gap-8 flex-wrap ">
-              <Image src="/images/AACROM.png" alt="AACROM" width={40} height={40} priority />
-            </div>
+            <Link href="https://aacrom.com/" className="flex gap-8 flex-wrap ">
+              <Image src="/images/aacrom.svg" alt="AACROM" width={170} height={170} priority />
+            </Link>
           </div>
 
           
-          <div className="flex flex-col gap-4 items-start md:items-end">
+          <div className="flex flex-col gap-4 lg:items-end">
             
-            <Link href="/apoyo"> {/* Aquí pones la ruta deseada */}
+            <Link href="/apoyo"> {/* Aquí poner la ruta deseada */}
               <Button className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A]">
                 Colabora con nosotros
               </Button>
             </Link>
             
-            <div className="text-gray-200 text-sm text-right">
+            <div className="text-gray-200 text-sm ">
               &copy; {new Date().getFullYear()} Fundación GESO. Todos los derechos reservados.
             </div>
 
           </div>
 
         </div>
-
+      
       </div>
     </footer>
   );
