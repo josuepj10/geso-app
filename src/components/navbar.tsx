@@ -62,7 +62,7 @@ export function Navbar() {
       <Image src="/images/logo.png" alt="Logo Fundación" width={40} height={40} priority />
     </Link>
 
-        {/* Desktop Menu */}
+    {/* Desktop Menu */}
     <nav className="hidden 2xl:flex gap-6">
       {menuItems.map((item) => {
         // Un padre es activo si su href coincide O si alguno de sus hijos coincide
@@ -80,10 +80,10 @@ export function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`px-3 py-1.5 flex items-center rounded-2xl text-lg font-medium transition-colors
+                className={`px-3 py-1.5 flex items-center rounded-[30px] text-lg font-medium transition-colors
                   ${isActive
-                    ? "bg-purplePrimary text-white"
-                    : "text-gray-700 hover:bg-purplePrimary hover:text-white"
+                    ? "bg-[#5B1780] text-white"
+                    : "text-gray-700 hover:bg-[#5B1780] hover:text-white"
                   }`}
               >
                 {item.label}
@@ -102,7 +102,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.25 }}
-                    className="absolute top-full left-0 bg-[#8C339D] shadow-md rounded-2xl py-2 mt-1 min-w-[170px] z-20 flex flex-col items-center"
+                    className="absolute top-full left-0 bg-[#8C339D] shadow-md rounded-[30px] py-2 mt-1 min-w-[170px] z-20 flex flex-col items-center"
                   >
                     {item.children.map((child) => {
                       const isChildActive = pathname === child.href
@@ -110,7 +110,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className={`block w-[144px] py-2 text-lg pl-2 rounded-2xl transition-colors ${
+                          className={`block w-[170px] py-2 text-lg pl-2 rounded-[30px] transition-colors ${
                             isChildActive
                               ? "bg-[#5B1780] text-white font-semibold"
                               : "text-white bg-[#8C339D] hover:text-white hover:bg-[#5B1780]"
