@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import SearchBar from "./searchbar" 
 import NavbarButton  from "@/components/navbarbutton"
+import MobileMenu from "@/components/mobileMenu"
 
 export function Navbar() {
   const pathname = usePathname()
@@ -18,6 +19,17 @@ export function Navbar() {
 
   const menuItems = [
     { label: "Inicio", href: "/" },
+
+    {
+      label: "Nosotros", href: "/nosotros",
+      children: [
+        { label: "Misión y visión", href: "/nosotros/mision-vision" },
+        { label: "Competencias y capacidades", href: "/nosotros/competencias-y-cap" },
+        { label: "Principios", href: "/nosotros/principios" },
+        { label: "Alianzas", href: "/nosotros/alianzas" },
+
+      ],
+    },
     
     { label: "Proyectos", href: "/proyecto" },
 
@@ -34,33 +46,30 @@ export function Navbar() {
       ],
     },
 
-    {
-      label: "Nosotros", href: "/nosotros",
-      children: [
-        { label: "Misión y visión", href: "/nosotros/mision-vision" },
-        { label: "Competencias y capacidades", href: "/nosotros/competencias-y-cap" },
-        { label: "Principios", href: "/nosotros/principios" },
-        { label: "Alianzas", href: "/nosotros/alianzas" },
-
-      ],
-    },
-
     { label: "Colabora", href: "/apoyo" },
   ]
 
   return (
     <header className="w-full">
-  <div className="w-[75%] mx-auto flex items-center justify-between py-2">
+  <div className="
+   md:w-[75%] mx-auto 
+   
+   flex items-center 
+   justify-between py-2">
     
     {/* Logo */}
     <Link href="/" className="flex items-center gap-2">
       <Image src="/images/logo.png" alt="Logo Fundación" width={40} height={40} priority />
     </Link>
 
-    {/* Desktop Menu */}
-    <nav className="hidden min-[1500px]:flex gap-6">
+        {/* Desktop Menu */}
+    <nav className="hidden 2xl:flex gap-6">
       {menuItems.map((item) => {
-        const isActive = pathname === item.href
+        // Un padre es activo si su href coincide O si alguno de sus hijos coincide
+        const isChildActive = item.children?.some(
+          (child) => pathname === child.href
+        )
+        const isActive = pathname === item.href || isChildActive
 
         if (item.children) {
           return (
@@ -72,14 +81,17 @@ export function Navbar() {
             >
               <button
                 className={`px-3 py-1.5 flex items-center rounded-2xl text-lg font-medium transition-colors
-                       text-gray-700 hover:bg-purplePrimary hover:text-white ${
-                  isActive
+                  ${isActive
                     ? "bg-purplePrimary text-white"
                     : "text-gray-700 hover:bg-purplePrimary hover:text-white"
-                }`}
+                  }`}
               >
                 {item.label}
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown
+                  className={`w-4 h-4 ml-1 transition-colors ${
+                    isActive ? "text-white" : "text-gray-600 group-hover:text-white"
+                  }`}
+                />
               </button>
 
               {/* Dropdown */}
@@ -124,54 +136,8 @@ export function Navbar() {
     </nav>
 
     {/* Mobile Menu */}
-    <div className="hidden max-[1500px]:block">
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button size="icon" className="bg-[#5B1780] text-white hover:bg-[#7a2c97]">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left">
-          <SheetHeader>
-            <SheetTitle>Menú</SheetTitle>
-          </SheetHeader>
-          <nav className="flex flex-col gap-4 mt-4">
-            {menuItems.map((item) => {
-              const isActive = pathname === item.href
-              return (
-                <div key={item.href} className="flex flex-col">
-                  <Link
-                    href={item.href}
-                    className={`ml-2 text-lg font-medium hover:text-primary ${
-                      isActive ? "text-primary underline" : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="ml-6 mt-2 flex flex-col gap-2">
-                      {item.children.map((child) => {
-                        const isChildActive = pathname === child.href
-                        return (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className={`text-sm hover:text-primary ${
-                              isChildActive ? "text-primary underline" : "text-muted-foreground"
-                            }`}
-                          >
-                            {child.label}
-                          </Link>
-                        )
-                      })}
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </nav>
-        </SheetContent>
-      </Sheet>
+    <div className="flex 2xl:hidden">
+      <MobileMenu menuItems={menuItems} />
     </div>
   </div>
 </header>
