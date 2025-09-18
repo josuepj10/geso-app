@@ -110,7 +110,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className={`block w-[170px] py-2 text-lg pl-2 rounded-[30px] transition-colors ${
+                          className={`block w-[150px] py-2 text-lg pl-2 rounded-[30px] transition-colors ${
                             isChildActive
                               ? "bg-[#5B1780] text-white font-semibold"
                               : "text-white bg-[#8C339D] hover:text-white hover:bg-[#5B1780]"

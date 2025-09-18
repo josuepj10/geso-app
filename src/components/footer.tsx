@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="w-full bg-[#5B1780] text-white" >
       
       
-      <div className="lg:max-w-[75%] max-w-[95%] mx-auto px-6 py-8">
+      <div className="lg:max-w-[75%] mx-auto px-6 py-8">
         
         <div className="flex flex-col md:flex-row ">
 
@@ -100,7 +100,7 @@ export default function Footer() {
           
           <div className="flex flex-col gap-4 ">
             <span className="font-semibold text-xl text-white">Nuestros aliados</span>
-            <Link href="https://aacrom.com/" className="flex gap-8 flex-wrap ">
+            <Link href="https://aacrom.com/" target="_blank" rel="noopener noreferrer" className="flex gap-8 flex-wrap ">
               <Image src="/images/aacrom.svg" alt="AACROM" width={170} height={170} priority />
             </Link>
           </div>
