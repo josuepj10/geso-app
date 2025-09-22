@@ -3,7 +3,7 @@
 @import "tw-animate-css";
 
 h1 {
-  @apply text-[40px] font-bold text-[#5B1780]
+  @apply md:text-3xl text-2xl font-bold text-[#5B1780]
 }
 
 @keyframes pulsoTexto {

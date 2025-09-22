@@ -13,7 +13,8 @@ export default function BarHeader() {
                  bg-white/35 backdrop-blur-sm
                  text-gray-900 
                  flex justify-center items-center 
-                 px-6 py-7 z-50"
+                 lg:px-6 lg:py-7 
+                 z-50 px-3 "
     >
       <Navbar />
     </motion.div>

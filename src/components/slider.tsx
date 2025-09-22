@@ -45,7 +45,7 @@ export default function Slider() {
                 className="absolute top-1/2 left-[12.5%] transform -translate-y-1/2
                           w-[90%] max-w-[770px] sm:h-auto p-10 flex flex-col justify-between"
               >
-                <h2 className="text-[40px] font-semibold text-[#5B1780] mb-4">
+                <h2 className="md:text-3xl text-2xl font-semibold text-[#5B1780] mb-4">
                   Democracia de género y participación ciudadana
                 </h2>
 
