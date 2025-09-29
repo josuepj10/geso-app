@@ -24,7 +24,7 @@ export default function RootLayout({
 
         {/* Contenido de cada página */}
         <main className="pt-32">
-          <div className="lg:max-w-[75%] mx-auto px-4">
+          <div className="lg:max-w-[75%] mx-auto px-4 ">
             {children}
           </div>
         </main>

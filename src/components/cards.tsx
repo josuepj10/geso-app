@@ -17,7 +17,7 @@ export default function Card({ title, image, href }: CardProps) {
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 250 }}
-          className="w-80 h-96 bg-white text-black rounded-[17%] shadow-2xl 
+          className="w-72 h-[281px] bg-white rounded-[17%] hover:shadow-2xl border border-gray-300
                      flex flex-col justify-between cursor-pointer overflow-hidden"
         >
           {/* Imagen superior */}
@@ -31,7 +31,7 @@ export default function Card({ title, image, href }: CardProps) {
           </div>
 
           {/* Título (parte inferior = 1/3 del contenedor) */}
-          <div className="flex items-center justify-center h-1/3 p-4">
+          <div className="flex text-center items-center justify-center text-[#374151] h-3/7 p-4">
             <span className="text-xl font-semibold">{title}</span>
           </div>
         </motion.div>

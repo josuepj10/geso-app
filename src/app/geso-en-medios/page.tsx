@@ -1,11 +1,26 @@
+"use client"
+
+import { Reveal } from "@/components/reveal"
+
 import Image from "next/image"
 
 export default function actualidadPage() {
   return (
     <div>
+      <div className="md:my-20 my-10 ">
+        <div className="leading-relaxed text-[#374151] text-lg my-6">
+
+          <Reveal>
+            <p className="text-[#374151] leading-relaxed text-lg">
+              Artículos, entrevistas, podcasts, trabajo en medios.
+            </p>
+          </Reveal>
+        </div>
+
+      </div>
       
       <div className="flex justify-center my-20">
-        <Image src="/images/development.png" alt="Construyendo" width={1000} height={1000} priority />
+        <Image src="/images/development.png" alt="Construyendo" width={700} height={700} priority />
       </div>
 
     </div>

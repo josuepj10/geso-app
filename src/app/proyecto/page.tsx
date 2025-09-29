@@ -5,20 +5,24 @@ import Card from "@/components/cards";
 export default function misionPage() {
   return (
     <div>
-      <br></br>
-      <h1 className="flex justify-center">Proyectos GESO</h1>
-      <br></br>
+      <div className="flex justify-center text-[#374151] md:text-3xl text-2xl font-bold my-6">
+        <span>Proyectos</span>
+        <span className="text-[#5B1780]">&nbsp;GESO</span>
 
-      <p className="flex justify-center">
-        &quot;Impulsamos iniciativas que promueven la participación ciudadana,
+      </div>
+      
+      
+
+      <p className="flex justify-center my-6">
+        Impulsamos iniciativas que promueven la participación ciudadana,
         la equidad de género, los derechos humanos y el desarrollo local,
-        apoyando a comunidades con enfoque inclusivo y sostenible.&quot;
+        apoyando a comunidades con enfoque inclusivo y sostenible.
       </p>
-      <br></br>
+      
 
       {/* cards */}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center my-10 justify-center ">
+      <div className="flex flex-wrap gap-8 my-10 items-center justify-center">
         <Card
           title="Democracia de género y participación ciudadana"
           image="/images/ejemplo2.jpg"
@@ -37,6 +41,10 @@ export default function misionPage() {
           href="/proyecto/migracion"
         />
 
+      </div>
+
+      <div className="flex flex-wrap gap-8 mb-8 md:mb-30 items-center justify-center">
+
         <Card
           title="Medios de comunicación y cultura"
           image="/images/ejemplo2.jpg"
@@ -50,7 +58,7 @@ export default function misionPage() {
         />
       </div>
 
-      <div className="flex justify-center gap-4 mt-8"></div>
+
     </div>
   );
 }
