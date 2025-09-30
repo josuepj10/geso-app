@@ -18,14 +18,17 @@ export default function misionPage() {
       
         <div className="md:w-1/2 lg:mr-10 my-10 ">
           <Reveal>
+            
             <h1 className="my-5">Misión</h1>
-          
+          </Reveal>
+          <Reveal>
             <p className="text-[#374151] leading-relaxed text-lg">
               La Fundación Género y Sociedad (GESO) promueve y desarrolla proyectos sociales y culturales que, 
               desde una perspectiva de género, buscan contribuir a la equidad social y al fortalecimiento de la 
               democracia en Costa Rica y la región. 
             </p>
-          </Reveal>
+          </Reveal> 
+          
           
         </div>
         
@@ -73,13 +76,15 @@ export default function misionPage() {
           <div className="md:w-1/2 md:pl-10 my-10 order-1 md:order-2">
             <Reveal>
               <h1 className="my-5">Visión</h1>
-            
+            </Reveal>
+            <Reveal>
               <p className="text-[#374151] leading-relaxed text-lg">
                 Ser una entidad reconocida a nivel nacional e internacional por la calidad de los proyectos sociales y culturales 
                 que desarrolla, así como por el rigor con que incorpora la perspectiva de equidad de género, tanto en el plano 
                 conceptual como en el metodológico. 
               </p>
             </Reveal>
+            
           </div>
           
         </div>
@@ -92,34 +97,36 @@ export default function misionPage() {
         </div>
         <div className="leading-relaxed text-[#374151] text-lg my-6">
           <Reveal>
+            
             <p>
               La Fundación GESO es una organización sin fines de lucro, creada en 1993, en Costa Rica, como una iniciativa de 
               profesionales de distintas áreas que identificaron la necesidad de promover la inclusión social a nivel local, 
               nacional y regional, tanto en el ámbito público como privado. Desde Costa Rica, proyectamos actividades a nivel 
               centroamericano y latinoamericano. 
             </p>
-            
-            
-              <p className="mt-4">
-                A lo largo de más de tres décadas, hemos impulsado proyectos innovadores en campos como:
-              </p>
-            
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Democracia de género.</li>
-                <li>Ciudadanía sustantiva.</li>
-                <li>Género y comercio internacional.</li>
-                <li>Migración y derechos humanos.</li>
-                <li>Medios de comunicación y representaciones sociales.</li>
-                <li>Políticas públicas de inclusión social.</li>
-              </ul>
-            
+              
+          </Reveal>
+          <Reveal>
+            <p className="mt-4">
+              A lo largo de más de tres décadas, hemos impulsado proyectos innovadores en campos como:
+            </p>
+          </Reveal>
+          <Reveal>
+            <ul className="list-disc list-inside mt-4 space-y-2">
+              <li>Democracia de género.</li>
+              <li>Ciudadanía sustantiva.</li>
+              <li>Género y comercio internacional.</li>
+              <li>Migración y derechos humanos.</li>
+              <li>Medios de comunicación y representaciones sociales.</li>
+              <li>Políticas públicas de inclusión social.</li>
+            </ul>
+          </Reveal>
+          <Reveal>
             <p className="mt-4">
               En este camino, GESO ha consolidado alianzas con instituciones públicas, organismos internacionales y organizaciones 
               de la sociedad civil, lo que ha permitido ampliar su impacto en comunidades y en la agenda pública.
             </p>
-            
           </Reveal>
-
         </div>
 
       </div>  

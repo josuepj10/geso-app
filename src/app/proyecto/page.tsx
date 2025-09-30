@@ -21,7 +21,7 @@ export default function misionPage() {
       
 
       {/* cards */}
-
+      
       <div className="flex flex-wrap gap-8 my-10 items-center justify-center">
         <Card
           title="Democracia de género y participación ciudadana"
@@ -57,7 +57,7 @@ export default function misionPage() {
           href="/proyecto/violencia-de-genero"
         />
       </div>
-
+    
 
     </div>
   );

@@ -23,9 +23,9 @@ export default function competenciasPage() {
               GESO cuenta con un Know How especializado con propósito, creatividad y sentido de innovación presente en 
               cada uno de los servicios que integra su portafolio: 
             </p>
+          </Reveal>
             
-            
-              
+          <Reveal>
             <ul className="list-disc list-inside mt-4 space-y-2">
               <li>Formulación y ejecución de proyectos propios.</li>
               <li>Ejecución y evaluación de políticas, programas y proyectos impulsados por otras entidades.</li>
@@ -34,8 +34,8 @@ export default function competenciasPage() {
               <li>Estudios e Investigación. </li>
               
             </ul>
-            
           </Reveal>
+          
         </div>
       </div>   
     </div>
