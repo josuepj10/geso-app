@@ -12,11 +12,11 @@ interface CardProps {
 export default function Cardinf({ title, text, image }: CardProps) {
   return (
     <div
-      className="w-[1362px] h-[617px] bg-white text-black rounded-[70px] 
+      className="md:w-full md:h-140 bg-white text-black rounded-[70px] 
                  shadow-2xl flex overflow-hidden"
     >
       {/* Columna izquierda: Imagen */}
-      <div className="w-1/2 flex items-center justify-center">
+      <div className="md:w-154 md:h-129 flex items-center justify-center gap-6 m-6">
         <Image
           src={image}
           alt={title}
@@ -34,7 +34,7 @@ export default function Cardinf({ title, text, image }: CardProps) {
         {/* Texto */}
         <p className="text-base mt-2 flex-1">{text}</p>
 
-        {/* Botones */}
+        {/* 
         <div className="flex gap-4 mt-4 ">
           <button className="bg-[#5B1780] text-white px-4 py-2 rounded-lg hover:bg-[#8C339D] transition cursor-pointer">
             Abrir
@@ -43,6 +43,7 @@ export default function Cardinf({ title, text, image }: CardProps) {
             Volver
           </button>
         </div>
+        */}
       </div>
     </div>
   )

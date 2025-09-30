@@ -1,3 +1,5 @@
+"use client"
+
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

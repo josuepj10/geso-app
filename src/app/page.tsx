@@ -2,7 +2,6 @@
 
 import { Reveal } from "@/components/reveal"
 import Slider from "@/components/slider"
-import { MessageSquareMore } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link";
@@ -13,40 +12,6 @@ export default function Home() {
      
       <Slider />
         
-      {/*
-        <h1 className="text-center mt-26 mb-13">Cifras de impacto de la fundación</h1>
-        <Reveal>
-          <div className="
-            my-8
-            grid
-            grid-cols-1
-            gap-x-8
-            gap-y-8
-            [@media(min-width:950px)]:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
-            w-full
-          "> 
-            
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 250 }}
-              className="w-80 h-40 rounded-4xl bg-white border border-[#D1D5DB] shadow-sm hover:shadow-2xl transition-shadow duration-300"
-            >
-              <div className="p-4 flex flex-col h-full justify-between items-center">
-                <h2 className="text-3xl font-semibold text-[#5B1780] mt-4">+3000</h2>
-
-                <div className="flex mx-auto items-center gap-6 my-5">
-                  
-                  <MessageSquareMore className="w-6 h-6 text-[#5B1780]" />
-
-                  <p className="text-[#374151] text-lg">
-                    Personas ayudadas
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </Reveal>
-      */}
 
       <div>
         <h1 className="mx-auto w-full p-6 text-center mt-20">Noticias más recientes</h1>
