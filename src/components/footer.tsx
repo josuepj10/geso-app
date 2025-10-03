@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="w-full bg-[#5B1780] text-white" >
       
       
-      <div className="lg:max-w-[75%] mx-auto px-6 py-8">
+      <div className="xl:max-w-[75%] mx-auto px-6 py-8">
         
         <div className="flex flex-col md:flex-row ">
 

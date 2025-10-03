@@ -54,7 +54,7 @@ export default function misionPage() {
       
       <div className="bg-[#F3F4F6] -ml-4 -mr-4 lg:relative lg:left-1/2 lg:-mx-[50vw] w-[100vw] overflow-x-hidden ">
 
-        <div className="lg:w-[75vw] px-4 mx-auto flex flex-col md:flex-row items-center md:items-center gap-4 md:justify-between py-6 lg:py-20">
+        <div className="xl:w-[75vw] px-4 mx-auto flex flex-col md:flex-row items-center md:items-center gap-4 md:justify-between py-6 lg:py-20">
           <div className="relative w-full h-70 md:w-150 md:h-110 rounded-[50px] overflow-hidden order-2 md:order-1 group">
             <Image 
               src="/images/vision.webp" 
