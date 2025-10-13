@@ -1,5 +1,4 @@
 "use client"
-
 import Image from "next/image"
 import Link from "next/link"
 
@@ -9,45 +8,62 @@ interface CardProps {
   image: string
   button: string
   href: string
+  imageClass?: string
 }
 
-export default function Cardinfrev({ title, text, image, button, href }: CardProps) {
+export default function Cardinfrev({ title, text, image, button, href, imageClass }: CardProps) {
   return (
     <div
-      className="w-full max-w-[41rem] h-auto
-                lg:max-w-full lg:h-full 
+      className="w-full h-auto sm:max-w-[680px]
+                lg:max-w-[1362px] lg:max-h-[617px]
                 bg-white text-black rounded-[45px]
-                border flex overflow-hidden mb-4"
+                border flex overflow-hidden mb-4
+                hover:shadow-2xl transition-shadow duration-300 ease-in-out"
     >
-
-
       <div className="flex flex-col lg:flex-row lg:items-center">
-            {/* Columna isquierda: Contenido */}
-            <div className=" flex flex-col justify-center items-center gap-6 lg:p-5 p-2 xl:pl-7 m-2
-                            lg:w-1/2 lg:items-start lg:mx-2  
-                            xl:gap-11 lg:gap-7 order-2 lg:order-1 group">
-                {/* Título */}
-                <h1 className="text-center lg:text-left">{title}</h1>
+        {/* Columna izquierda: Contenido */}
+        <div
+          className="flex flex-col justify-center items-center gap-6 lg:p-5 p-4 xl:pl-7 
+                      flex-[1_1_50%] min-w-[50%] lg:items-start lg:mx-2  
+                      xl:gap-11 lg:gap-7 order-2 lg:order-1 group"
+        >
+          <h1 className="text-center lg:text-left">{title}</h1>
 
-                {/* Texto */}
-                <p className="text-lg text-[#374151] mt-2 text-center lg:text-left ">{text}</p>
+          <div 
+            className="text-lg text-[#374151] mt-2 text-center lg:text-left [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
+            dangerouslySetInnerHTML={{ __html: text }}
+          ></div>
+            
+          {/* Se muestra botón solo si button y href tienen contenido) */}
+          {button && href ? (
+            <Link
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#5B1780] rounded-3xl text-white text-lg px-6 py-1 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
+            >
+              {button}
+            </Link>
+          ) : null}
 
-                <Link href={href}>
-                    <button className="bg-[#5B1780] rounded-3xl text-white text-lg px-6 py-1 hover:bg-[#8C339D] transition cursor-pointer mb-4">
-                    {button}
-                    </button>
-                </Link>
-            </div>
+        </div>
 
-            <div className="flex items-center justify-between lg:w-1/2 gap-6 m-2 md:m-5 p-5 order-1 lg:order-2">
-                <Image
-                    src={image}
-                    alt={title}
-                    width={616}
-                    height={517}
-                    className="w-full h-auto max-h-[450px] rounded-[45px] object-contain overflow-hidden"           
-                />
-            </div>
+        {/* Columna derecha: Imagen */}
+        <div
+          className="flex lg:justify-end justify-center items-center lg:py-4 lg:pr-4 xl:py-10 xl:pr-10 p-4
+                      lg:flex-[1_1_auto] lg:max-w-[50%] 
+                      order-1 lg:order-2"
+        >
+          <div>
+            <Image
+              src={image}
+              alt={title}
+              width={616}
+              height={517}
+              className={`w-full h-auto max-h-[517px] rounded-[45px] object-cover ${imageClass || ""}`}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )

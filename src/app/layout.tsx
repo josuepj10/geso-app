@@ -24,7 +24,7 @@ export default function RootLayout({
 
         {/* Contenido de cada página */}
         <main className="pt-18 lg:pt-32">
-          <div className="xl:max-w-[75%] mx-auto px-4 ">
+          <div className="xl:max-w-[73.3%] mx-auto px-4 ">
             {children}
           </div>
         </main>
