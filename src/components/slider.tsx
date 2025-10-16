@@ -11,7 +11,7 @@ import "swiper/css/pagination"
 
 const slides = [
   
-  { image: "/images/img1.webp" }
+  { image: "/images/inicio.webp" }
   
   
 ]
