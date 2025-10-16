@@ -4,12 +4,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
-import { Menu, ChevronDown } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-import SearchBar from "./searchbar" 
 import NavbarButton  from "@/components/navbarbutton"
 import MobileMenu from "@/components/mobileMenu"
 
