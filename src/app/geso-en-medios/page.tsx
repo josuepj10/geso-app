@@ -1,7 +1,6 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
-import Image from "next/image"
 
 export default function actualidadPage() {
   return (

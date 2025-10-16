@@ -1,10 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Autoplay } from "swiper/modules"
 import Image from "next/image"
-import BarSlider from "@/components/barheader"
 import Link from "next/link";
 
 // Importar estilos de Swiper
