@@ -42,12 +42,12 @@ export default function Slider() {
               />
               {/* Card sobre la imagen */}
               <div
-                className="absolute top-1/2 left-[12.5%] transform -translate-y-1/2
+                className="absolute top-1/2 lg:left-[12.5%] transform -translate-y-1/2
                           w-[90%] max-w-[770px] sm:h-auto p-10 flex flex-col justify-between"
               >
-                <h2 className="text-[40px] font-semibold text-[#5B1780] mb-4">
+                <h1 className="mb-4">
                   Democracia de género y participación ciudadana
-                </h2>
+                </h1>
 
                 <p className="text-[#374151] text-base sm:text-lg mb-4">
                   Iniciativas que promueven la igualdad en la toma de decisiones y en las políticas públicas locales y nacionales.

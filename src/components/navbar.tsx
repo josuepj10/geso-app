@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import SearchBar from "./searchbar" 
 import NavbarButton  from "@/components/navbarbutton"
+import MobileMenu from "@/components/mobileMenu"
 
 export function Navbar() {
   const pathname = usePathname()
@@ -18,21 +19,6 @@ export function Navbar() {
 
   const menuItems = [
     { label: "Inicio", href: "/" },
-    
-    { label: "Proyectos", href: "/proyecto" },
-
-    { label: "Eventos", href: "/eventos" },
-  
-    
-    { label: "GESO en medios", href: "/geso-en-medios" },
-    { label: "Impacto", href: "/impacto" },
-    { 
-      label: "Recursos", href: "/recursos", 
-      children: [
-        { label: "Entrevistas", href: "/recursos/entrevistas" },
-        { label: "Publicaciones", href: "/recursos/publicaciones" },
-      ],
-    },
 
     {
       label: "Nosotros", href: "/nosotros",
@@ -44,23 +30,39 @@ export function Navbar() {
 
       ],
     },
+    
+    { label: "Proyectos", href: "/proyecto" },
 
+    { label: "Eventos", href: "/eventos" },
+  
+    
+    { label: "GESO en medios", href: "/geso-en-medios" },
+    { label: "Impacto", href: "/impacto" },
+    { label: "Publicaciones y recursos", href: "/recursos" },
     { label: "Colabora", href: "/apoyo" },
   ]
 
   return (
-    <header className="w-full">
-  <div className="w-[75%] mx-auto flex items-center justify-between py-2">
+    <header className="w-full max-w-[1860px] ">
+  <div className="
+   md:w-[73.8%] mx-auto 
+   
+   flex items-center 
+   justify-between py-2">
     
     {/* Logo */}
-    <Link href="/" className="flex items-center gap-2">
+    <Link href="/" className="flex items-center gap-4">
       <Image src="/images/logo.png" alt="Logo Fundación" width={40} height={40} priority />
     </Link>
 
     {/* Desktop Menu */}
-    <nav className="hidden min-[1500px]:flex gap-6">
+    <nav className="hidden 2xl:flex gap-4">
       {menuItems.map((item) => {
-        const isActive = pathname === item.href
+        // Un padre es activo si su href coincide O si alguno de sus hijos coincide
+        const isChildActive = item.children?.some(
+          (child) => pathname === child.href
+        )
+        const isActive = pathname === item.href || isChildActive
 
         if (item.children) {
           return (
@@ -71,15 +73,18 @@ export function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`px-3 py-1.5 flex items-center rounded-2xl text-lg font-medium transition-colors
-                       text-gray-700 hover:bg-purplePrimary hover:text-white ${
-                  isActive
-                    ? "bg-purplePrimary text-white"
-                    : "text-gray-700 hover:bg-purplePrimary hover:text-white"
-                }`}
+                className={`px-3 py-1.5 flex items-center rounded-[30px] font-medium transition-colors
+                  ${isActive
+                    ? "bg-[#5B1780] text-white"
+                    : "text-gray-700 hover:bg-[#5B1780] hover:text-white"
+                  }`}
               >
                 {item.label}
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown
+                  className={`w-4 h-4 ml-1 transition-colors ${
+                    isActive ? "text-white" : "text-gray-600 group-hover:text-white"
+                  }`}
+                />
               </button>
 
               {/* Dropdown */}
@@ -90,7 +95,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.25 }}
-                    className="absolute top-full left-0 bg-[#8C339D] shadow-md rounded-2xl py-2 mt-1 min-w-[170px] z-20 flex flex-col items-center"
+                    className="absolute top-full left-0 bg-[#8C339D] shadow-md rounded-[30px] py-2 mt-1 min-w-[170px] z-20 flex flex-col items-center"
                   >
                     {item.children.map((child) => {
                       const isChildActive = pathname === child.href
@@ -98,7 +103,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className={`block w-[144px] py-2 text-lg pl-2 rounded-2xl transition-colors ${
+                          className={`block w-[150px] py-2 text-lg pl-2 rounded-[30px] transition-colors ${
                             isChildActive
                               ? "bg-[#5B1780] text-white font-semibold"
                               : "text-white bg-[#8C339D] hover:text-white hover:bg-[#5B1780]"
@@ -124,54 +129,8 @@ export function Navbar() {
     </nav>
 
     {/* Mobile Menu */}
-    <div className="hidden max-[1500px]:block">
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button size="icon" className="bg-[#5B1780] text-white hover:bg-[#7a2c97]">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left">
-          <SheetHeader>
-            <SheetTitle>Menú</SheetTitle>
-          </SheetHeader>
-          <nav className="flex flex-col gap-4 mt-4">
-            {menuItems.map((item) => {
-              const isActive = pathname === item.href
-              return (
-                <div key={item.href} className="flex flex-col">
-                  <Link
-                    href={item.href}
-                    className={`ml-2 text-lg font-medium hover:text-primary ${
-                      isActive ? "text-primary underline" : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="ml-6 mt-2 flex flex-col gap-2">
-                      {item.children.map((child) => {
-                        const isChildActive = pathname === child.href
-                        return (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className={`text-sm hover:text-primary ${
-                              isChildActive ? "text-primary underline" : "text-muted-foreground"
-                            }`}
-                          >
-                            {child.label}
-                          </Link>
-                        )
-                      })}
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </nav>
-        </SheetContent>
-      </Sheet>
+    <div className="flex 2xl:hidden">
+      <MobileMenu menuItems={menuItems} />
     </div>
   </div>
 </header>

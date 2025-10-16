@@ -1,13 +1,5 @@
 "use client"
 
-// para insertar boton usar 
-
-// <Button>Botón normal</Button>
-// <Button variant="outline">Botón borde</Button>
-// <Button size="lg" variant="default">Grande</Button>
-// <Button variant="link">Enlace</Button>
-//
-
 import * as React from "react"
 import { cn } from "@/lib/utils"
 

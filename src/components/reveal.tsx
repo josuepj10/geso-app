@@ -1,14 +1,27 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useEffect } from "react"
 
 export function Reveal({ children }: { children: React.ReactNode }) {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: false })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 })
+    } else {
+      controls.start({ opacity: 0, y: 12 })
+    }
+  }, [inView, controls])
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={controls}
       transition={{ duration: 0.6 }}
-      viewport={{ once: false, amount: 0.2 }}
     >
       {children}
     </motion.div>
