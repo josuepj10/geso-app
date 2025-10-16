@@ -18,7 +18,7 @@ export default function ApoyoPage() {
             </ul>`,
       image: "/images/ejemplo2.jpg",
       button: "Quiero donar ahora",
-      href: " ",
+      href: "#",
     },
     {
       type: "reverse", // Cardinfrev
@@ -33,7 +33,7 @@ export default function ApoyoPage() {
             </ul>`,
       image: "/images/apoyo.webp",
       button: "Postúlate como voluntario/a",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -48,7 +48,7 @@ export default function ApoyoPage() {
             </ul>`,
       image: "/images/ejemplo2.jpg",
       button: "Conversemos sobre alianzas",
-      href: " ",
+      href: "#",
     },
   ]
 

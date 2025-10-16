@@ -17,7 +17,7 @@ export default function migracionPage() {
       los retos de las comunidades migrantes y las herramientas institucionales disponibles.`,
       image: "/images/ejemplo2.jpg",
       button: "Consultar diagnóstico",
-      href: " ",
+      href: "#",
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ export default function migracionPage() {
       de fortalecer la participación de las mujeres en procesos de seguridad y justicia.`,
       image: "/images/ejemplo2.jpg",
       button: "Más información",
-      href: " ",
+      href: "#",
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export default function migracionPage() {
       Migración y Extranjería de Costa Rica.`,
       image: "/images/apoyo.webp",
       button: "Ver memorias del seminario",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -62,7 +62,7 @@ export default function migracionPage() {
       El documento analiza la situación de mujeres, niños y niñas migrantes en la región y los principales desafíos en materia de protección y derechos humanos.`,
       image: "/images/ejemplo2.jpg",
       button: "Consultar documento",
-      href: " ",
+      href: "#",
     },
     {
       id: 6,
@@ -72,7 +72,7 @@ export default function migracionPage() {
       en Costa Rica y los riesgos asociados a la trata de personas. El informe se convirtió en un referente para la formulación de políticas laborales y de protección de derechos.`,
       image: "/images/apoyo.webp",
       button: "Descargar publicación OIT",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
 

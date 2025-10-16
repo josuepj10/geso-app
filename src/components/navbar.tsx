@@ -73,7 +73,7 @@ export function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`px-3 py-1.5 flex items-center rounded-[30px] text-lg font-medium transition-colors
+                className={`px-3 py-1.5 flex items-center rounded-[30px] font-medium transition-colors
                   ${isActive
                     ? "bg-[#5B1780] text-white"
                     : "text-gray-700 hover:bg-[#5B1780] hover:text-white"

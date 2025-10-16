@@ -16,7 +16,7 @@ export default function mediosPage() {
       y narrativas negativas.`,
       image: "/images/ejemplo2.jpg",
       button: "Descargar manual",
-      href: " ",
+      href: "#",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export default function mediosPage() {
       sobre cobertura periodística con enfoque de derechos humanos en migración y refugio. Esta guía fortalece la práctica profesional de la comunicación en el país. `,
       image: "/images/apoyo.webp",
       button: "Ver guía completa",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -38,7 +38,7 @@ export default function mediosPage() {
       de Periodistas de Costa Rica por su aporte a la comunicación inclusiva.`,
       image: "/images/ejemplo2.jpg",
       button: "Escuchar programa",
-      href: " ",
+      href: "#",
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export default function mediosPage() {
             </ul> `,
       image: "/images/apoyo.webp",
       button: "Más información",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     

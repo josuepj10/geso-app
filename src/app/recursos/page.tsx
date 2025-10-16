@@ -94,7 +94,7 @@ export default function recursosPage() {
       insumos para la V Conferencia Regional sobre Migración (Washington, 2000). `,
       image: "/images/apoyo.webp",
       button: "Consultar documento",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -115,7 +115,7 @@ export default function recursosPage() {
       futuros sobre género y ciudadanía en la región. `,
       image: "/images/apoyo.webp",
       button: "Descargar",
-      href: "",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
   ];

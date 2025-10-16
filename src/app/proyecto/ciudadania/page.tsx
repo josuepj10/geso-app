@@ -19,7 +19,7 @@ export default function ciudadaniaPage() {
         generando propuestas para una economía más inclusiva.`,
       image: "/images/ejemplo2.jpg",
       button: "Ver publicación",
-      href: " ",
+      href: "#",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export default function ciudadaniaPage() {
         y el Caribe, con un enfoque de participación ciudadana y equidad.`,
       image: "/images/apoyo.webp",
       button: "Conocer más",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -42,7 +42,7 @@ export default function ciudadaniaPage() {
       creando las bases para políticas locales inclusivas.`,
       image: "/images/ejemplo2.jpg",
       button: "Leer experiencia",
-      href: " ",
+      href: "#",
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ export default function ciudadaniaPage() {
       omunidades.`,
       image: "/images/apoyo.webp",
       button: "Ver resultados",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -64,7 +64,7 @@ export default function ciudadaniaPage() {
       perspectiva de género. Además, compartimos experiencias de Costa Rica sobre la transición de cuotas mínimas a la paridad política.`,
       image: "/images/ejemplo2.jpg",
       button: "Ver memoria",
-      href: " ",
+      href: "#",
     },
     {
       id: 6,
@@ -74,7 +74,7 @@ export default function ciudadaniaPage() {
       e instituciones nacionales. Este trabajo sentó bases regionales para la transversalización de género en políticas de integración y seguridad.`,
       image: "/images/apoyo.webp",
       button: "Ver documento",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -85,7 +85,7 @@ export default function ciudadaniaPage() {
       elección directa de alcaldías en Costa Rica.`,
       image: "/images/ejemplo2.jpg",
       button: "Escuchar programa",
-      href: " ",
+      href: "#",
     },
 
   ];

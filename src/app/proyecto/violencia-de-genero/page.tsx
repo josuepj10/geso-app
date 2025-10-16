@@ -17,7 +17,7 @@ export default function violenciaPage() {
       nivel local. `,
       image: "/images/ejemplo2.jpg",
       button: "Ver resultados",
-      href: " ",
+      href: "#",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function violenciaPage() {
       A través de talleres participativos, impulsamos procesos de liderazgo, organización y prevención de la violencia en todas sus formas. `,
       image: "/images/apoyo.webp",
       button: "Conocer experiencia",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -39,7 +39,7 @@ export default function violenciaPage() {
       pobreza, brindándoles herramientas para fortalecer sus competencias personales, sociales y productivas. `,
       image: "/images/ejemplo2.jpg",
       button: "Ver testimonios",
-      href: " ",
+      href: "#",
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ export default function violenciaPage() {
       mejorar la atención de la violencia en América Latina.`,
       image: "/images/apoyo.webp",
       button: "Descargar publicación BID",
-      href: " ",
+      href: "#",
       imageClass: "lg:h-[360px]",
     },
     {
@@ -61,7 +61,7 @@ export default function violenciaPage() {
       trabajo comparativo se convirtió en una referencia regional para la elaboración de políticas públicas y estrategias de prevención. `,
       image: "/images/ejemplo2.jpg",
       button: "Consultar informe PNUD",
-      href: " ",
+      href: "#",
     },
     
   ];
