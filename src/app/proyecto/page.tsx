@@ -11,15 +11,6 @@ export default function misionPage() {
 
       </div>
       
-      
-
-      <p className="flex justify-center my-6">
-        Impulsamos iniciativas que promueven la participación ciudadana,
-        la equidad de género, los derechos humanos y el desarrollo local,
-        apoyando a comunidades con enfoque inclusivo y sostenible.
-      </p>
-      
-
       {/* cards */}
       
       <div className="flex flex-wrap gap-8 my-10 items-center justify-center">

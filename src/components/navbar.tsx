@@ -38,32 +38,25 @@ export function Navbar() {
     
     { label: "GESO en medios", href: "/geso-en-medios" },
     { label: "Impacto", href: "/impacto" },
-    { 
-      label: "Recursos", href: "/recursos", 
-      children: [
-        { label: "Entrevistas", href: "/recursos/entrevistas" },
-        { label: "Publicaciones", href: "/recursos/publicaciones" },
-      ],
-    },
-
+    { label: "Publicaciones y recursos", href: "/recursos" },
     { label: "Colabora", href: "/apoyo" },
   ]
 
   return (
-    <header className="w-full">
+    <header className="w-full max-w-[1860px] ">
   <div className="
-   md:w-[75%] mx-auto 
+   md:w-[73.8%] mx-auto 
    
    flex items-center 
    justify-between py-2">
     
     {/* Logo */}
-    <Link href="/" className="flex items-center gap-2">
+    <Link href="/" className="flex items-center gap-4">
       <Image src="/images/logo.png" alt="Logo Fundación" width={40} height={40} priority />
     </Link>
 
     {/* Desktop Menu */}
-    <nav className="hidden 2xl:flex gap-6">
+    <nav className="hidden 2xl:flex gap-4">
       {menuItems.map((item) => {
         // Un padre es activo si su href coincide O si alguno de sus hijos coincide
         const isChildActive = item.children?.some(
@@ -80,7 +73,7 @@ export function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className={`px-3 py-1.5 flex items-center rounded-[30px] text-lg font-medium transition-colors
+                className={`px-3 py-1.5 flex items-center rounded-[30px] font-medium transition-colors
                   ${isActive
                     ? "bg-[#5B1780] text-white"
                     : "text-gray-700 hover:bg-[#5B1780] hover:text-white"

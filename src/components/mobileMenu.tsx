@@ -41,13 +41,12 @@ export default function MobileMenu({ menuItems }: { menuItems: MenuItem[] }) {
       {/* Contenido fullscreen */}
       <DialogContent
         showCloseButton={false}
-        className="bg-white/65 backdrop-blur-sm flex flex-col"
+        className="bg-white/65 backdrop-blur-sm flex flex-col h-[95vh]"
       >
-        {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b">
+        {/* Header fijo */}
+        <div className="flex-shrink-0 flex items-center justify-between px-4 py-3 border-b">
           <DialogTitle className="text-3xl font-bold text-[#5B1780]">
             GESO
-            {/*<Image src="/images/logo.png" alt="Logo Fundación" width={45} height={45} priority />*/}
           </DialogTitle>
           <DialogClose asChild>
             <button>

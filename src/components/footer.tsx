@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="w-full bg-[#5B1780] text-white" >
       
       
-      <div className="lg:max-w-[75%] mx-auto px-6 py-8">
+      <div className="w-full max-w-[1420px] mx-auto px-6 py-8">
         
         <div className="flex flex-col md:flex-row ">
 
@@ -34,7 +34,6 @@ export default function Footer() {
               <span className="font-bold mb-2 text-xl text-white">Nosotros</span>
               <Link href="/nosotros/alianzas" className="hover:underline">Alianzas</Link>
               <Link href="/nosotros/competencias-y-cap" className="hover:underline">Competencias y capacidades</Link>
-              <Link href="/nosotros/historia" className="hover:underline">Historia</Link>
               <Link href="/nosotros/mision-vision" className="hover:underline">Misión y Visión</Link>
               <Link href="/nosotros/principios" className="hover:underline">Principios</Link>
             </div>
@@ -102,7 +101,7 @@ export default function Footer() {
           
           <div className="flex flex-col gap-4 ">
             <span className="font-semibold text-xl text-white">Nuestros aliados</span>
-            <Link href="https://aacrom.com/" target="_blank" rel="noopener noreferrer" className="flex gap-8 flex-wrap ">
+            <Link href="https://university.aacrom.com/" target="_blank" rel="noopener noreferrer" className="flex gap-8 flex-wrap ">
               <Image src="/images/aacrom.svg" alt="AACROM" width={170} height={170} priority />
             </Link>
           </div>
