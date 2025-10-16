@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Cardinf from "@/components/cardinf"
 import Cardinfrev from "@/components/cardinfrev"
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, PaginationEllipsis } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
-export default function violenciaPage() {
+export default function ViolenciaPage() {
   const cards = [
     {
       id: 1,

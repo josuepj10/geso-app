@@ -4,9 +4,9 @@ import { Reveal } from "@/components/reveal"
 import { useState } from "react";
 import Cardinf from "@/components/cardinf"
 import Cardinfrev from "@/components/cardinfrev"
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, PaginationEllipsis } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
-export default function recursosPage() {
+export default function RecursosPage() {
   const cards = [
     {
       id: 1,
