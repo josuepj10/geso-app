@@ -92,6 +92,18 @@ export default function ApoyoPage() {
         )
       )}
 
+      <div className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
+        
+        <Reveal>
+          <p className="mb-3">Tu compromiso transforma vidas</p>
+          <p>
+             Gracias a tu apoyo hemos podido desarrollar iniciativas reconocidas a nivel nacional e internacional, 
+            como el programa Gente sin Fronteras o la elaboración de manuales para periodistas con enfoque de derechos humanos.
+          </p>
+          <p className="mt-3">Ahora, contigo, podemos llegar más lejos.</p>
+        </Reveal>
+      </div>
+
     </div>
   )
 }

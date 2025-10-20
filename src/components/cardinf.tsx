@@ -16,7 +16,7 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
   return (
     
     <div
-      className="w-full h-auto sm:max-w-[680px]
+      className="w-max-full h-auto sm:max-w-[680px]
                 lg:max-w-[1362px] lg:h-full
                 bg-white text-black rounded-[45px]
                 border flex overflow-hidden mb-4 
@@ -60,7 +60,7 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#5B1780] rounded-3xl text-white text-lg px-6 py-1 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
+              className="bg-[#5B1780] rounded-4xl text-white text-lg w-full lg:w-70 py-4 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
             >
               {button}
             </Link>

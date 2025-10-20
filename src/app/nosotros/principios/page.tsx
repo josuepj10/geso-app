@@ -9,7 +9,7 @@ export default function principiosPage() {
               
         <div className="flex justify-center pb-10 ">
           
-          <h1>Cómo operamos / principios</h1>
+          <h1>Nuestros principios</h1>
           
         </div>
 

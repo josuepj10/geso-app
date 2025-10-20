@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="w-full bg-[#5B1780] text-white" >
       
       
-      <div className="w-full max-w-[1420px] mx-auto px-6 py-8">
+      <div className="w-full max-w-[1420px] mx-auto px-6 lg:py-16 py-8">
         
         <div className="flex flex-col md:flex-row ">
 
@@ -77,21 +77,21 @@ export default function Footer() {
         <div className="
           grid grid-cols-1 
           sm:grid-cols-2 
-          lg:grid-cols-3
-          gap-14 pb-12 
+          lg:grid-cols-3 
+          gap-14 
           w-full">
             
             
           <div className="flex flex-col gap-4">
             <span className="font-semibold text-xl text-white">Redes</span>
             <div className="flex gap-4 space-x-6 ">
-              <Link href="https://www.facebook.com/FundacionGESO#" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+              <Link href="https://www.facebook.com/FundacionGESO#" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD11A]">
                 <FaFacebookF size={30} />
               </Link>
-              <Link href="https://www.instagram.com/fundaciongeso/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+              <Link href="https://www.instagram.com/fundaciongeso/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD11A]">
                 <FaInstagram size={30} />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCGghK4Q0ZFTG6lOay5qO1BQ" target="_blank" rel="noopener noreferrer" className="hover:text-red-600">
+              <Link href="https://www.youtube.com/channel/UCGghK4Q0ZFTG6lOay5qO1BQ" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD11A]">
                 <FaYoutube size={30} />
               </Link>
             </div>
@@ -99,7 +99,7 @@ export default function Footer() {
 
           
           <div className="flex flex-col gap-4 ">
-            <span className="font-semibold text-xl text-white">Nuestros aliados</span>
+            <span className="font-semibold text-xl text-white">Página elaborada por</span>
             <Link href="https://university.aacrom.com/" target="_blank" rel="noopener noreferrer" className="flex gap-8 flex-wrap ">
               <Image src="/images/aacrom.svg" alt="AACROM" width={170} height={170} priority />
             </Link>

@@ -21,9 +21,9 @@ export default function misionPage() {
         />
 
         <Card
-          title="Género y comercio internacional"
+          title="Violencia de género y prevención"
           image="/images/ejemplo2.jpg"
-          href="/proyecto/g-y-comercio"
+          href="/proyecto/violencia-de-genero"
         />
 
         <Card
@@ -41,11 +41,11 @@ export default function misionPage() {
           image="/images/ejemplo2.jpg"
           href="/proyecto/medios"
         />
-
+        
         <Card
-          title="Violencia de género y prevención"
+          title="Género y comercio internacional"
           image="/images/ejemplo2.jpg"
-          href="/proyecto/violencia-de-genero"
+          href="/proyecto/g-y-comercio"
         />
       </div>
     

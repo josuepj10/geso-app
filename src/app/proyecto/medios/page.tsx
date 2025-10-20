@@ -1,14 +1,12 @@
 "use client"
 
-import { useState } from "react";
 import Cardinf from "@/components/cardinf"
 import Cardinfrev from "@/components/cardinfrev"
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+
 
 export default function MediosPage() {
   const cards = [
     {
-      id: 1,
       type: "normal", // Cardinf
       title: "Manual para periodistas sobre migración y refugio (2024)",
       text: `En GESO elaboramos, junto con <strong>ACNUR, el Banco Mundial y Aacrom </strong>, un manual práctico para periodistas que cubren temas de migración y refugio. 
@@ -19,7 +17,6 @@ export default function MediosPage() {
       href: "#",
     },
     {
-      id: 2,
       type: "reverse", // Cardinfrev
       title: "Capítulo en la Guía de Cobertura Periodística del COLPER (2024)",
       text: `En alianza con el <strong>Colegio de Periodistas de Costa Rica (COLPER)</strong>, <strong>ACNUR</strong> y <strong>Aacrom</strong>, desarrollamos el capítulo 
@@ -30,7 +27,6 @@ export default function MediosPage() {
       imageClass: "lg:h-[360px]",
     },
     {
-      id: 3,
       type: "normal", // Cardinf
       title: "Programa radial Gente sin Fronteras (2002-2010)",
       text: `Durante ocho años produjimos y transmitimos el programa radial Gente sin Fronteras, un espacio pionero que visibilizó las voces de la población 
@@ -41,7 +37,6 @@ export default function MediosPage() {
       href: "#",
     },
     {
-      id: 4,
       type: "reverse", // Cardinfrev
       title: "Programas radiales para promover la ciudadanía (2002)",
       text: `Producimos programas radiales en alianza con instituciones nacionales: 
@@ -57,30 +52,13 @@ export default function MediosPage() {
     
   ];
 
-  // Configuración de paginación
-  const itemsPerPage = 4;
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(cards.length / itemsPerPage);
-
-  // Calcular las cards visibles
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const visibleCards = cards.slice(startIndex, startIndex + itemsPerPage);
-
-  // Cambio de página
-  const handlePageChange = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="flex flex-col items-center gap-8 p-4">
-      {/* Cards visibles */}
-      {visibleCards.map((card) =>
+      
+      {cards.map((card, index) =>
         card.type === "normal" ? (
           <Cardinf
-            key={card.id}
+            key={index}
             title={card.title}
             text={card.text}
             image={card.image}
@@ -90,7 +68,7 @@ export default function MediosPage() {
           />
         ) : (
           <Cardinfrev
-            key={card.id}
+            key={index}
             title={card.title}
             text={card.text}
             image={card.image}
@@ -100,41 +78,6 @@ export default function MediosPage() {
           />
         )
       )}
-
-      {/* Paginación */}
-      <Pagination className="mt-4">
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-disabled={currentPage === 1}
-            />
-          </PaginationItem>
-
-          {[...Array(totalPages)].map((_, index) => (
-            <PaginationItem key={index}>
-              <PaginationLink
-                isActive={currentPage === index + 1}
-                onClick={() => handlePageChange(index + 1)}
-              >
-                {index + 1}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-
-          <PaginationItem>
-            <PaginationNext
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-disabled={currentPage === totalPages}
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
-    </div>
-
-      
-      
-      
-    
+    </div> 
   );
 }

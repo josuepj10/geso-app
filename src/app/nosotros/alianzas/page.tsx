@@ -34,7 +34,6 @@ export default function alianzasPage() {
             <Image src="/images/redcepaz.webp" alt="redcepaz" width={300} height={200} className="object-contain w-[240px] h-[190px] md:w-[300px] md:h-[200px]" priority />
             <Image src="/images/FORO.webp" alt="FORO" width={250} height={300} className="object-contain w-[200px] h-[240px] md:w-[250px] md:h-[300px]" priority />
             <Image src="/images/CANAESS.webp" alt="CANAESS" width={330} height={230} className="object-contain w-[280px] h-[200px] md:w-[330px] md:h-[230px]" priority />
-            
           </div>
 
           <Reveal>

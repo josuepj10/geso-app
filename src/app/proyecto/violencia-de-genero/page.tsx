@@ -1,14 +1,11 @@
 "use client"
 
-import { useState } from "react";
 import Cardinf from "@/components/cardinf"
 import Cardinfrev from "@/components/cardinfrev"
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 export default function ViolenciaPage() {
   const cards = [
     {
-      id: 1,
       type: "normal", // Cardinf
       title: "Fortalecimiento de políticas públicas en Gobiernos Locales (2018)",
       text: `En GESO implementamos este proyecto junto con la Unión Nacional de Gobiernos Locales (UNGL) y el Gobierno de Estados Unidos, con el objetivo de reforzar 
@@ -20,7 +17,6 @@ export default function ViolenciaPage() {
       href: "#",
     },
     {
-      id: 2,
       type: "reverse", // Cardinfrev
       title: "Estrategia comunitaria contra la violencia hacia las mujeres (2017-2018) ",
       text: `Diseñamos y ejecutamos, en alianza con el INAMU, una estrategia comunitaria para el empoderamiento de mujeres en cantones seleccionados de Costa Rica. 
@@ -31,7 +27,6 @@ export default function ViolenciaPage() {
       imageClass: "lg:h-[360px]",
     },
     {
-      id: 3,
       type: "normal", // Cardinf
       title: "Proyectos comunitarios en Tirrases de Curridabat (2016-2017)",
       text: `En alianza con la Municipalidad de Curridabat y otras instituciones, desarrollamos proyectos como el Programa de formación humana para un proyecto de 
@@ -42,7 +37,6 @@ export default function ViolenciaPage() {
       href: "#",
     },
     {
-      id: 4,
       type: "reverse", // Cardinfrev
       title: "Investigación regional sobre violencia doméstica (2002) ",
       text: `En GESO colaboramos con el Banco Interamericano de Desarrollo (BID) en la investigación Violencia doméstica: intervenciones para su prevención y 
@@ -54,7 +48,6 @@ export default function ViolenciaPage() {
       imageClass: "lg:h-[360px]",
     },
     {
-      id: 5,
       type: "normal", // Cardinf
       title: "Informes regionales sobre violencia de género en América Latina y el Caribe (1999-2000)",
       text: `Lideramos, junto con el PNUD, un estudio en 18 países de la región para evaluar la situación de la violencia de género contra las mujeres. Este 
@@ -66,29 +59,14 @@ export default function ViolenciaPage() {
     
   ];
 
-  // Configuración de paginación
-  const itemsPerPage = 4;
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(cards.length / itemsPerPage);
-
-  // Calcular las cards visibles
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const visibleCards = cards.slice(startIndex, startIndex + itemsPerPage);
-
-  // Cambio de página
-  const handlePageChange = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+  
   return (
     <div className="flex flex-col items-center gap-8 p-4">
-      {/* Cards visibles */}
-      {visibleCards.map((card) =>
+      
+      {cards.map((card, index) =>
         card.type === "normal" ? (
           <Cardinf
-            key={card.id}
+            key={index}
             title={card.title}
             text={card.text}
             image={card.image}
@@ -98,7 +76,7 @@ export default function ViolenciaPage() {
           />
         ) : (
           <Cardinfrev
-            key={card.id}
+            key={index}
             title={card.title}
             text={card.text}
             image={card.image}
@@ -108,37 +86,6 @@ export default function ViolenciaPage() {
           />
         )
       )}
-
-      {/* Paginación */}
-      <Pagination className="mt-4">
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-disabled={currentPage === 1}
-            />
-          </PaginationItem>
-
-          {[...Array(totalPages)].map((_, index) => (
-            <PaginationItem key={index}>
-              <PaginationLink
-                isActive={currentPage === index + 1}
-                onClick={() => handlePageChange(index + 1)}
-              >
-                {index + 1}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-
-          <PaginationItem>
-            <PaginationNext
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-disabled={currentPage === totalPages}
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
     </div>
-
   );
 }

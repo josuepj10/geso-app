@@ -139,23 +139,25 @@ export default function RecursosPage() {
 
   return (
     <div>
-      <div className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
+      {currentPage === 1 && (
+        <div className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
 
-        <div className="flex justify-center pb-10 ">
-        
-          <h1>Publicaciones y recursos</h1>
+          <div className="flex justify-center pb-10 ">
+          
+            <h1>Publicaciones y recursos</h1>
 
+          </div>
+
+          <Reveal>
+            <p className="text-[#374151] leading-relaxed text-lg">
+              En la Fundación Género y Sociedad (GESO) ponemos a disposición de la ciudadanía material que refleja nuestro trabajo en investigación, 
+              formación y comunicación. Son herramientas diseñadas para fortalecer la equidad de género, la participación ciudadana y los derechos 
+              humanos en distintos ámbitos sociales y culturales. <br/><br/>
+              Cada publicación es fruto de la experiencia en proyectos desarrollados junto a comunidades, periodistas, instituciones y organismos internacionales. 
+            </p>
+          </Reveal>
         </div>
-
-        <Reveal>
-          <p className="text-[#374151] leading-relaxed text-lg">
-            En la Fundación Género y Sociedad (GESO) ponemos a disposición de la ciudadanía material que refleja nuestro trabajo en investigación, 
-            formación y comunicación. Son herramientas diseñadas para fortalecer la equidad de género, la participación ciudadana y los derechos 
-            humanos en distintos ámbitos sociales y culturales. <br/><br/>
-            Cada publicación es fruto de la experiencia en proyectos desarrollados junto a comunidades, periodistas, instituciones y organismos internacionales. 
-          </p>
-        </Reveal>
-      </div>
+      )}
 
       <div className="flex flex-col items-center gap-8 p-4">
         {/* Cards visibles */}

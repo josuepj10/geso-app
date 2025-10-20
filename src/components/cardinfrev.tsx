@@ -40,7 +40,7 @@ export default function Cardinfrev({ title, text, image, button, href, imageClas
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#5B1780] rounded-3xl text-white text-lg px-6 py-1 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
+              className="bg-[#5B1780] rounded-4xl text-white text-lg w-full lg:w-70 py-4 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
             >
               {button}
             </Link>
