@@ -17,7 +17,7 @@ export default function Card({ title, image, href }: CardProps) {
         <motion.div
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 250 }}
-          className="w-72 h-[281px] bg-white rounded-[17%] hover:shadow-2xl border border-gray-300
+          className="w-full max-h-90 aspect-[4.7/5] sm:w-72 sm:h-[281px] bg-white rounded-[17%] hover:shadow-2xl border border-gray-300
                      flex flex-col justify-between cursor-pointer overflow-hidden"
         >
           {/* Imagen superior */}

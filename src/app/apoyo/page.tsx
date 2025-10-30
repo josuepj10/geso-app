@@ -53,7 +53,7 @@ export default function ApoyoPage() {
   ]
 
   return (
-    <div className="flex flex-col items-center gap-8 p-4">
+    <div className="flex flex-col items-center gap-8">
       <div className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
         <div className="flex justify-center pb-10">
           <h1>Haz parte del cambio</h1>

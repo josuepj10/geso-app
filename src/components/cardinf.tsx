@@ -16,7 +16,7 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
   return (
     
     <div
-      className="w-max-full h-auto sm:max-w-[680px]
+      className="w-full h-auto sm:max-w-[680px]
                 lg:max-w-[1362px] lg:h-full
                 bg-white text-black rounded-[45px]
                 border flex overflow-hidden mb-4 
@@ -42,15 +42,16 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
         </div>
                       
         
-        <div className=" flex flex-col justify-center items-center gap-6 lg:p-5 p-4 xl:pr-7
+        <div className=" flex flex-col justify-center items-center gap-6 xl:p-5 p-4 xl:pr-7
                       flex-[1_1_50%] min-w-[50%] lg:items-start  
                       xl:gap-11 lg:gap-7">
           {/* Título */}
-          <h1 className="text-center lg:text-left">{title}</h1>
+          <h2 className="text-center lg:text-left">{title}</h2>
 
           {/* Texto */}
           <div 
-            className="text-lg text-[#374151] mt-2 text-center lg:text-left [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
+            className="text-lg lg:text-base 2xl:text-lg text-[#374151] mt-2  text-center lg:text-left 
+            [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: text }}
           ></div>
 
@@ -60,7 +61,7 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#5B1780] rounded-4xl text-white text-lg w-full lg:w-70 py-4 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
+              className="bg-[#5B1780] rounded-4xl text-white text-lg w-full lg:w-76 py-4 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
             >
               {button}
             </Link>

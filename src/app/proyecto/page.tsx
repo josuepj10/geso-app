@@ -13,7 +13,7 @@ export default function misionPage() {
       
       {/* cards */}
       
-      <div className="flex flex-wrap gap-8 my-10 items-center justify-center">
+      <div className="flex flex-wrap justify-center gap-8 my-10 max-w-[1200px] mx-auto">
         <Card
           title="Democracia de género y participación ciudadana"
           image="/images/ejemplo2.jpg"
@@ -32,16 +32,12 @@ export default function misionPage() {
           href="/proyecto/migracion"
         />
 
-      </div>
-
-      <div className="flex flex-wrap gap-8 mb-8 md:mb-30 items-center justify-center">
-
         <Card
           title="Medios de comunicación y cultura"
           image="/images/ejemplo2.jpg"
           href="/proyecto/medios"
         />
-        
+
         <Card
           title="Género y comercio internacional"
           image="/images/ejemplo2.jpg"

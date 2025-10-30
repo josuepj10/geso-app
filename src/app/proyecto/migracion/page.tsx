@@ -96,7 +96,7 @@ export default function MigracionPage() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-8 p-4">
+    <div className="flex flex-col items-center gap-8 ">
       {/* Cards visibles */}
       {visibleCards.map((card) =>
         card.type === "normal" ? (
@@ -123,7 +123,7 @@ export default function MigracionPage() {
       )}
 
       {/* Paginación */}
-      <Pagination className="mt-4">
+      <Pagination className="mb-8">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious

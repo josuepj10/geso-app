@@ -36,7 +36,8 @@ export default function Home() {
 
               <p className="text-[#374151] text-base lg:my-7 my-4 text-start ">
                 Entre 2018 y 2019, en GESO asumimos la Secretaría Técnica de la Red  Nacional de Organizaciones Civiles para las 
-                Migraciones (REDNAM).  Durante este período impulsamos la participación en la Conferencia...
+                Migraciones (REDNAM).  Durante este período impulsamos la participación en la Conferencia Regional sobre Migración 
+                (CRM) y fortalecimos las acciones de ...
               </p>
 
               <Link 

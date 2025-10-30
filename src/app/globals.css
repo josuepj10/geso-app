@@ -6,6 +6,10 @@ h1 {
   @apply md:text-3xl text-2xl font-bold text-[#5B1780]
 }
 
+h2 {
+  @apply text-2xl lg:text-xl 2xl:text-2xl font-bold text-[#5B1780]
+}
+
 @keyframes pulsoTexto {
   0% {
     opacity: 1;
@@ -21,7 +25,20 @@ h1 {
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 300s linear infinite;
+}
 
 .nav-item {
   position: relative;

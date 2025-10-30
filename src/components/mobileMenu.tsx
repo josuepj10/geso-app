@@ -40,7 +40,7 @@ export default function MobileMenu({ menuItems }: { menuItems: MenuItem[] }) {
       {/* Contenido fullscreen */}
       <DialogContent
         showCloseButton={false}
-        className="bg-white/65 backdrop-blur-sm flex flex-col h-[95vh]"
+        className="bg-white/65 backdrop-blur-sm flex flex-col w-screen max-w-none h-screen "
       >
         {/* Header fijo */}
         <div className="flex-shrink-0 flex items-center justify-between px-4 py-3 border-b">
@@ -57,8 +57,8 @@ export default function MobileMenu({ menuItems }: { menuItems: MenuItem[] }) {
         {/* Links */}
         <div className="flex-1 overflow-y-auto p-6 ">
           <div className="grid grid-cols-1 
-                          gap-3 text-gray-600 font-bold
-                          md:grid-cols-2 md:gap-6 md:text-xl">
+                          gap-3 text-[#374151] font-bold
+                          "> 
             {menuItems.map((item) => {
               
               const isChildActive = item.children?.some(
@@ -94,7 +94,7 @@ export default function MobileMenu({ menuItems }: { menuItems: MenuItem[] }) {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="pl-4 flex flex-col gap-2 mt-2 "
+                            className="p-4 bg-[#8C339D] rounded-4xl flex flex-col gap-2 mt-2  "
                           >
                             {item.children.map((child) => {
                               const isChildActive = pathname === child.href
@@ -104,8 +104,8 @@ export default function MobileMenu({ menuItems }: { menuItems: MenuItem[] }) {
                                     href={child.href}
                                     className={`px-3 py-2 rounded-[30px] text-sm border transition-colors ${
                                       isChildActive
-                                        ? "bg-[#5B1780] text-white"
-                                        : "border-[#5B1780] hover:bg-gray-100 text-gray-800"
+                                        ? "bg-[#5B1780] text-white border-none"
+                                        : "border-none hover:bg-gray-100  text-white"
                                     }`}
                                   >
                                     {child.label}
@@ -124,7 +124,7 @@ export default function MobileMenu({ menuItems }: { menuItems: MenuItem[] }) {
                         className={`w-full px-4 py-3 rounded-[30px] border transition-colors ${
                           isActive
                             ? "bg-[#5B1780] text-white"
-                            : "border-[#5B1780] hover:bg-gray-100 text-gray-800"
+                            : "border-[#5B1780] hover:bg-gray-100 text-[#374151]"
                         }`}
                       >
                         {item.label}
