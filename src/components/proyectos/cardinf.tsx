@@ -16,18 +16,18 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
   return (
     
     <div
-      className="w-full h-auto sm:max-w-[680px]
-                lg:max-w-[1362px] lg:h-full
-                bg-white text-black rounded-[45px]
-                border flex overflow-hidden mb-4 
+      className="w-full h-auto 
+                xl:max-w-[1362px] xl:h-full
+                bg-white rounded-[55px]
+                flex overflow-hidden mb-4 border xl:border-0 xl:hover:border
                 hover:shadow-2xl transition-shadow duration-300 ease-in-out"
-    >
+    > 
       
 
-      <div className="flex flex-col lg:flex-row lg:items-center">
+      <div className="flex flex-col xl:flex-row xl:items-center">
         <div
-          className="flex lg:justify-start justify-center items-center lg:items-start lg:py-4 lg:pl-4 xl:py-10 xl:pl-10 p-4 
-                      lg:flex-[1_1_auto] lg:max-w-[50%]
+          className="flex xl:justify-start justify-center items-center xl:items-start p-5 sm:p-8 
+                      xl:flex-[1_1_auto] xl:max-w-[50%]
                       "
         >
           
@@ -36,21 +36,21 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
             alt={title}
             width={616}
             height={517}
-            className={`w-full h-auto max-h-[517px] rounded-[45px] object-cover ${imageClass || ""}`}
+            className={`w-full h-full max-h-[547] lg:min-h-[547px] rounded-[34px] object-cover ${imageClass || ""}`}
           />
         
         </div>
                       
         
-        <div className=" flex flex-col justify-center items-center gap-6 xl:p-5 p-4 xl:pr-7
-                      flex-[1_1_50%] min-w-[50%] lg:items-start  
-                      xl:gap-11 lg:gap-7">
+        <div className=" flex flex-col justify-center items-center gap-6 sm:p-8 py-5 px-5
+                      flex-[1_1_50%] min-w-[50%] xl:items-start  
+                      ">
           {/* Título */}
-          <h2 className="text-center lg:text-left">{title}</h2>
+          <h2 className="text-center xl:text-left ">{title}</h2>
 
           {/* Texto */}
           <div 
-            className="text-lg lg:text-base 2xl:text-lg text-[#374151] mt-2  text-center lg:text-left 
+            className="text-lg text-[#374151] mt-2 text-center xl:text-left 
             [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: text }}
           ></div>
@@ -61,7 +61,9 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#5B1780] rounded-4xl text-white text-lg w-full lg:w-76 py-4 hover:bg-[#8C339D] transition cursor-pointer mb-4 inline-block text-center"
+              className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full xl:w-76 py-4 
+              hover:bg-[#FFD11A] transition cursor-pointer mb-4 inline-block text-center"
+                        
             >
               {button}
             </Link>

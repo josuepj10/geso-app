@@ -1,8 +1,8 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
-import Cardinf from "@/components/cardinf"
-import Cardinfrev from "@/components/cardinfrev"
+import Cardinf from "@/components/proyectos/cardinf"
+import Cardinfrev from "@/components/proyectos/cardinfrev"
 
 export default function ApoyoPage() {
   const cards = [

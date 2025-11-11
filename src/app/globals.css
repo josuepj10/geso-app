@@ -7,7 +7,12 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl lg:text-xl 2xl:text-2xl font-bold text-[#5B1780]
+  @apply text-2xl font-bold text-[#5B1780]
+}
+
+.footer-links a {
+  display: inline-block;
+  width: fit-content;
 }
 
 @keyframes pulsoTexto {
@@ -33,6 +38,20 @@ h2 {
     transform: translateX(-50%);
   }
 }
+
+@keyframes soft-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-soft-bounce {
+  animation: soft-bounce 2s ease-in-out infinite;
+}
+
 
 .animate-marquee {
   display: flex;

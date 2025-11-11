@@ -1,18 +1,21 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import ImageGESO from "@/components/imageGESO"
 
 export default function competenciasPage() {
   return (
-    <div>
+    <>
+
+      <ImageGESO 
+        imageSrc="/images/observar.webp" 
+        title="Competencias y capacidades"
+        imageClassName="object-[60%_center]"
+      />
+
                                       
       <div className="md:my-20 my-10 ">
-      
-        <div className="flex justify-center pb-10 ">
-          
-          <h1>Competencias y capacidades</h1>
-          
-        </div>
+    
 
         <div className="leading-relaxed text-[#374151] text-lg my-6">
 
@@ -38,6 +41,6 @@ export default function competenciasPage() {
           
         </div>
       </div>   
-    </div>
+    </>
   );
 }

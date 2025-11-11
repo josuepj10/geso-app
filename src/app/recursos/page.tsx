@@ -2,8 +2,8 @@
 
 import { Reveal } from "@/components/reveal"
 import { useState } from "react";
-import Cardinf from "@/components/cardinf"
-import Cardinfrev from "@/components/cardinfrev"
+import Cardinf from "@/components/proyectos/cardinf"
+import Cardinfrev from "@/components/proyectos/cardinfrev"
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 export default function RecursosPage() {

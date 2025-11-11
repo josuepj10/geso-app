@@ -13,7 +13,7 @@ export default function NavbarButton({ href, active, special, children }: Navbar
   return (
     <Link
       href={href}
-      className={`px-5 py-1.5 rounded-[30px] font-medium transition-colors
+      className={`xl:px-5 px-3 py-1.5 rounded-[30px] font-medium transition-colors
         ${
           special
             ? "bg-[#FFD11A] text-[#5B1780]" // estilo del botón especial (apóyanos)

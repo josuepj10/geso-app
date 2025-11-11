@@ -1,16 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Cardinf from "@/components/cardinf"
-import Cardinfrev from "@/components/cardinfrev"
+import Cardinf from "@/components/proyectos/cardinf"
+import Cardinfrev from "@/components/proyectos/cardinfrev"
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 
-export default function CiudadaniaPage() {
-  
+export default function CiudadaniaPage() { 
   const cards = [
     {
-      id: 1,
+      
       type: "normal", // Cardinf
       title: "Género y Comercio Internacional (2024)",
       text: `En GESO investigamos y publicamos el ensayo “Género y Comercio Internacional: avances y desafíos, 
@@ -22,7 +21,7 @@ export default function CiudadaniaPage() {
       href: "#",
     },
     {
-      id: 2,
+      
       type: "reverse", // Cardinfrev
       title: "Apoyo técnico a FUNDEMUCA (2022-2024)",
       text: `Acompañamos el Programa Internacional de Alto Rendimiento (PIAR) “Alcalde Tomás Rodríguez Bolaños”, una iniciativa conjunta 
@@ -31,10 +30,9 @@ export default function CiudadaniaPage() {
       image: "/images/apoyo.webp",
       button: "Conocer más",
       href: "#",
-      imageClass: "lg:h-[360px]",
     },
     {
-      id: 3,
+      
       type: "normal", // Cardinf
       title: "Gestión municipal y equidad de género (2005)",
       text: `En GESO desarrollamos, junto con la Unión Nacional de Gobiernos Locales (UNGL), el proyecto “Gestión municipal y equidad de género”. 
@@ -45,7 +43,7 @@ export default function CiudadaniaPage() {
       href: "#",
     },
     {
-      id: 4,
+      
       type: "reverse", // Cardinfrev
       title: "Políticas locales en San José, Cartago y Alajuela (2005-2007)",
       text: `Apoyamos a las municipalidades de San José, Cartago y Alajuela en el diseño y aprobación de sus políticas locales de igualdad y 
@@ -54,10 +52,9 @@ export default function CiudadaniaPage() {
       image: "/images/apoyo.webp",
       button: "Ver resultados",
       href: "#",
-      imageClass: "lg:h-[360px]",
     },
     {
-      id: 5,
+      
       type: "normal", // Cardinf
       title: "Observación electoral con enfoque de género (2010-2011)",
       text: `Brindamos asistencia técnica en Guatemala y El Salvador, con el NDI y otras organizaciones, para promover la observación electoral con 
@@ -67,7 +64,7 @@ export default function CiudadaniaPage() {
       href: "#",
     },
     {
-      id: 6,
+      
       type: "reverse", // Cardinfrev
       title: "Consultorías en el SICA (2009-2012)",
       text: `Elaboramos diagnósticos y lineamientos para la Política Regional de Igualdad y Equidad de Género (PRIEG-SICA), en conjunto con COMMCA/SICA 
@@ -75,10 +72,9 @@ export default function CiudadaniaPage() {
       image: "/images/apoyo.webp",
       button: "Ver documento",
       href: "#",
-      imageClass: "lg:h-[360px]",
     },
     {
-      id: 7,
+      
       type: "normal", // Cardinf
       title: "Ciudadanía y Poder Local (2002)",
       text: `Producimos el programa radial “Ciudadanía y Poder Local” para el IFAM, con el fin de promover la participación ciudadana durante la primera 
@@ -90,79 +86,30 @@ export default function CiudadaniaPage() {
 
   ];
 
-  // Configuración de paginación
-  const itemsPerPage = 4;
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(cards.length / itemsPerPage);
-
-  // Calcular las cards visibles
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const visibleCards = cards.slice(startIndex, startIndex + itemsPerPage);
-
-  // Cambio de página
-  const handlePageChange = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="flex flex-col items-center gap-8">
-      {/* Cards visibles */}
-      {visibleCards.map((card) =>
+      
+      {cards.map((card, index) =>
         card.type === "normal" ? (
           <Cardinf
-            key={card.id}
+            key={index}
             title={card.title}
             text={card.text}
             image={card.image}
             button={card.button}
             href={card.href}
-            imageClass={card.imageClass}
           />
         ) : (
           <Cardinfrev
-            key={card.id}
+            key={index}
             title={card.title}
             text={card.text}
             image={card.image}
             button={card.button}
             href={card.href}
-            imageClass={card.imageClass}
           />
         )
       )}
-
-      {/* Paginación */}
-      <Pagination className="mb-8">
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-disabled={currentPage === 1}
-            />
-          </PaginationItem>
-
-          {[...Array(totalPages)].map((_, index) => (
-            <PaginationItem key={index}>
-              <PaginationLink
-                isActive={currentPage === index + 1}
-                onClick={() => handlePageChange(index + 1)}
-              >
-                {index + 1}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-
-          <PaginationItem>
-            <PaginationNext
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-disabled={currentPage === totalPages}
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
     </div>
   );
 }
