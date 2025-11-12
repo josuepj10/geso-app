@@ -10,15 +10,15 @@ export default function Footer() {
     <footer className="w-full bg-[#5B1780] text-white" >
       
       
-      <div className="w-full max-w-[1420px] mx-auto px-6 py-8">
+      <div className="w-full max-w-[1420px] mx-auto px-6 lg:py-16 py-8">
         
         <div className="flex flex-col md:flex-row ">
 
           
           <div className="flex-shrink-0 mr-10 mb-8 gap-10">
-            <Link href="/">
-              <Image src="/images/logo.png" alt="Logo Fundación" width={80} height={80} priority />
-            </Link>
+            
+            <Image src="/images/logo.png" alt="Logo Fundación" width={80} height={80} priority />
+            
           </div>
 
           <div className="
@@ -29,16 +29,16 @@ export default function Footer() {
            flex-1 w-full">
 
             
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 footer-links">
               <span className="font-bold mb-2 text-xl text-white">Nosotros</span>
               <Link href="/nosotros/alianzas" className="hover:underline">Alianzas</Link>
-              <Link href="/nosotros/competencias-y-cap" className="hover:underline">Competencias y capacidades</Link>
-              <Link href="/nosotros/mision-vision" className="hover:underline">Misión y Visión</Link>
+              <Link href="/nosotros/competencias-y-cap" className="hover:underline">Competencias</Link>
+              <Link href="/nosotros/mision-vision" className="hover:underline">Sobre GESO</Link>
               <Link href="/nosotros/principios" className="hover:underline">Principios</Link>
             </div>
 
             
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 footer-links">
               <span className="font-semibold mb-2 text-xl text-white">Enlaces rápidos</span>
               <Link href="/" className="hover:underline">Inicio</Link>
               <Link href="/proyecto" className="hover:underline">Proyectos</Link>
@@ -77,36 +77,36 @@ export default function Footer() {
         <div className="
           grid grid-cols-1 
           sm:grid-cols-2 
-          lg:grid-cols-3
-          gap-14 pb-12 
+          lg:grid-cols-3 
+          gap-14 
           w-full">
             
             
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-5">
             <span className="font-semibold text-xl text-white">Redes</span>
             <div className="flex gap-4 space-x-6 ">
-              <Link href="https://www.facebook.com/FundacionGESO#" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+              <Link href="https://www.facebook.com/FundacionGESO#" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD11A]">
                 <FaFacebookF size={30} />
               </Link>
-              <Link href="https://www.instagram.com/fundaciongeso/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+              <Link href="https://www.instagram.com/fundaciongeso/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD11A]">
                 <FaInstagram size={30} />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCGghK4Q0ZFTG6lOay5qO1BQ" target="_blank" rel="noopener noreferrer" className="hover:text-red-600">
+              <Link href="https://www.youtube.com/channel/UCGghK4Q0ZFTG6lOay5qO1BQ" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD11A]">
                 <FaYoutube size={30} />
               </Link>
             </div>
           </div>
 
           
-          <div className="flex flex-col gap-4 ">
-            <span className="font-semibold text-xl text-white">Nuestros aliados</span>
+          <div className="flex flex-col gap-5 footer-links">
+            <span className="font-semibold text-xl text-white">Creado por</span>
             <Link href="https://university.aacrom.com/" target="_blank" rel="noopener noreferrer" className="flex gap-8 flex-wrap ">
               <Image src="/images/aacrom.svg" alt="AACROM" width={170} height={170} priority />
             </Link>
           </div>
 
           
-          <div className="flex flex-col gap-4 lg:items-end">
+          <div className="flex flex-col gap-5 lg:items-end">
             
             <Link href="/apoyo"> {/* Aquí poner la ruta deseada */}
               <Button className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A]">
