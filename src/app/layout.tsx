@@ -31,7 +31,7 @@ export default function RootLayout({
 
         {/* Contenido principal */}
         <main className="pt-18 lg:pt-32">
-          <div className="2xl:max-w-[73.3%] mx-auto md:px-10 px-4">
+          <div className="max-w-[1362px] mx-auto md:px-6 2xl:px-0 px-4">
             {children}
           </div>
         </main>

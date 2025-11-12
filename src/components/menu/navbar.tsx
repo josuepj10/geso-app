@@ -15,8 +15,8 @@ export function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   return (
-    <header className="w-full max-w-[1860px]">
-      <div className="2xl:max-w-[1362px] mx-auto flex justify-between items-center py-2 px-4 lg:px-0">
+    <header className="w-full max-w-[1362px]">
+      <div className="mx-auto flex justify-between items-center py-2 px-4 lg:px-0">
         {/* Logo */}
         <Link href="/" className="py-2 pl-4 lg:pl-0">
           <Image
