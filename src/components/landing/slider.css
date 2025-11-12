@@ -1,0 +1,30 @@
+/* Personaliza la paginación del Swiper */
+.swiper-pagination-bullet {
+  background-color: white !important; /* color base */
+  opacity: 1;
+  border: 1px solid #5B1780; /* borde morado */
+  width: 11px;
+  height: 11px;
+  transition: all 0.3s ease;
+  margin: 0 2.5px !important; /* reduce o elimina separación horizontal */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #5B1780 !important; /* color activo */
+  opacity: 1;
+  transform: scale(1);
+}
+
+.swiper-pagination {
+  background-color: white;
+  border-radius: 25px; /* bordes redondeados */
+  padding: 4px ; /* espacio interno */
+  width: auto !important;
+  position: absolute !important; /* asegura posicionamiento */
+  left: 50% !important; /* centra horizontalmente */
+  transform: translateX(-50%) !important;
+  bottom: 20px !important; /* ajusta altura desde abajo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,7 +1,7 @@
 "use client"
 
-import Cardinf from "@/components/cardinf"
-import Cardinfrev from "@/components/cardinfrev"
+import Cardinf from "@/components/proyectos/cardinf"
+import Cardinfrev from "@/components/proyectos/cardinfrev"
 
 
 export default function MediosPage() {
@@ -53,7 +53,7 @@ export default function MediosPage() {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-8 p-4">
+    <div className="flex flex-col items-center gap-8 mb-8">
       
       {cards.map((card, index) =>
         card.type === "normal" ? (

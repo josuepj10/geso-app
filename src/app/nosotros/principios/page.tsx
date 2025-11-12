@@ -1,17 +1,19 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import ImageGESO from "@/components/imageGESO"
 
 export default function principiosPage() {
   return (
-    <div>
+    <>
+
+      <ImageGESO 
+        imageSrc="/images/lectura.webp" 
+        title="Nuestros principios"
+        imageClassName="#"
+      />
+
       <div className="md:my-20 my-10">
-              
-        <div className="flex justify-center pb-10 ">
-          
-          <h1>Nuestros principios</h1>
-          
-        </div>
 
         <div className="leading-relaxed text-[#374151] text-lg my-6">
 
@@ -39,6 +41,6 @@ export default function principiosPage() {
           
         </div>
       </div> 
-    </div>
+    </>
   );
 }

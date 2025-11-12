@@ -2,8 +2,8 @@
 
 import { Reveal } from "@/components/reveal"
 import { useState } from "react";
-import Cardinf from "@/components/cardinf"
-import Cardinfrev from "@/components/cardinfrev"
+import Cardinf from "@/components/proyectos/cardinf"
+import Cardinfrev from "@/components/proyectos/cardinfrev"
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 export default function RecursosPage() {
@@ -15,9 +15,10 @@ export default function RecursosPage() {
       text: `En alianza con ACNUR, Banco Mundial y Aacrom. 
       Una guía esencial para periodistas que cubren temas de migración y refugio. Incluye herramientas sobre verificación de hechos, narrativas 
       responsables y marcos normativos de Costa Rica y Centroamérica. Busca promover una cobertura con enfoque de derechos, ética y empática. `,
-      image: "/images/ejemplo2.jpg",
+      image: "/images/manual-per.webp",
       button: "Descargar el manual en ACNUR",
       href: "https://www.acnur.org/sites/default/files/2024-11/manual_para_periodistas_acnur_2024.pdf",
+      imageClass: "lg:h-[420px]",
     },
     {
       id: 2,
@@ -26,10 +27,10 @@ export default function RecursosPage() {
       text: `Parte de la <strong>Guía de Cobertura Periodística</strong> del Colegio de Periodistas de Costa Rica (COLPER). 
       GESO elaboró este capítulo en conjunto con ACNUR y Aacrom, ofreciendo recomendaciones prácticas para periodistas que trabajan temas de migración 
       y refugio. `,
-      image: "/images/apoyo.webp",
+      image: "/images/guia.webp",
       button: "Ver la guía completa",
       href: "https://colper.or.cr/wp-content/uploads/2024/09/Guia_cobertura_-periodistica_web.pdf?fbclid=IwY2xjawFqVZJleHRuA2FlbQIxMAABHUz8ebCZxeO1APnm55NqEXhzbx-t_U5bqYjoml9BkcCGqa-8w6V6EnhqQw_aem_QddrsA9ix8d0bxNUoNn1Ow",
-      imageClass: "lg:h-[360px]",
+      imageClass: "lg:h-[420px]",    
     },
     {
       id: 3,
@@ -38,9 +39,10 @@ export default function RecursosPage() {
       text: `Ensayo de Ana Isabel García Quesada, publicado por GESO y FOMEECARD. 
       Analiza cómo los tratados comerciales impactan de manera diferenciada a mujeres y hombres en Centroamérica. Señala retos pendientes para lograr una política 
       comercial inclusiva y equitativa en la región del SICA. `,
-      image: "/images/ejemplo2.jpg",
+      image: "/images/genero_y_comercio.webp",
       button: "Leer publicación",
       href: "https://drive.google.com/file/d/19JzPpGPpjCqLZkrbRYWVISh_G7e584lr/view?usp=sharing",
+      imageClass: "lg:h-[420px]", 
     },
     {
       id: 4,
@@ -48,7 +50,7 @@ export default function RecursosPage() {
       title: "Diagnóstico del contexto migratorio de Costa Rica (2017) ",
       text: `Estudio para la Dirección General de Migración y Extranjería y MIEUX. 
       Proporciona un panorama actualizado sobre los flujos migratorios en Costa Rica, retos en materia de integración y políticas públicas con perspectiva de derechos. `,
-      image: "/images/apoyo.webp",
+      image: "/images/diagnostico.webp",
       button: "Consultar diagnóstico",
       href: "https://docs.google.com/document/d/e/2PACX-1vTDbEuh7DX00N9CApMxgEFL37--1xXKfLE4GE20Y1CcyinVuAk1RuLKmi0goRDlf8Urlv3lT0-FTXcv/pub",
       imageClass: "lg:h-[360px]",
@@ -64,6 +66,7 @@ export default function RecursosPage() {
       image: "/images/ejemplo2.jpg",
       button: "",
       href: "",
+      imageClass: "lg:h-[420px]",
     },
     {
       id: 6,
@@ -71,10 +74,10 @@ export default function RecursosPage() {
       title: "Género y seguridad democrática (2002-2003) ",
       text: `Texto de Enrique Gomáriz y Ana Isabel García. Explora la relación entre género, paz y seguridad desde una perspectiva conceptual y metodológica. Publicado 
       en la revista Aportes Andinos y en la conferencia “Reproducción de la Pobreza, Gobernabilidad Democrática y Equidad de Género”. `,
-      image: "/images/apoyo.webp",
+      image: "/images/genero_y_seguridad.webp",
       button: "Ver el documento",
       href: "https://docs.google.com/document/d/e/2PACX-1vQOsA-QpmcKoB-7cOHAh9PtEIPIJulP1p3XDth_-TIbTFoq1jO0c8whWa8gNDMZuixtov05KHwQxFVN/pub",
-      imageClass: "lg:h-[360px]",
+      imageClass: "lg:h-[420px]",
     },
     {
       id: 7,
@@ -85,6 +88,7 @@ export default function RecursosPage() {
       image: "/images/ejemplo2.jpg",
       button: "Leer publicación BID",
       href: "https://publications.iadb.org/es/publicacion/14280/violencia-domestica-intervenciones-para-su-prevencion-y-tratamiento-3-planes",
+      imageClass: "lg:h-[420px]",
     },
     {
       id: 8,
@@ -95,7 +99,7 @@ export default function RecursosPage() {
       image: "/images/apoyo.webp",
       button: "Consultar documento",
       href: "#",
-      imageClass: "lg:h-[360px]",
+      imageClass: "lg:h-[420px]",
     },
     {
       id: 9,
@@ -106,6 +110,7 @@ export default function RecursosPage() {
       image: "/images/ejemplo2.jpg",
       button: "Descargar publicación BID",
       href: "https://publications.iadb.org/handle/11319/641?locale-attribute=es",
+      imageClass: "lg:h-[420px]",
     },
     {
       id: 10,
@@ -116,7 +121,7 @@ export default function RecursosPage() {
       image: "/images/apoyo.webp",
       button: "Descargar",
       href: "#",
-      imageClass: "lg:h-[360px]",
+      imageClass: "lg:h-[420px]",
     },
   ];
 
@@ -159,7 +164,7 @@ export default function RecursosPage() {
         </div>
       )}
 
-      <div className="flex flex-col items-center gap-8 p-4">
+      <div className="flex flex-col items-center gap-8 ">
         {/* Cards visibles */}
         {visibleCards.map((card) =>
           card.type === "normal" ? (
@@ -186,7 +191,7 @@ export default function RecursosPage() {
         )}
   
         {/* Paginación */}
-        <Pagination className="mt-4">
+        <Pagination className="mb-8">
           <PaginationContent>
             <PaginationItem>
               <PaginationPrevious

@@ -1,7 +1,7 @@
 "use client"
 
-import Cardinf from "@/components/cardinf"
-import Cardinfrev from "@/components/cardinfrev"
+import Cardinf from "@/components/proyectos/cardinf"
+import Cardinfrev from "@/components/proyectos/cardinfrev"
 
 export default function ViolenciaPage() {
   const cards = [
@@ -24,7 +24,6 @@ export default function ViolenciaPage() {
       image: "/images/apoyo.webp",
       button: "Conocer experiencia",
       href: "#",
-      imageClass: "lg:h-[360px]",
     },
     {
       type: "normal", // Cardinf
@@ -45,7 +44,6 @@ export default function ViolenciaPage() {
       image: "/images/apoyo.webp",
       button: "Descargar publicación BID",
       href: "#",
-      imageClass: "lg:h-[360px]",
     },
     {
       type: "normal", // Cardinf
@@ -61,7 +59,7 @@ export default function ViolenciaPage() {
 
   
   return (
-    <div className="flex flex-col items-center gap-8 p-4">
+    <div className="flex flex-col items-center gap-8 mb-8 ">
       
       {cards.map((card, index) =>
         card.type === "normal" ? (
@@ -72,7 +70,6 @@ export default function ViolenciaPage() {
             image={card.image}
             button={card.button}
             href={card.href}
-            imageClass={card.imageClass}
           />
         ) : (
           <Cardinfrev
@@ -82,7 +79,6 @@ export default function ViolenciaPage() {
             image={card.image}
             button={card.button}
             href={card.href}
-            imageClass={card.imageClass}
           />
         )
       )}

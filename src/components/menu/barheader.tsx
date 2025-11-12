@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Navbar } from "@/components/navbar"
+import { Navbar } from "@/components/menu/navbar"
 
 export default function BarHeader() {
   return (
@@ -10,10 +10,9 @@ export default function BarHeader() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 w-full 
-                 bg-white/35 backdrop-blur-sm
-                 text-gray-900 
+                 bg-white/90 backdrop-blur-sm
                  flex justify-center items-center 
-                 lg:px-6 lg:py-7 
+                 lg:px-6 lg:py-2 
                  z-50 px-3 "
     >
       <Navbar />

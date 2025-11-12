@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/components/cards";
+import Card from "@/components/proyectos/cards";
 
 export default function misionPage() {
   return (
@@ -13,10 +13,10 @@ export default function misionPage() {
       
       {/* cards */}
       
-      <div className="flex flex-wrap gap-8 my-10 items-center justify-center">
+      <div className="flex flex-wrap justify-center gap-8 my-10 max-w-[1200px] mx-auto px-8">
         <Card
           title="Democracia de género y participación ciudadana"
-          image="/images/ejemplo2.jpg"
+          image="/images/manos.webp"
           href="/proyecto/ciudadania"
         />
 
@@ -28,23 +28,19 @@ export default function misionPage() {
 
         <Card
           title="Migración y derechos humanos"
-          image="/images/ejemplo2.jpg"
+          image="/images/encuentro.webp"
           href="/proyecto/migracion"
         />
-
-      </div>
-
-      <div className="flex flex-wrap gap-8 mb-8 md:mb-30 items-center justify-center">
 
         <Card
           title="Medios de comunicación y cultura"
           image="/images/ejemplo2.jpg"
           href="/proyecto/medios"
         />
-        
+
         <Card
           title="Género y comercio internacional"
-          image="/images/ejemplo2.jpg"
+          image="/images/trabajadora.webp"
           href="/proyecto/g-y-comercio"
         />
       </div>
