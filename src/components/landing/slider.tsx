@@ -12,7 +12,7 @@ import "./slider.css"
 
 const slides = [
   {
-    image: "/images/fundadora.webp",
+    image: "/images/inicio/fundadora.webp",
     title: (
       <>
         Fundación Género
@@ -23,7 +23,7 @@ const slides = [
     button: null,
   },
   {
-    image: "/images/abajo_inicio.webp",
+    image: "/images/inicio/abajo_inicio.webp",
     title: (
       <>
         <div className="xl:text-[48px]">

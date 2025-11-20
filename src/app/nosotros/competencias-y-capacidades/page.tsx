@@ -10,7 +10,7 @@ export default function competenciasPage() {
     <>
 
       <ImageGESO 
-        imageSrc="/images/observar.webp" 
+        imageSrc="/images/competencias/observar.webp" 
         title="Competencias y capacidades"
         imageClassName="object-[60%_center]"
       />
