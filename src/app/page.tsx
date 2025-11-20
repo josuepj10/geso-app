@@ -24,7 +24,7 @@ export default function Home() {
             descripcion="Entre 2018 y 2019, en GESO asumimos la Secretaría Técnica de la Red  Nacional de Organizaciones Civiles para las 
               Migraciones (REDNAM).  Durante este período impulsamos la participación en la Conferencia Regional sobre Migración 
               (CRM) y fortalecimos las acciones de ..."
-            enlace="/proyecto/migracion"
+            enlace="/proyectos/migracion-y-derechos-humanos"
             textoB="Leer más"
           />
         </Reveal>
@@ -34,7 +34,7 @@ export default function Home() {
             descripcion="En GESO investigamos y publicamos el ensayo “Género y Comercio Internacional: avances y desafíos, en alianza con 
               FOMEECARD. Además, organizamos el foro “Desafíos de género para el comercio exterior de Costa Rica”. Con esta 
               iniciativa buscamos ..."
-            enlace="/proyecto/ciudadania"
+            enlace="/proyectos/democracia-de-genero"
             textoB="Leer más"
           />
         </Reveal>
@@ -43,7 +43,7 @@ export default function Home() {
             titulo="Manual para periodistas sobre migración y refugio (2024)"
             descripcion="En GESO elaboramos, junto con ACNUR, el Banco Mundial y Aacrom , un manual práctico para periodistas que cubren 
               temas de migración y refugio. La publicación ofrece herramientas para ..."
-            enlace="/proyecto/medios"
+            enlace="/proyectos/medios-de-comunicacion-y-cultura"
             textoB="Leer más"
           />
         </Reveal>  
@@ -52,7 +52,7 @@ export default function Home() {
             titulo="Fortalecimiento de políticas públicas en Gobiernos Locales (2018)"
             descripcion="En GESO implementamos este proyecto junto con la Unión Nacional de Gobiernos Locales (UNGL) y el Gobierno de 
               Estados Unidos, con el objetivo de reforzar las capacidades técnicas de ..."
-            enlace="/proyecto/violencia-de-genero"
+            enlace="/proyectos/violencia-de-genero-y-prevencion"
             textoB="Leer más"
           />
         </Reveal>
@@ -64,7 +64,7 @@ export default function Home() {
           title="Colabora con la Fundación GESO y ayúdanos a promover la equidad social."
           description="Cada aporte que usted realiza se transforma en oportunidades reales para quienes más lo necesitan. Sus donaciones permiten financiar programas de educación, inclusión y desarrollo comunitario que buscan reducir las brechas sociales en nuestro país."
           buttonText="Dona aquí"
-          buttonHref="/apoyo"
+          buttonHref="/apoyanos"
         />
       </main>
 
