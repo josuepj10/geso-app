@@ -13,7 +13,7 @@ export default function RecursosPage() {
       text: `En alianza con ACNUR, Banco Mundial y Aacrom. 
       Una guía esencial para periodistas que cubren temas de migración y refugio. Incluye herramientas sobre verificación de hechos, narrativas 
       responsables y marcos normativos de Costa Rica y Centroamérica. Busca promover una cobertura con enfoque de derechos, ética y empática. `,
-      image: "/images/manual-per.webp",
+      image: "/images/guia.webp",
       button: "Descargar el manual en ACNUR",
       href: "https://www.acnur.org/sites/default/files/2024-11/manual_para_periodistas_acnur_2024.pdf",
     },
