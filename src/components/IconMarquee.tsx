@@ -3,10 +3,10 @@
 import Image from "next/image";
 
 const icons = [
-  "/images/REDNAM.webp",
-  "/images/redcepaz.webp",
-  "/images/FORO.webp",
-  "/images/CANAESS.webp",
+  "/images/iconos-marquee/REDNAM.webp",
+  "/images/iconos-marquee/redcepaz.webp",
+  "/images/iconos-marquee/FORO.webp",
+  "/images/iconos-marquee/CANAESS.webp",
 ];
 
 export default function IconMarquee() {
