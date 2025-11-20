@@ -9,7 +9,7 @@ export default function principiosPage() {
     <>
 
       <ImageGESO 
-        imageSrc="/images/lectura.webp" 
+        imageSrc="/images/principios/lectura.webp" 
         title="Nuestros principios"
         imageClassName="#"
       />
