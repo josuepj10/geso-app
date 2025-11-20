@@ -32,8 +32,8 @@ export default function Footer() {
             <div className="flex flex-col gap-2 footer-links">
               <span className="font-bold mb-2 text-xl text-white">Nosotros</span>
               <Link href="/nosotros/alianzas" className="hover:underline">Alianzas</Link>
-              <Link href="/nosotros/competencias-y-cap" className="hover:underline">Competencias</Link>
-              <Link href="/nosotros/mision-vision" className="hover:underline">Sobre GESO</Link>
+              <Link href="/nosotros/competencias-y-capacidades" className="hover:underline">Competencias</Link>
+              <Link href="/nosotros/sobre-geso" className="hover:underline">Sobre GESO</Link>
               <Link href="/nosotros/principios" className="hover:underline">Principios</Link>
             </div>
 
@@ -41,11 +41,12 @@ export default function Footer() {
             <div className="flex flex-col gap-2 footer-links">
               <span className="font-semibold mb-2 text-xl text-white">Enlaces rápidos</span>
               <Link href="/" className="hover:underline">Inicio</Link>
-              <Link href="/proyecto" className="hover:underline">Proyectos</Link>
-              <Link href="/recursos" className="hover:underline">Recursos</Link>
+              <Link href="/proyectos" className="hover:underline">Proyectos</Link>
+              <Link href="/eventos" className="hover:underline">Eventos</Link>
               <Link href="/geso-en-medios" className="hover:underline">GESO en medios</Link>
               <Link href="/impacto" className="hover:underline">Impacto</Link>
-              <Link href="/apoyo" className="hover:underline">Colabora</Link>
+              <Link href="/publicaciones-y-recursos" className="hover:underline">Publicaciones</Link>
+              <Link href="/apoyanos" className="hover:underline">Apóyanos</Link>
             </div>
 
             
@@ -108,7 +109,7 @@ export default function Footer() {
           
           <div className="flex flex-col gap-5 lg:items-end">
             
-            <Link href="/apoyo"> {/* Aquí poner la ruta deseada */}
+            <Link href="/colabora"> {/* Aquí poner la ruta deseada */}
               <Button className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A]">
                 Colabora con nosotros
               </Button>

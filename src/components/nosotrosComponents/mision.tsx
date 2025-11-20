@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import { Reveal } from "@/components/reveal";
@@ -28,6 +28,7 @@ export default function Mision() {
           
           {/* Contenedor interno que mantiene el redondeado y overflow */}
           <div className="relative w-full h-full rounded-[50px] overflow-hidden">
+            
             {/* Imagen principal */}
             <Image 
               src="/images/mision_3.webp"
@@ -37,12 +38,11 @@ export default function Mision() {
               priority
             />
 
-            
             <div className="absolute inset-0 bg-[#5B1780]/65 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
 
             {/* Imagen hover */}
             <Image
-              src="/images/iconoBandera.svg"
+              src="/images/sobre-geso/iconoBandera.svg"
               alt="Ícono Hover Misión"
               width={197}
               height={247}

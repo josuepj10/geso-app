@@ -28,7 +28,7 @@ export default function Historia() {
             {/* Cuadro amarillo */}
             <div className="w-[122px] h-[122px] border bg-[#FFD11A] rounded-3xl flex items-center justify-center">
                 <Image
-                src="/images/manosHistoria.svg"
+                src="/images/sobre-geso/manosHistoria.svg"
                 alt="Ícono Hover Misión"
                 width={44}
                 height={44}
@@ -44,7 +44,7 @@ export default function Historia() {
             {/* Cuadro */}
             <div className="w-[122px] h-[122px] border bg-[#5B1780] rounded-3xl flex items-center justify-center">
                 <Image
-                src="/images/piezas.svg"
+                src="/images/sobre-geso/piezas.svg"
                 alt="Ícono Hover Misión"
                 width={44}
                 height={44}
@@ -88,7 +88,7 @@ export default function Historia() {
             {/* Cuadro */}
             <div className="w-[122px] h-[122px] border rounded-3xl flex items-center justify-center">
                 <Image
-                src="/images/estrecharManos.svg"
+                src="/images/sobre-geso/estrecharManos.svg"
                 alt="Ícono Hover Misión"
                 width={44}
                 height={44}
