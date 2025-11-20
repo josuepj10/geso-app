@@ -39,7 +39,7 @@ const slides = [
     ),
     button: {
       label: "Conocer más",
-      href: "/proyecto/ciudadania",
+      href: "/proyectos/democracia-de-genero",
     },
   },
 ]
@@ -98,7 +98,8 @@ export default function Slider() {
                 {slide.button && (
                   <Link
                     href={slide.button.href}
-                    className="self-start mt-5 px-2 w-full sm:w-[180px] py-4 text-lg bg-[#FFD11A] text-[#5B1780] rounded-4xl inline-block text-center font-semibold hover:bg-[#eec900] transition-colors duration-300"
+                    className="self-start mt-5 px-2 w-full sm:w-[180px] py-4 text-lg bg-[#FFD11A] text-[#5B1780] 
+                              rounded-4xl inline-block text-center font-semibold "
                   >
                     {slide.button.label}
                   </Link>

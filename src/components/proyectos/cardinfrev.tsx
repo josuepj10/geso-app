@@ -14,11 +14,11 @@ interface CardProps {
 export default function Cardinfrev({ title, text, image, button, href, imageClass }: CardProps) {
   return (
     <div
-      className="w-full h-auto
+      className="w-full h-auto max-w-[750px]  
                 xl:max-w-[1362px] xl:h-full
                 bg-white rounded-[55px]
-                flex overflow-hidden mb-4 border xl:border-0 xl:hover:border
-                hover:shadow-2xl transition-shadow duration-300 ease-in-out"
+                flex overflow-hidden mb-4 outline xl:outline-0 xl:hover:outline
+                hover:shadow-xl transition-shadow transition-outline duration-300 ease-in-out"
     >
       <div className="flex flex-col xl:flex-row xl:items-center">
         {/* Columna izquierda: Contenido */}
@@ -41,7 +41,7 @@ export default function Cardinfrev({ title, text, image, button, href, imageClas
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full xl:w-76 py-4 
-              hover:bg-[#FFD11A] transition cursor-pointer mb-4 inline-block text-center"
+              hover:bg-[#FFD11A] transition cursor-pointer inline-block text-center"
             >
               {button}
             </Link>

@@ -5,14 +5,28 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import NavbarButton from "@/components/menu/navbarbutton"
 import { menuItems } from "@/components/menu/menuItems"
-
 
 export function Navbar() {
   const pathname = usePathname()
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
+
+  // Detectar clic fuera del dropdown
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpenDropdown(null)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
 
   return (
     <header className="w-full max-w-[1362px]">
@@ -29,7 +43,7 @@ export function Navbar() {
         </Link>
 
         {/* Menú Desktop */}
-        <nav className="hidden lg:flex lg:gap-2 xl:gap-6 2xl:gap-4">
+        <nav className="hidden lg:flex lg:gap-4 xl:gap-6">
           {menuItems.map((item) => {
             const isChildActive = item.children?.some(
               (child) => pathname === child.href
@@ -37,27 +51,32 @@ export function Navbar() {
             const isActive = pathname === item.href || isChildActive
             const isOpen = openDropdown === item.href
 
+            // retorna el bloque dropdown
             if (item.children) {
               return (
-                <div key={item.href} className="relative group">
+                <div key={item.href} className="relative group" ref={dropdownRef}>
                   <button
-                    onClick={() =>
-                      setOpenDropdown(isOpen ? null : item.href)
-                    }
-                    className={`xl:px-5 px-2 py-1.5 xl:gap-3 flex items-center rounded-3xl font-medium transition-colors cursor-pointer
+                    onClick={() => setOpenDropdown(isOpen ? null : item.href)}
+                    className={`xl:px-5 px-2 py-1.5 xl:gap-3 flex items-center rounded-3xl font-medium transition-colors cursor-pointer box-border
                       ${
-                        isActive || isOpen
-                          ? "bg-[#5B1780] text-white"
+                        isChildActive
+                          ? "bg-[#5B1780] text-white outline-none"
+                          : isOpen
+                          ? " text-[#374151] outline-1 outline-[#5B1780]"
                           : "text-[#374151] hover:text-[#5B1780]"
                       }`}
                   >
                     {item.label}
                     {isOpen ? (
-                      <ChevronUp className="w-5 h-5 text-white" />
+                      <ChevronUp
+                        className={`w-5 h-5 ${
+                          isChildActive ? "text-white" : "text-[#374151]"
+                        }`}
+                      />
                     ) : (
                       <ChevronDown
                         className={`w-5 h-5 ${
-                          isActive
+                          isChildActive
                             ? "text-white"
                             : "text-[#374151] group-hover:text-[#5B1780]"
                         }`}
@@ -100,6 +119,7 @@ export function Navbar() {
               )
             }
 
+             // else, retorna un botón normal
             return (
               <NavbarButton
                 key={item.href}
@@ -112,8 +132,6 @@ export function Navbar() {
             )
           })}
         </nav>
-
-        
       </div>
     </header>
   )

@@ -4,8 +4,8 @@ export default function eventosPage() {
   return (
     <div>
       
-      <div className="flex justify-center my-20">
-        <Image src="/images/development.png" alt="Construyendo" width={660} height={660} priority />
+      <div className="flex justify-center mt-20 mb-42">
+        <Image src="/images/eventosimage.webp" alt="Construyendo" width={750} height={500} priority />
       </div>
 
     </div>

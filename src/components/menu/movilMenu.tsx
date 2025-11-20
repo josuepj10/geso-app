@@ -13,24 +13,31 @@ export default function MovilMenu() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const pathname = usePathname()
 
-  // Bloqueo del scroll de la página mientras el menú esté abierto
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-      setOpenDropdown(null)
-    }
-    return () => {
-      document.body.style.overflow = ""
-    }
+    document.body.style.overflow = isOpen ? "hidden" : ""
+    return () => { document.body.style.overflow = "" }
   }, [isOpen])
+
+  // Función para determinar si una ruta está activa o es hija
+  const isRouteActive = (href: string) => {
+    if (href === "/") return pathname === "/"
+    return pathname === href || pathname.startsWith(href + "/")
+  }
+
+  // Estilos unificados
+  const baseBtn = "w-full px-4 py-3 rounded-[30px] transition-colors text-lg"
+  const activeBtn = "bg-[#5B1780] text-white transition-colors duration-300"
+  const inactiveBtn = "hover:bg-gray-100 text-[#374151] transition-colors duration-300"
+
+  const childBase = "px-3 py-2 rounded-[30px] text-lg border transition-colors duration-300"
+  const childActive = "bg-[#5B1780] text-white border-none transition-colors duration-300 "
+  const childInactive = "border-none hover:bg-white text-[#374151] transition-colors duration-300"
 
   return (
     <>
       {/* Botón hamburguesa */}
       <motion.button
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => setIsOpen(prev => !prev)}
         className="fixed top-2 right-8 z-[60] p-2 flex items-center justify-center lg:hidden"
         whileTap={{ scale: 0.9 }}
         aria-label="Abrir menú"
@@ -48,18 +55,17 @@ export default function MovilMenu() {
           className="origin-top"
         >
           {isOpen ? (
-            <X className="h-10 w-10 text-[#5B1780]" strokeWidth={3}  />
+            <X className="h-10 w-10 text-[#5B1780]" strokeWidth={3} />
           ) : (
             <FaBars className="h-9 w-9 text-[#5B1780]" />
           )}
         </motion.div>
       </motion.button>
 
-      {/* Panel del menú */}
+      {/* Panel */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Fondo semitransparente */}
             <motion.div
               className="fixed top-[6%] left-0 w-full h-[15%] backdrop-blur-lg bg-[#5B1780]/20 z-40"
               initial={{ opacity: 0 }}
@@ -69,7 +75,6 @@ export default function MovilMenu() {
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Contenedor principal */}
             <motion.div
               className="fixed left-0 bottom-0 w-full h-[80%] max-h-[80vh] bg-white z-50 flex flex-col items-center"
               initial={{ y: "100vh" }}
@@ -78,53 +83,42 @@ export default function MovilMenu() {
               transition={{ type: "spring", stiffness: 100, damping: 15 }}
             >
               <div className="w-full h-full overflow-y-auto relative md:flex items-center justify-start">
-                
-                {/* Menú principal */}
-                <nav className="grid grid-cols-1 gap-6 max-w-lg pt-12 my-auto
-                                md:grid-cols-2 md:max-w-2xl md:gap-9 md:pt-0
-                                w-full text-center relative z-20 mx-auto px-2">
+                <nav className="grid grid-cols-1 gap-6 max-w-lg pt-12 md:grid-cols-2 md:max-w-2xl md:gap-9 md:pt-0 w-full text-center px-2">
+
                   {menuItems.map((item) => {
-                    const isChildActive = item.children?.some(
-                      (child) => pathname === child.href
+                    // Determinamos si algún hijo está activo (boolean)
+                    const hasActiveChild = item.children?.some((child) =>
+                      isRouteActive(child.href)
                     )
-                    const isActive = pathname === item.href || isChildActive
-                    const isDropdownOpen = openDropdown === item.href 
+
+                    // El padre está activo si su ruta o cualquier hijo está activa
+                    const active = isRouteActive(item.href) || Boolean(hasActiveChild)
+                    const dropdownOpen = openDropdown === item.href
 
                     return (
                       <div key={item.href} className="flex flex-col w-full">
                         {item.children ? (
                           <>
                             {/* Botón dropdown */}
-                            <div className="flex">
-                              <button
-                                onClick={() =>
-                                  setOpenDropdown(
-                                    isDropdownOpen ? null : item.href
-                                  )
-                                }
-                                className={`w-full flex items-center text-lg justify-between px-4 py-3 pl-11 rounded-[30px] transition-colors
-                                  ${
-                                    isActive || isDropdownOpen
-                                      ? "bg-[#5B1780] text-white"
-                                      : "hover:bg-gray-100 text-[#374151]"
-                                  }`}
-                              >
-                                <span className="flex-1 text-center">{item.label}</span>
-                                <ChevronDown
-                                  className={`h-6 w-6 transition-transform duration-300
-                                    ${isDropdownOpen ? "rotate-180" : ""}
-                                    ${
-                                      isActive || isDropdownOpen
-                                        ? "text-white"
-                                        : "text-[#374151]"
-                                    }`}
-                                />
-                              </button>
-                            </div>
+                            <button
+                              onClick={() =>
+                                setOpenDropdown(dropdownOpen ? null : item.href)
+                              }
+                              className={`${baseBtn} flex items-center justify-between pl-11 
+                                ${active || dropdownOpen ? activeBtn : inactiveBtn}`}
+                            >
+                              <span className="flex-1 text-center">{item.label}</span>
+                              <ChevronDown
+                                className={`h-6 w-6 transition-transform duration-300 
+                                  ${dropdownOpen ? "rotate-180" : ""}
+                                  ${dropdownOpen || active ? "text-white" : "text-[#374151]"}
+                                `}
+                              />
+                            </button>
 
-                            {/* Submenú animado */}
+                            {/* Submenú */}
                             <AnimatePresence>
-                              {isDropdownOpen && (
+                              {dropdownOpen && (
                                 <motion.div
                                   initial={{ height: 0, opacity: 0 }}
                                   animate={{ height: "auto", opacity: 1 }}
@@ -132,22 +126,19 @@ export default function MovilMenu() {
                                   transition={{ duration: 0.2 }}
                                   className="p-4 bg-[#FFD11A] rounded-4xl flex flex-col gap-2 mt-2"
                                 >
-                                  {item.children.map((child) => {
-                                    const isChildActive = pathname === child.href
+                                  {item.children.map((child) => { 
+                                    const isChildActive = isRouteActive(child.href)
                                     return (
                                       <Link
                                         key={child.href}
                                         href={child.href}
                                         onClick={() => {
                                           setIsOpen(false)
-                                          setOpenDropdown(null) // cierra el dropdown al navegar
+                                          setOpenDropdown(null)
                                         }}
-                                        className={`px-3 py-2 rounded-[30px] text-lg border transition-colors
-                                          ${
-                                            isChildActive
-                                              ? "bg-[#5B1780] text-white border-none"
-                                              : "border-none hover:bg-white text-[#374151]"
-                                          }`}
+                                        className={`${childBase} ${
+                                          isChildActive ? childActive : childInactive
+                                        }`}
                                       >
                                         {child.label}
                                       </Link>
@@ -158,16 +149,11 @@ export default function MovilMenu() {
                             </AnimatePresence>
                           </>
                         ) : (
-                          // Elemento sin dropdown
+                          // Sin dropdown
                           <Link
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className={`w-full px-4 py-3 rounded-[30px] transition-colors text-lg
-                              ${
-                                isActive
-                                  ? "bg-[#5B1780] text-white"
-                                  : "hover:bg-gray-100 text-[#374151]"
-                              }`}
+                            className={`${baseBtn} ${active ? activeBtn : inactiveBtn}`}
                           >
                             {item.label}
                           </Link>
@@ -175,6 +161,7 @@ export default function MovilMenu() {
                       </div>
                     )
                   })}
+
                 </nav>
               </div>
             </motion.div>

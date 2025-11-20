@@ -17,7 +17,7 @@ export default function Vision({
         <section className="relative flex flex-col items-center my-20 mb-60
                             left-1/2 right-1/2 -mx-[50vw] max-w-screen 
                             lg:my-20 lg:mb-60">
-        {/* Imagen de fondo */}
+            {/* Imagen de fondo */}
             <div className="relative w-full h-[600px] lg:h-[830px]">
                 <Image
                 src={imageSrc}
@@ -28,8 +28,7 @@ export default function Vision({
                 />
             </div>
 
-        {/* Caja de texto */}
-
+            {/* Caja de texto */}
             <div className="absolute bottom-0 translate-y-1/2 left-0 right-0 px-3 sm:px-10 xl:px-0 ">
                 <div
                     className="
