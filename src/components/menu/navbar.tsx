@@ -124,7 +124,6 @@ export function Navbar() {
               <NavbarButton
                 key={item.href}
                 href={item.href}
-                active={isActive}
                 special={item.label === "Apóyanos"}
               >
                 {item.label}
