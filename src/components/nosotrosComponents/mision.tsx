@@ -31,7 +31,7 @@ export default function Mision() {
             
             {/* Imagen principal */}
             <Image 
-              src="/images/mision_3.webp"
+              src="/images/sobre-geso/mision_3.webp"
               alt="Imagen principal" 
               fill 
               className="object-cover transition duration-300"

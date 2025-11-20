@@ -11,7 +11,7 @@ export default function misionPage() {
   return (
     <>
       <ImageGESO 
-        imageSrc="/images/exponer.webp" 
+        imageSrc="/images/sobre-geso/exponer.webp" 
         title="Misión, visión e historia"
         imageClassName="object-[15%_center]"
       />
@@ -20,7 +20,7 @@ export default function misionPage() {
       
       <main>
         <Vision
-          imageSrc="/images/vision_2.webp"
+          imageSrc="/images/sobre-geso/vision_2.webp"
           title="Visión"
           description="Ser una entidad reconocida a nivel nacional e internacional por la calidad de los proyectos sociales y culturales 
           que desarrolla, así como por el rigor con que incorpora la perspectiva de equidad de género, tanto en el plano conceptual como 

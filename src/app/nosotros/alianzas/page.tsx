@@ -8,7 +8,7 @@ export default function alianzasPage() {
   return (
     <>
       <ImageGESO 
-        imageSrc="/images/estrechar_manos.webp" 
+        imageSrc="/images/alianzas/estrechar_manos.webp" 
         title="Nuestras alianzas"
         imageClassName="#"
       />

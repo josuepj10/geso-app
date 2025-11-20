@@ -60,7 +60,7 @@ export default function Home() {
       
       <main>
         <ImageButton
-          imageSrc="/images/imagen_colabora.webp"
+          imageSrc="/images/inicio/imagen_colabora.webp"
           title="Colabora con la Fundación GESO y ayúdanos a promover la equidad social."
           description="Cada aporte que usted realiza se transforma en oportunidades reales para quienes más lo necesitan. Sus donaciones permiten financiar programas de educación, inclusión y desarrollo comunitario que buscan reducir las brechas sociales en nuestro país."
           buttonText="Dona aquí"
