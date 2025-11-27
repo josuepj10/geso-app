@@ -50,6 +50,7 @@ export default function Slider() {
                     pt-21 lg:pt-11 "
                     >
       <Swiper
+        allowTouchMove={false}
         role="region"
         aria-roledescription="Carrusel"
         aria-label="Imágenes destacadas del sitio"
