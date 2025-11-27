@@ -29,7 +29,7 @@ export default function misionPage() {
       </main>
 
       <div className="flex justify-center md:my-20 my-10 ">
-          <h1>Historia</h1>
+          <h2 className="md:text-3xl text-2xl font-bold text-[#5B1780]">Historia</h2>
       </div>
 
       <Historia />

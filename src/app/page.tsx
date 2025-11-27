@@ -9,12 +9,15 @@ export default function Home() {
   return (
     <>    
       <Slider />
-        
-      <div>
-        <h1 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6">Noticias más recientes</h1>
-      </div>
 
-      <div className="my-2 lg:my-8 gap-8 max-w-[1362px] mx-auto
+      {/* h2 text-2xl font-bold text-[#5B1780] */}
+      {/*h1 md:text-3xl text-2xl font-bold text-[#5B1780] */}
+        
+      <h1 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-3xl text-2xl font-bold text-[#5B1780] ">
+        Noticias más recientes
+      </h1>
+
+      <article className="my-2 lg:my-8 gap-8 max-w-[1362px] mx-auto
                       lg:grid-cols-2
                       grid grid-cols-1 
                         ">
@@ -56,7 +59,7 @@ export default function Home() {
             textoB="Leer más"
           />
         </Reveal>
-      </div>
+      </article>
       
       <main>
         <ImageButton

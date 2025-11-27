@@ -14,8 +14,8 @@ export default function principiosPage() {
         imageClassName="#"
       />
 
-      <div className="md:my-25 my-10 text-center">
-        <h1>Nuestro trabajo se inspira en la Democracia de Género</h1>
+      <article className="md:my-25 my-10 text-center">
+        <h2 className="md:text-3xl text-2xl font-bold text-[#5B1780]">Nuestro trabajo se inspira en la Democracia de Género</h2>
         <Reveal>
           <p className="leading-relaxed text-[#374151] text-lg my-8 mx-auto max-w-[1060px]">
               Una propuesta normativa y estratégica que impulsa ciudadanía desde la igualdad, 
@@ -24,8 +24,7 @@ export default function principiosPage() {
 
           </p>
         </Reveal>
-
-      </div>
+      </article>
 
       <Principios />
 

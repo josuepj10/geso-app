@@ -52,11 +52,11 @@ export default function ApoyoPage() {
   ]
 
   return (
-    <div className="flex flex-col items-center gap-8">
-      <div className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
-        <div className="flex justify-center pb-10">
-          <h1>Haz parte del cambio</h1>
-        </div>
+    <section className="flex flex-col items-center gap-8">
+      <main className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
+        
+        <h1 className="flex justify-center pb-10 md:text-3xl text-2xl font-bold text-[#5B1780]">Haz parte del cambio</h1>
+        
 
         <Reveal>
           <p className="text-[#374151] leading-relaxed text-lg">
@@ -64,7 +64,7 @@ export default function ApoyoPage() {
             alianza institucional nos acerca a una sociedad más justa, inclusiva y equitativa.
           </p>
         </Reveal>
-      </div>
+      </main>
       
       {/* Cards */}
       {cards.map((card, index) =>
@@ -101,6 +101,6 @@ export default function ApoyoPage() {
         </Reveal>
       </div>
 
-    </div>
+    </section>
   )
 }

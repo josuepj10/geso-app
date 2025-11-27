@@ -33,17 +33,17 @@ export default function ImageButton({
 
       {/* Caja de texto y botón */}
 
-      <div className="absolute bottom-10 md:bottom-20 left-0 right-0 px-4 sm:px-10 xl:px-0 ">
-        <div
+      <main className="absolute bottom-10 md:bottom-20 left-0 right-0 px-4 sm:px-10 xl:px-0 ">
+        <article
             className="
             mx-auto w-full max-w-[1014px]
             bg-white rounded-[50px] border border-[#D1D5DB]
             shadow-lg p-11 lg:p-13 flex flex-col
             "
         >
-          <h3 className="text-2xl lg:text-[40px] font-semibold text-[#5B1780] mb-4">
+          <h2 className="text-2xl lg:text-[40px] font-semibold text-[#5B1780] mb-4">
           {title}
-          </h3>
+          </h2>
 
           <p className="text-[#374151] text-lg mb-4">
           {description}
@@ -51,6 +51,7 @@ export default function ImageButton({
 
           <Link
           href={buttonHref}
+          aria-label={`Ir a ${buttonText}`}
           className="
               self-start mt-2 w-full sm:w-[180px] py-3 text-lg bg-[#5B1780] 
               text-white hover:text-[#5B1780] rounded-full hover:bg-[#FFD11A] 
@@ -59,8 +60,8 @@ export default function ImageButton({
           >
           {buttonText}
           </Link>
-        </div>
-      </div>
+        </article>
+      </main>
     </section>
   );
 }

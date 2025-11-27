@@ -18,7 +18,7 @@ export default function Alianzas() {
                             items-center justify-center max-w-fit mx-auto
                             ">
                 {/* Elemento 1 */}
-                <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 "> 
@@ -29,10 +29,10 @@ export default function Alianzas() {
                     <p className="text-center text-[#374151] px-13 mt-9">
                         Participar en espacios de diálogo y toma de <br/>decisiones.
                     </p>
-                </div>
+                </article>
 
                 {/* Elemento 2 */}
-                <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out lg:mt-15 ">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 "> 
@@ -43,10 +43,10 @@ export default function Alianzas() {
                     <p className="text-center text-[#374151] px-13 mt-9">
                         Incidir en políticas públicas desde una perspectiva de género y derechos humanos.
                     </p>
-                </div>
+                </article>
 
                 {/* Elemento 3 */}
-                <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 "> 
@@ -57,7 +57,7 @@ export default function Alianzas() {
                     <p className="text-center text-[#374151] px-13 mt-9">
                         Intercambio de experiencias con organizaciones e instituciones.
                     </p>
-                </div>
+                </article>
             </div>
         </section>
     )

@@ -15,7 +15,7 @@ interface CardProps {
 export default function Cardinf({ title, text, image, button, href, imageClass }: CardProps) {
   return (
     
-    <div
+    <article
       className="w-full h-auto max-w-[750px]  
                 xl:max-w-[1362px] xl:h-full
                 bg-white rounded-[55px]
@@ -44,14 +44,14 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
                       flex-[1_1_50%] min-w-[50%] xl:items-start  
                       ">
           {/* Título */}
-          <h2 className="text-center xl:text-left ">{title}</h2>
+          <h2 className="text-center xl:text-left text-2xl font-bold text-[#5B1780] ">{title}</h2>
 
           {/* Texto */}
-          <div 
+          <p 
             className="text-lg text-[#374151] mt-2 text-center xl:text-left 
             [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: text }}
-          ></div>
+          ></p>
 
           {/* Se muestra botón solo si button y href tienen contenido) */}
           {button && href ? (
@@ -69,7 +69,7 @@ export default function Cardinf({ title, text, image, button, href, imageClass }
         </div>
       </div>
         
-    </div>
+    </article>
 
   )
 }

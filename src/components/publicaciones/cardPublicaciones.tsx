@@ -15,7 +15,7 @@ interface CardProps {
 export default function CardPublicaciones({ title, text, image, button, href, imageClass }: CardProps) {
   return (
 
-    <div className="w-full max-w-[666px] min-h-[732px]
+    <article className="w-full max-w-[666px] min-h-[732px]
                 bg-white rounded-[55px]
                 overflow-hidden outline
                 hover:shadow-xl transition-shadow transition-outline duration-300 ease-in-out
@@ -35,15 +35,15 @@ export default function CardPublicaciones({ title, text, image, button, href, im
       <div className=" flex flex-col flex-1 justify-start gap-6 sm:px-8 px-4">
           
         {/* Título */}
-        <h3 className="text-left text-[#5B1780] font-bold text-2xl pt-4">{title}</h3>
+        <h2 className="text-left text-[#5B1780] font-bold text-2xl pt-4">{title}</h2>
 
         {/* Texto */}
-        <div 
-          className="text-lg text-[#374151] mt-2 text-center xl:text-left 
+        <p 
+          className="text-lg text-[#374151] mt-2 text-center xl:text-left mb-2
           [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
-          dangerouslySetInnerHTML={{ __html: text }}
-        >
-        </div>
+          dangerouslySetInnerHTML={{ __html: text }} >
+        
+        </p>
 
         {/* Se muestra botón solo si button y href tienen contenido) */}
         {button && href ? (
@@ -58,11 +58,6 @@ export default function CardPublicaciones({ title, text, image, button, href, im
           </Link>
         ) : null}
       </div>
-        
-
-
-    </div>
-
-
+    </article>
   )
 }
