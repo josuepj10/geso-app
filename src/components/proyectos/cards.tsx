@@ -12,7 +12,7 @@ interface CardProps {
 
 export default function Card({ title, image, href }: CardProps) {
   return (
-    <div>
+    <section>
       <Link href={href}>
         <motion.div
           whileHover={{ scale: 1.02 }}
@@ -32,10 +32,10 @@ export default function Card({ title, image, href }: CardProps) {
 
           {/* Título (parte inferior = 1/3 del contenedor) */}
           <div className="flex text-center items-center justify-center text-[#374151] h-3/7 p-4">
-            <span className="text-xl font-semibold">{title}</span>
+            <h2 className="text-xl font-semibold">{title}</h2>
           </div>
         </motion.div>
       </Link>
-    </div>
+    </section>
   )
 }

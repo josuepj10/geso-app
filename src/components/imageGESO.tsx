@@ -21,6 +21,8 @@ export default function ImageGESO({ imageSrc, title, imageClassName }: ImageGESO
 
   return (
     <section
+      role="banner"
+      aria-label={`Hero de la página ${title}`}
       className="relative -mt-22 left-1/2 right-1/2 -mx-[50vw]
       max-w-screen overflow-hidden pt-21 lg:pt-11"
     >
@@ -31,7 +33,6 @@ export default function ImageGESO({ imageSrc, title, imageClassName }: ImageGESO
           alt={title}
           fill
           className={`object-cover transition-all duration-500 ease-in-out ${imageClassName || ""}`}
-          priority
         />
 
         
@@ -39,9 +40,9 @@ export default function ImageGESO({ imageSrc, title, imageClassName }: ImageGESO
 
        
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <h3 className="text-[40px] lg:text-[60px] font-semibold text-white mb-4">
+          <h1 className="text-[40px] lg:text-[60px] font-semibold text-white mb-4">
             {title}
-          </h3>
+          </h1>
         </div>
 
         

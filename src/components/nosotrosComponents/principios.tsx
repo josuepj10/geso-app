@@ -8,12 +8,12 @@ export default function Principios() {
 
         <section className="max-w-[1362px] mx-auto my-20 xl:my-35 md:px-4 lg:px-0">
 
-            <p className="xl:hidden text-center text-[#374151] mb-10 md:col-span-2 font-bold">
+            <h2 className="xl:hidden text-center text-[#374151] mb-10 md:col-span-2 font-bold">
                 En la Fundación GESO operamos bajo los siguientes principios rectores:
-            </p>
+            </h2>
 
             {/* Contenedor GRID de los 4 elementos */}
-            <div className="grid gap-6 
+            <main className="grid gap-6 
                             grid-cols-1 
                             md:grid-cols-2 
                             xl:grid-cols-[318px_1fr_318px]
@@ -22,7 +22,7 @@ export default function Principios() {
                             "                        
             >
                 {/* Elemento 1 */}
-                <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 "> 
@@ -37,10 +37,10 @@ export default function Principios() {
                         <span className="text-[#5B1780] font-bold">Equidad e inclusión: </span>
                         igualdad sustantiva, diversidad y no discriminación.
                     </p>
-                </div>
+                </article>
 
                 {/* Elemento 2 hidden */}
-                <div className="xl:hidden w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="xl:hidden w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 relative "> 
@@ -55,10 +55,10 @@ export default function Principios() {
                         <span className="text-[#5B1780] font-bold">Derechos y democracia: </span>
                         ciudadanía activa, justicia social y cultura de paz.
                     </p>
-                </div>
+                </article>
 
                 {/* Elemento 3 hidden */}
-                <div className="xl:hidden w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="xl:hidden w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 "> 
@@ -73,7 +73,7 @@ export default function Principios() {
                         <span className="text-[#5B1780] font-bold">Innovación y conocimiento: </span>
                         metodologías creativas y producción de saberes.
                     </p>
-                </div>
+                </article>
 
 
                 {/* Texto arriba + elementos 2xl y 3xl abajo */}
@@ -90,7 +90,7 @@ export default function Principios() {
                     </p>
 
                     {/* Elemento 2 */}
-                    <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                    <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                     group hover:shadow-xl transition-shadow duration-300 ease-in-out ">
                         <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                         group-hover:border-0 group-hover:bg-[#5B1780] transition-colors duration-300 relative "> 
@@ -112,10 +112,10 @@ export default function Principios() {
                             <span className="text-[#5B1780] font-bold">Derechos y democracia: </span>
                             ciudadanía activa, justicia social y cultura de paz.
                         </p>
-                    </div>
+                    </article>
 
                     {/* Elemento 3 */}
-                    <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                    <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                     group hover:shadow-xl transition-shadow duration-300 ease-in-out ">
                         <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                         group-hover:border-0 group-hover:bg-[#FFD11A] transition-colors duration-300 "> 
@@ -130,11 +130,11 @@ export default function Principios() {
                             <span className="text-[#5B1780] font-bold">Innovación y conocimiento: </span>
                             metodologías creativas y producción de saberes.
                         </p>
-                    </div>
+                    </article>
                 </div>
 
                 {/* Elemento 4 */}
-                <div className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
+                <article className="w-full max-w-[318px] h-[318px] border rounded-[40px] flex flex-col items-center 
                                 group hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     <div className="w-[121px] h-[121px] border rounded-3xl mt-9 flex items-center justify-center
                                     group-hover:border-0 group-hover:bg-[#5B1780] transition-colors duration-300 relative "> 
@@ -157,10 +157,8 @@ export default function Principios() {
                         trabajo en red, ética y responsabilidad social.
                     </p>
 
-                </div>
-
-            </div>
-
+                </article>
+            </main>
         </section>
     )
 }

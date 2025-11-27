@@ -2,13 +2,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-h1 {
-  @apply md:text-3xl text-2xl font-bold text-[#5B1780]
-}
-
-h2 {
-  @apply text-2xl font-bold text-[#5B1780]
-}
 
 .footer-links a {
   display: inline-block;

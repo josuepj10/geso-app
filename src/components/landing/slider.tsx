@@ -46,10 +46,14 @@ const slides = [
 
 export default function Slider() {
   return (
-    <div className="relative -mt-22 left-1/2 right-1/2 -mx-[50vw] max-w-screen overflow-hidden 
+    <header className="relative -mt-22 left-1/2 right-1/2 -mx-[50vw] max-w-screen overflow-hidden 
                     pt-21 lg:pt-11 "
                     >
       <Swiper
+        role="region"
+        aria-roledescription="Carrusel"
+        aria-label="Imágenes destacadas del sitio"
+        aria-live="off"
         modules={[Pagination, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
@@ -71,6 +75,7 @@ export default function Slider() {
                 fill
                 className={`object-cover ${index === 0 ? "object-[70%_center]" : ""}`}
                 priority={index === 0}
+                loading={index === 0 ? "eager" : "lazy"}
               />
               <div className="absolute inset-0 bg-[#5B1780]/60" />
 
@@ -81,24 +86,24 @@ export default function Slider() {
                 px-4 sm:px-10 md:px-12 w-full
                 sm:max-w-[790px]
                 left-1/2 transform -translate-x-1/2
-                top-4/11 sm:top-1/2 sm:left-[12.5%] sm:bottom-auto sm:-translate-y-1/2 sm:translate-x-0 "
+                top-7/20 sm:top-1/2 sm:left-[12.5%] sm:bottom-auto sm:-translate-y-1/2 sm:translate-x-0 "
               > {/* Otra opcion es usar botton-20 y el top-4/11 borrarlo */}
 
                 {/* Título */}
-                <h3 className="xl:text-6xl text-[40px] font-bold text-white">
+                <h2 className="xl:text-6xl text-[40px] font-bold text-white">
                   {slide.title}
-                </h3>
+                </h2>
 
                 {/* Texto opcional */}
                 {slide.text && (
-                  <p className="md:text-[26px] text-lg text-white mt-4">{slide.text}</p>
+                  <p className="md:text-[26px] text-lg text-white mt-3 sm:mt-4">{slide.text}</p>
                 )}
 
                 {/* Botón opcional */}
                 {slide.button && (
                   <Link
                     href={slide.button.href}
-                    className="self-start mt-5 px-2 w-full sm:w-[180px] py-4 text-lg bg-[#FFD11A] text-[#5B1780] 
+                    className="self-start mt-4 sm:mt-5 px-2 w-full sm:w-[180px] py-4 text-lg bg-[#FFD11A] text-[#5B1780] 
                               rounded-4xl inline-block text-center font-semibold "
                   >
                     {slide.button.label}
@@ -109,6 +114,6 @@ export default function Slider() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </header>
   )
 }

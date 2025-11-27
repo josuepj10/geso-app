@@ -9,7 +9,7 @@ export default function Historia() {
 
         {/*Primer par */}
 
-        <div className="flex flex-col-reverse lg:flex-row lg:justify-start justify-center items-center gap-8 sm:mx-6 lg:mx-0">
+        <article className="flex flex-col-reverse lg:flex-row lg:justify-start justify-center items-center gap-8 sm:mx-6 lg:mx-0">
 
             {/* Cuadro de texto */}
             <div className="lg:w-[752px] lg:h-[290px] w-full max-w-[752px] h-auto border rounded-[60px] flex flex-col 
@@ -35,11 +35,11 @@ export default function Historia() {
                 className="transition duration-300"
                 />
             </div>
-        </div>
+        </article>
 
         {/*Segundo par */}
 
-        <div className="flex flex-col lg:flex-row lg:justify-end justify-center items-center lg:gap-16 gap-8 sm:mx-6 lg:mx-0">
+        <article className="flex flex-col lg:flex-row lg:justify-end justify-center items-center lg:gap-16 gap-8 sm:mx-6 lg:mx-0">
 
             {/* Cuadro */}
             <div className="w-[122px] h-[122px] border bg-[#5B1780] rounded-3xl flex items-center justify-center">
@@ -69,11 +69,11 @@ export default function Historia() {
                     <li>Políticas públicas de inclusión social.</li>
                 </ul>
             </div>
-        </div>
+        </article>
 
         {/*Tercer par */}
 
-        <div className="flex flex-col-reverse lg:flex-row lg:justify-start justify-center items-center gap-8 sm:mx-6 lg:mx-0">
+        <article className="flex flex-col-reverse lg:flex-row lg:justify-start justify-center items-center gap-8 sm:mx-6 lg:mx-0">
 
             {/* Cuadro de texto */}
             <div className="lg:w-[752px] lg:h-[290px] w-full max-w-[752px] h-auto border rounded-[60px] flex flex-col 
@@ -90,12 +90,12 @@ export default function Historia() {
                 <Image
                 src="/images/sobre-geso/estrecharManos.svg"
                 alt="Ícono Hover Misión"
-                width={44}
+                width={46}
                 height={44}
                 className="transition duration-300"
                 />
             </div>
-        </div>
+        </article>
     </section>
   );
 }
