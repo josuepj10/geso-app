@@ -9,7 +9,7 @@ export default function Competencias() {
         <section className="flex flex-wrap justify-center gap-18 my-20 xl:my-35 max-w-[1362px] mx-auto">
 
             {/* Primer elemento */}
-            <div className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
+            <article className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
                                 flex flex-col text-center justify-center hover:shadow-xl transition-shadow duration-300 ease-in-out group ">
 
                 <p className="text-lg text-[#374151] pt-6">
@@ -26,15 +26,15 @@ export default function Competencias() {
                                 src="/images/competencias/libro_engranaje.svg"
                                 width={55}
                                 height={55}
-                                alt="Libro engranaje"
+                                alt="Ícono aprendizaje con libro"
                             />
                         </div>                    
                     </div>
                 </div>
-            </div>
+            </article>
 
             {/* Segundo elemento */}
-            <div className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12 2xl:mt-0
+            <article className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12 2xl:mt-0
                                 flex flex-col text-center justify-center hover:shadow-xl transition-shadow duration-300 ease-in-out group ">
 
                 <p className="text-lg text-[#374151] pt-6">
@@ -51,23 +51,23 @@ export default function Competencias() {
                                 src="/images/competencias/pizarra.svg"
                                 width={55}
                                 height={55}
-                                alt="pizarra"
+                                alt="Ícono aprendizaje en pizarra"
                             />
 
                             <Image
                                 src="/images/competencias/pizarra_blanca.svg"
                                 width={52}
                                 height={53}
-                                alt="pizarra"
+                                alt="Hover ícono en blanco"
                                 className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"
                             />
                         </div>                    
                     </div>
                 </div>
-            </div>
+            </article>
 
             {/* Tercer elemento */}
-            <div className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
+            <article className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
                                 flex flex-col text-center justify-center hover:shadow-xl transition-shadow duration-300 ease-in-out group ">
 
                 <p className="text-lg text-[#374151] pt-6">
@@ -84,15 +84,15 @@ export default function Competencias() {
                                 src="/images/competencias/sombrero.svg"
                                 width={66}
                                 height={66}
-                                alt="sombrero"
+                                alt="Ícono título obtenido"
                             />
                         </div>                    
                     </div>
                 </div>
-            </div>
+            </article>
 
             {/* Cuarto elemento */}
-            <div className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
+            <article className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
                                 flex flex-col text-center justify-center hover:shadow-xl transition-shadow duration-300 ease-in-out group ">
 
                 <p className="text-lg text-[#374151] pt-6">
@@ -109,23 +109,23 @@ export default function Competencias() {
                                 src="/images/competencias/audifonos.svg"
                                 width={55}
                                 height={55}
-                                alt="audifonos"
+                                alt="Ícono aprendizaje con herramientas tecnológicas "
                             />
 
                             <Image
                                 src="/images/competencias/audifonos_blanco.svg"
                                 width={53}
                                 height={53}
-                                alt="audifonos"
+                                alt="Ícono hover aprendizaje con herramientas tecnológicas"
                                 className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition duration-300"
                             />
                         </div>                    
                     </div>
                 </div>
-            </div>
+            </article>
 
             {/* Quinto elemento */}
-            <div className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
+            <article className="relative w-full max-w-[401px] h-[199px] border-1 border-[#D1D5DB] rounded-[40px] mt-12
                                 flex flex-col text-center justify-center hover:shadow-xl transition-shadow duration-300 ease-in-out group ">
 
                 <p className="text-lg text-[#374151] pt-6">
@@ -142,15 +142,12 @@ export default function Competencias() {
                                 src="/images/competencias/buscador.svg"
                                 width={64}
                                 height={59}
-                                alt="buscador"
+                                alt="Ícono investigación"
                             />
                         </div>                    
                     </div>
                 </div>
-            </div>
-
-
-
+            </article>
         </section>    
     ); 
 }

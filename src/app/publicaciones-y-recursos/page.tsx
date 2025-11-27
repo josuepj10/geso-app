@@ -127,15 +127,11 @@ export default function RecursosPage() {
   };
 
   return (
-    <div>
+    <section>
       {currentPage === 1 && (
-        <div className="leading-relaxed text-[#374151] text-center text-lg md:my-10 my-7 mx-auto max-w-[1050px]">
+        <main className="leading-relaxed text-[#374151] text-center text-lg md:my-10 my-7 mx-auto max-w-[1050px]">
 
-          <div className="flex justify-center pb-2  ">
-          
-            <h3 className="text-[44px] text-[#5B1780] font-bold">Publicaciones y recursos</h3>
-
-          </div>
+          <h1 className=" flex justify-center pb-2 text-[44px] text-[#5B1780] font-bold ">Publicaciones y recursos</h1>
 
           <Reveal>
             <p className="text-[#374151] leading-relaxed text-lg">
@@ -146,7 +142,7 @@ export default function RecursosPage() {
               internacionales. 
             </p>
           </Reveal>
-        </div>
+        </main>
       )}
 
       <div className="grid grid-cols-1 items-center justify-center max-w-fit mx-auto
@@ -194,6 +190,6 @@ export default function RecursosPage() {
           </PaginationItem>
         </PaginationContent>
       </Pagination>
-    </div> 
+    </section> 
   );
 }

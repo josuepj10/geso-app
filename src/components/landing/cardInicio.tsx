@@ -17,10 +17,11 @@ export default function CardInicio({ titulo, descripcion, enlace, textoB }: Card
         whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 250 }}
         className="
-        rounded-[50px] bg-white border border-[#D1D5DB] shadow-sm hover:shadow-2xl transition-shadow duration-300 ease-in-out"
+        rounded-[50px] bg-white border w-full max-w-[666px] mx-auto border-[#D1D5DB] shadow-sm hover:shadow-2xl  
+        transition-shadow duration-300 ease-in-out"
     >
-        <div className="p-5 lg:p-8 xl:p-9 flex flex-col h-full justify-between items-center lg:items-start">
-            <h2 className="md:text-3xl text-2xl font-semibold text-[#5B1780] text-center lg:text-start">
+        <article className="p-5 lg:p-8 xl:p-9 flex flex-col h-full xl:min-h-[355px] justify-between items-center lg:items-start">
+            <h2 className="lg:text-3xl text-2xl font-semibold text-[#5B1780] text-center lg:text-start">
                 {titulo}
             </h2>
 
@@ -30,13 +31,13 @@ export default function CardInicio({ titulo, descripcion, enlace, textoB }: Card
 
             <Link
                 href={enlace}
-                className="inline-block w-full sm:w-[180px] text-center py-4 bg-[#5B1780] text-white hover:text-[#5B1780] 
+                className="mt-auto inline-block w-full sm:w-[180px] text-center py-4 bg-[#5B1780] text-white hover:text-[#5B1780] 
                 rounded-4xl text-lg hover:bg-[#FFD11A] 
                 pointer-events-auto hover:shadow-2xl "
             >
                 {textoB}
             </Link>
-        </div>
+        </article>
     </motion.div>
     
   );
