@@ -41,7 +41,7 @@ export default function Cardinfrev({ title, text, image, button, href, imageClas
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full xl:w-76 py-4 
-              hover:bg-[#FFD11A] transition cursor-pointer inline-block text-center"
+              hover:bg-[#FFD11A] transition-colors duration-300 cursor-pointer inline-block text-center"
             >
               {button}
             </Link>

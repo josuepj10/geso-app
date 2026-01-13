@@ -52,7 +52,7 @@ export default function CardPublicaciones({ title, text, image, button, href, im
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full py-4 
-            hover:bg-[#FFD11A] transition cursor-pointer mb-4 sm:mb-8 inline-block text-center mt-auto"           
+            hover:bg-[#FFD11A] transition-colors duration-300 cursor-pointer mb-4 sm:mb-8 inline-block text-center mt-auto"           
           >
             {button}
           </Link>

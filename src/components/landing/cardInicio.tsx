@@ -32,7 +32,7 @@ export default function CardInicio({ titulo, descripcion, enlace, textoB }: Card
             <Link
                 href={enlace}
                 className="mt-auto inline-block w-full sm:w-[180px] text-center py-4 bg-[#5B1780] text-white hover:text-[#5B1780] 
-                rounded-4xl text-lg hover:bg-[#FFD11A] 
+                rounded-4xl text-lg hover:bg-[#FFD11A] transition-colors duration-200
                 pointer-events-auto hover:shadow-2xl "
             >
                 {textoB}

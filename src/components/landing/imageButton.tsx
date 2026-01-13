@@ -55,7 +55,7 @@ export default function ImageButton({
           className="
               self-start mt-2 w-full sm:w-[180px] py-3 text-lg bg-[#5B1780] 
               text-white hover:text-[#5B1780] rounded-full hover:bg-[#FFD11A] 
-              inline-block text-center transition-shadow duration-300 ease-in-out
+              inline-block text-center transition-colors duration-300 ease-in-out
           "
           >
           {buttonText}

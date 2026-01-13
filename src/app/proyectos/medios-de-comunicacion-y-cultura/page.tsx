@@ -12,7 +12,7 @@ export default function MediosPage() {
       text: `En GESO elaboramos, junto con <strong>ACNUR, el Banco Mundial y Aacrom </strong>, un manual práctico para periodistas que cubren temas de migración y refugio. 
       La publicación ofrece herramientas para una cobertura ética, responsable y con enfoque de derechos humanos, contribuyendo a contrarrestar estereotipos 
       y narrativas negativas.`,
-      image: "/images/ejemplo2.jpg",
+      image: "/images/proyectos/medios/Manual para periodistas sobre migración y refugio.webp",
       button: "Descargar manual",
       href: "#",
     },
@@ -21,7 +21,7 @@ export default function MediosPage() {
       title: "Capítulo en la Guía de Cobertura Periodística del COLPER (2024)",
       text: `En alianza con el <strong>Colegio de Periodistas de Costa Rica (COLPER)</strong>, <strong>ACNUR</strong> y <strong>Aacrom</strong>, desarrollamos el capítulo 
       sobre cobertura periodística con enfoque de derechos humanos en migración y refugio. Esta guía fortalece la práctica profesional de la comunicación en el país. `,
-      image: "/images/ejemplo2.jpg",
+      image: "/images/proyectos/medios/Capitulo-en-la-Guia-de-Cobertura-Periodistica-del-COLPER.webp",
       button: "Ver guía completa",
       href: "#",
     },

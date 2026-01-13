@@ -109,7 +109,7 @@ export default function Footer() {
           
           <div className="flex flex-col gap-5 lg:items-end">
             
-            <Link href="/colabora"> {/* Aquí poner la ruta deseada */}
+            <Link href="/apoyanos">
               <Button className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A]">
                 Colabora con nosotros
               </Button>
