@@ -1,62 +1,17 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
-import Cardinf from "@/components/proyectos/cardinf"
-import Cardinfrev from "@/components/proyectos/cardinfrev"
+import Verticales from "@/components/apoyanos/cardsVerticales"
 
 export default function ApoyoPage() {
-  const cards = [
-    {
-      type: "normal", // Cardinf
-      title: "Dona y apoya nuestros proyectos",
-      text: `Tu aporte económico permite que sigamos desarrollando proyectos sociales y culturales con perspectiva de género en Costa Rica y la región. <br></br> 
-            Con tu ayuda podemos: 
-            <ul>
-              <li>Formar líderes comunitarios.</li>
-              <li>Fortalecer políticas públicas con enfoque de género.</li>
-              <li>Producir recursos educativos y comunicativos que generan impacto real.</li>
-            </ul>`,
-      image: "/images/ejemplo2.jpg",
-      button: "Quiero donar ahora",
-      href: "#",
-    },
-    {
-      type: "reverse", // Cardinfrev
-      title: "Únete como voluntario/a",
-      text: `¿Quieres ser parte activa del cambio? 
-            En GESO abrimos espacios para que estudiantes, profesionales y activistas aporten sus conocimientos en: 
-            <ul>
-              <li>Comunicación y medios.</li>
-              <li>Investigación social.</li>
-              <li>Educación y formación.</li>
-              <li>Gestión de proyectos comunitarios.</li>
-            </ul>`,
-      image: "/images/ejemplo2.jpg",
-      button: "Postúlate como voluntario/a",
-      href: "#",
-    },
-    {
-      type: "normal", // Cardinf
-      title: "Alianzas y apoyo institucional",
-      text: `El trabajo colaborativo potencia nuestro impacto. Por eso construimos alianzas con: 
-            <ul>
-              <li>Organismos internacionales,</li>
-              <li>Gobiernos locales y municipales,</li>
-              <li>Universidades y centros de investigación,</li>
-              <li>Organizaciones de la sociedad civil y empresas comprometidas con la equidad.</li>
-            </ul>`,
-      image: "/images/ejemplo2.jpg",
-      button: "Conversemos sobre alianzas",
-      href: "#",
-    },
-  ]
 
   return (
     <section className="flex flex-col items-center gap-8">
-      <main className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
+      <main className="leading-relaxed text-[#374151] text-lg text-center my-3 mx-auto max-w-[1050px]">
         
-        <h1 className="flex justify-center pb-10 md:text-3xl text-2xl font-bold text-[#5B1780]">Haz parte del cambio</h1>
-        
+        <h1 className=" flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold mb-2 ">
+          Haz parte del cambio
+        </h1>       
 
         <Reveal>
           <p className="text-[#374151] leading-relaxed text-lg">
@@ -64,41 +19,23 @@ export default function ApoyoPage() {
             alianza institucional nos acerca a una sociedad más justa, inclusiva y equitativa.
           </p>
         </Reveal>
-      </main>
-      
-      {/* Cards */}
-      {cards.map((card, index) =>
-        card.type === "normal" ? (
-          <Cardinf
-            key={index}
-            title={card.title}
-            text={card.text}
-            image={card.image}
-            button={card.button}
-            href={card.href}
-          />
-        ) : (
-          <Cardinfrev
-            key={index}
-            title={card.title}
-            text={card.text}
-            image={card.image}
-            button={card.button}
-            href={card.href}
-          />
-        )
-      )}
+      </main>  
 
-      <div className="leading-relaxed text-[#374151] text-lg md:my-10 my-7">
-        
+      <Verticales/>
+      
+      <div className="leading-relaxed text-[#374151] text-lg mb-9">
+          
+        <h2 className="text-center text-xl text-[#374151] font-bold pb-6">
+          Tu compromiso transforma vidas
+        </h2>
         <Reveal>
-          <p className="mb-3">Tu compromiso transforma vidas</p>
           <p>
-             Gracias a tu apoyo hemos podido desarrollar iniciativas reconocidas a nivel nacional e internacional, 
+              Gracias a tu apoyo hemos podido desarrollar iniciativas reconocidas a nivel nacional e internacional, 
             como el programa Gente sin Fronteras o la elaboración de manuales para periodistas con enfoque de derechos humanos.
           </p>
           <p className="mt-3">Ahora, contigo, podemos llegar más lejos.</p>
         </Reveal>
+        
       </div>
 
     </section>

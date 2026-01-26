@@ -86,7 +86,7 @@ export default function Historia() {
             </div>
 
             {/* Cuadro */}
-            <div className="w-[122px] h-[122px] border rounded-3xl flex items-center justify-center">
+            <div className="w-[122px] h-[122px] bg-[#FFD11A] border rounded-3xl flex items-center justify-center">
                 <Image
                 src="/images/sobre-geso/estrecharManos.svg"
                 alt="Ícono Hover Misión"

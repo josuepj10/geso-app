@@ -8,6 +8,7 @@ import { FaBars } from "react-icons/fa"
 import { usePathname } from "next/navigation"
 import { menuItems } from "@/components/menu/menuItems"
 
+
 export default function MovilMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -35,10 +36,11 @@ export default function MovilMenu() {
 
   return (
     <>
-      {/* Botón hamburguesa */}
+      
+      {/* Menu hamburguesa */}
       <motion.button
         onClick={() => setIsOpen(prev => !prev)}
-        className="fixed top-2 right-8 z-[60] p-2 flex items-center justify-center lg:hidden"
+        className="fixed top-2 right-8 z-[60] p-2 flex items-center justify-center md:hidden"
         whileTap={{ scale: 0.9 }}
         aria-label="Abrir menú"
         style={{ perspective: 900 }}
@@ -61,7 +63,7 @@ export default function MovilMenu() {
           )}
         </motion.div>
       </motion.button>
-
+      
       {/* Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -82,8 +84,8 @@ export default function MovilMenu() {
               exit={{ y: "100vh" }}
               transition={{ type: "spring", stiffness: 100, damping: 15 }}
             >
-              <div className="w-full h-full overflow-y-auto relative md:flex items-center justify-start">
-                <nav className="grid grid-cols-1 gap-6 max-w-lg pt-12 md:grid-cols-2 md:max-w-2xl md:gap-9 md:pt-0 w-full text-center px-2">
+              <div className="w-full h-full overflow-y-auto relative flex flex-col items-center justify-start">
+                <nav className="flex flex-col gap-6 max-w-sm pt-12 w-full text-center px-2">
 
                   {menuItems.map((item) => {
                     // Determinamos si algún hijo está activo (boolean)

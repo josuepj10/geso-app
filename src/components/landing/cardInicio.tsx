@@ -21,7 +21,7 @@ export default function CardInicio({ titulo, descripcion, enlace, textoB }: Card
         transition-shadow duration-300 ease-in-out"
     >
         <article className="p-5 lg:p-8 xl:p-9 flex flex-col h-full xl:min-h-[355px] justify-between items-center lg:items-start">
-            <h2 className="lg:text-3xl text-2xl font-semibold text-[#5B1780] text-center lg:text-start">
+            <h2 className="lg:text-[28px] text-2xl font-semibold text-[#5B1780] text-center lg:text-start">
                 {titulo}
             </h2>
 

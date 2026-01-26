@@ -16,7 +16,7 @@ export default function Proyectos() {
       <div className="flex flex-wrap justify-center gap-8 my-10 max-w-[1200px] mx-auto px-8">
         <Card
           title="Democracia de género y participación ciudadana"
-          image="/images/proyectos/democracia-de-genero-y-participacion-ciudadana.webp"
+          image="/images/proyectos/democracia de genero.webp"
           href="/proyectos/democracia-de-genero-y-participacion-ciudadana"
         />
         

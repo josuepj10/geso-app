@@ -4,7 +4,7 @@ import Link from "next/link"
 
 interface CardProps {
   title: string
-  text: string
+  text: React.ReactNode
   image: string
   button: string
   href: string
@@ -29,10 +29,12 @@ export default function Cardinfrev({ title, text, image, button, href, imageClas
         >
           <h2 className="text-center xl:text-left text-2xl font-bold text-[#5B1780]">{title}</h2>
 
-          <p 
+          <div 
             className="text-lg text-[#374151] mt-2 text-center xl:text-left [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></p>
+            
+          >
+            {text }
+          </div>
             
           {/* Se muestra botón solo si button y href tienen contenido) */}
           {button && href ? (

@@ -8,7 +8,7 @@ export default function Alianzas() {
 
         <section className="max-w-[1200px] mx-auto my-8 lg:mt-15">
 
-            <p className="text-center text-[#374151] mb-14 lg:mb-2 font-bold">
+            <p className="text-center text-xl text-[#374151] mb-14 lg:mb-2 font-bold">
                 Estas alianzas nos permiten:
             </p>
 

@@ -5,7 +5,7 @@ import Link from "next/link"
 
 interface CardProps {
   title: string
-  text: string
+  text: React.ReactNode
   image: string
   button: string
   href: string
@@ -15,7 +15,7 @@ interface CardProps {
 export default function CardPublicaciones({ title, text, image, button, href, imageClass }: CardProps) {
   return (
 
-    <article className="w-full max-w-[666px] min-h-[732px]
+    <article className="w-full max-w-[666px] h-full
                 bg-white rounded-[55px]
                 overflow-hidden outline
                 hover:shadow-xl transition-shadow transition-outline duration-300 ease-in-out
@@ -38,12 +38,12 @@ export default function CardPublicaciones({ title, text, image, button, href, im
         <h2 className="text-left text-[#5B1780] font-bold text-2xl pt-4">{title}</h2>
 
         {/* Texto */}
-        <p 
+        <div
           className="text-lg text-[#374151] mt-2 text-center xl:text-left mb-2
-          [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
-          dangerouslySetInnerHTML={{ __html: text }} >
-        
-        </p>
+          [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"          
+        >
+          {text }
+        </div> 
 
         {/* Se muestra botón solo si button y href tienen contenido) */}
         {button && href ? (
