@@ -48,7 +48,7 @@ export function Navbar() {
             const isChildActive = item.children?.some(
               (child) => pathname === child.href
             )
-            const isActive = pathname === item.href || isChildActive
+           // const isActive = pathname === item.href || isChildActive
             const isOpen = openDropdown === item.href
 
             // retorna el bloque dropdown

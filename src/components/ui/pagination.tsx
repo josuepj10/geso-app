@@ -44,7 +44,6 @@ type PaginationLinkProps = {
   React.ComponentProps<"a">
 
 function PaginationLink({
-  className,
   isActive,
   size = "icon",
   variant ,

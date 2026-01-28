@@ -11,7 +11,7 @@ interface CardProps {
   imageClass?: string
 }
 
-export default function Cardinfrev({ title, text, image, button, href, imageClass }: CardProps) {
+export default function Cardinfrev({ title, text, image, button, href }: CardProps) {
   return (
     <article
       className="w-full h-auto max-w-[750px]  
