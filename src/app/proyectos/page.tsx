@@ -22,7 +22,7 @@ export default function Proyectos() {
         
         <Card
           title="Violencia de género y prevención"
-          image="/images/ejemplo2.jpg"
+          image="/images/proyectos/violencia de genero y prevencion.webp"
           href="/proyectos/violencia-de-genero-y-prevencion"
         />
         
@@ -34,7 +34,7 @@ export default function Proyectos() {
         
         <Card
           title="Medios de comunicación y cultura"
-          image="/images/ejemplo2.jpg"
+          image="/images/proyectos/medios de comunicacion.webp"
           href="/proyectos/medios-de-comunicacion-y-cultura"
         />
 

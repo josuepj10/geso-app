@@ -44,7 +44,7 @@ export default function MediosPage() {
                 <li><strong>“La Voz del Tribunal” </strong> con el TSE, orientado a informar y motivar la participación ciudadana durante el mismo proceso electoral. </li>
               </ul> 
             </span>,
-      image: "/images/ejemplo2.jpg",
+      image: "/images/proyectos/medios/radiales.webp",
       button: "Más información",
       href: "",
     },
