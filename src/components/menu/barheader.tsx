@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/menu/navbar"
-import { useEffect, useState } from "react"
 
 export default function BarHeader() {
   
