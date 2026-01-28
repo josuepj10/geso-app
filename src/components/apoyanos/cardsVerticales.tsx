@@ -1,79 +1,73 @@
 "use client";
 
-import Link from "next/link";
-import React, { useRef, useEffect, type RefObject } from "react";
-import { useInView } from "@/hooks/useInView";
-import type { LottieRefCurrentProps } from "lottie-react";
+import CardIcons from "./cardVertical";
+import VolunteerIcon from "./lottieVolunteer";
+import HighFiveIcon from "./lottieHighFive";
+import PartnershipIcon from "./lottiePartnership";
 
-interface CardProps {
-  title: string;
-  text: React.ReactNode;
-  media?:
-    | React.ReactNode
-    | ((lottieRef: RefObject<LottieRefCurrentProps | null>) => React.ReactNode);
-  button: string;
-  href: string;
-  animationDelay?: number;
-}
-
-export default function CardIcons({
-  title,
-  text,
-  media,
-  button,
-  href,
-  animationDelay = 0,
-}: CardProps) {
-  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
-
-  const { ref: cardRef, isInView } = useInView<HTMLElement>({
-    threshold: 0.2,
-    once: true,
-  });
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    const timeout = setTimeout(() => {
-      lottieRef.current?.goToAndPlay(0, true);
-    }, animationDelay);
-
-    return () => clearTimeout(timeout);
-  }, [isInView, animationDelay]);
-
+export default function Verticales() {
   return (
-    <article
-      ref={cardRef}
-      onMouseEnter={() => lottieRef.current?.play()}
-      onMouseLeave={() => lottieRef.current?.stop()}
-      className="w-full max-w-[432px] h-full bg-white rounded-[55px] overflow-hidden outline hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col p-3"
-    >
-      {media && (
-        <div className="flex justify-center items-center px-2">
-          {typeof media === "function" ? media(lottieRef) : media}
-        </div>
-      )}
+    <div className="flex flex-wrap lg:grid lg:grid-cols-3 justify-center gap-8 max-w-[1420px] mx-auto">
+      <CardIcons
+        title="Apoya nuestros proyectos"
+        text={
+          <div>
+            <p>
+              Tu aporte económico permite que sigamos desarrollando proyectos sociales y culturales con perspectiva de
+              género en Costa Rica y la región. Con tu ayuda podemos:
+            </p>
+            <ul>
+              <li>Fortalecer políticas públicas con enfoque de género.</li>
+              <li>Producir recursos educativos y comunicativos que generan impacto real.</li>
+            </ul>
+          </div>
+        }
+        button="Donar ahora"
+        href=""
+        media={(lottieRef) => <VolunteerIcon lottieRef={lottieRef} />}
+        animationDelay={0}
+      />
 
-      <div className="flex flex-col flex-1 gap-2 px-5">
-        <h2 className="text-[#5B1780] font-bold text-center text-2xl pt-4">
-          {title}
-        </h2>
+      <CardIcons
+        title="Únete como voluntario/a"
+        text={
+          <div>
+            <p>
+              ¿Quieres ser parte activa del cambio? En GESO abrimos espacios para que estudiantes, profesionales y
+              activistas aporten sus conocimientos en:
+            </p>
+            <ul>
+              <li>Comunicación y medios.</li>
+              <li>Investigación social.</li>
+              <li>Educación y formación.</li>
+              <li>Gestión de proyectos comunitarios.</li>
+            </ul>
+          </div>
+        }
+        button="Postúlate como voluntaria/o"
+        href=""
+        media={(lottieRef) => <HighFiveIcon lottieRef={lottieRef} />}
+        animationDelay={700}
+      />
 
-        <div className="text-lg text-[#374151] mt-2 mb-2 text-left [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:text-[16px] [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold">
-          {text}
-        </div>
-
-        {button && href && (
-          <Link
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full py-4 hover:bg-[#FFD11A] transition-colors duration-300 mb-5 mt-auto text-center"
-          >
-            {button}
-          </Link>
-        )}
-      </div>
-    </article>
+      <CardIcons
+        title="Alianzas y apoyo institucional"
+        text={
+          <div>
+            <p>El trabajo colaborativo potencia nuestro impacto. Por eso construimos alianzas con:</p>
+            <ul>
+              <li>Organismos internacionales.</li>
+              <li>Gobiernos locales y municipales.</li>
+              <li>Universidades y centros de investigación.</li>
+              <li>Organizaciones de la sociedad civil y empresas comprometidas con la equidad.</li>
+            </ul>
+          </div>
+        }
+        button="Conversemos sobre alianzas"
+        href=""
+        media={(lottieRef) => <PartnershipIcon lottieRef={lottieRef} />}
+        animationDelay={1400}
+      />
+    </div>
   );
 }

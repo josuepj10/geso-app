@@ -3,22 +3,17 @@
 import Link from "next/link";
 import React, { useRef, useEffect, type RefObject } from "react";
 import { useInView } from "@/hooks/useInView";
+import type { LottieRefCurrentProps } from "lottie-react";
 
-type LottieController = {
-  play: () => void;
-  stop: () => void;
-  goToAndPlay: (value: number, isFrame?: boolean) => void;
-};
-
-interface CardProps {
+export interface CardProps {
   title: string;
   text: React.ReactNode;
   media?:
     | React.ReactNode
-    | ((lottieRef: RefObject<LottieController | null>) => React.ReactNode);
+    | ((lottieRef: RefObject<LottieRefCurrentProps | null>) => React.ReactNode);
   button: string;
   href: string;
-  animationDelay?: number; // delay en ms
+  animationDelay?: number;
 }
 
 export default function CardIcons({
@@ -29,7 +24,7 @@ export default function CardIcons({
   href,
   animationDelay = 0,
 }: CardProps) {
-  const lottieRef = useRef<LottieController | null>(null);
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
 
   const { ref: cardRef, isInView } = useInView<HTMLElement>({
     threshold: 0.2,
