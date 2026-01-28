@@ -1,9 +1,7 @@
 "use client"
 
-import { Reveal } from "@/components/reveal"
 import ImageGESO from "@/components/imageGESO"
 import Competencias from "@/components/nosotrosComponents/competencias";
-import Image from "next/image";
 
 export default function competenciasPage() {
   return (
