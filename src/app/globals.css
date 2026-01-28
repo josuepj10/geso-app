@@ -2,20 +2,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-p {
-  @apply text-center text-gray-800 leading-relaxed max-w-6xl mx-auto my-6 text-2xl;
-}
 
-h1 {
-  @apply text-2xl font-semibold 
-}
-
-h2 {
-  @apply text-3xl font-bold 
-}
-
-h1, h2 {
-  @apply text-center max-w-6xl mx-auto my-2 text-purple-800
+.footer-links a {
+  display: inline-block;
+  width: fit-content;
 }
 
 @keyframes pulsoTexto {
@@ -33,6 +23,34 @@ h1, h2 {
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes soft-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-soft-bounce {
+  animation: soft-bounce 2s ease-in-out infinite;
+}
+
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 300s linear infinite;
+}
 
 .nav-item {
   position: relative;
@@ -78,6 +96,19 @@ h1, h2 {
 .border-purpleHover {
   border-color: #8C339D;
 }
+
+.bg-yellowtertiary {
+  background-color: #FFD11A;
+}
+
+.text-yellowtertiary {
+  color: #FFD11A;
+}
+
+.border-yellowtertiary {
+  border-color: #FFD11A;
+}
+
 
 
 @custom-variant dark (&:is(.dark *));

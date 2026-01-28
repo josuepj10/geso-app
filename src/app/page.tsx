@@ -1,24 +1,78 @@
-import { Reveal } from "@/components/reveal"
-import Slider from "@/components/slider"
+"use client"
 
+import { Reveal } from "@/components/reveal"
+import Slider from "@/components/landing/slider"
+import ImageButton from "@/components/landing/imageButton"
+import CardInicio from "@/components/landing/cardInicio"
 
 export default function Home() {
   return (
-    <>
+    <>    
       <Slider />
-      <section className="max-w-4xl mx-auto p-6 text-center">
+
+      {/* h2 text-2xl font-bold text-[#5B1780] */}
+      {/*h1 md:text-3xl text-2xl font-bold text-[#5B1780] */}
         
-        <h2>Presentación institucional</h2>
-        <Reveal>
-          <p>
-            La Fundación Género y Sociedad (GESO) es una organización sin fines de lucro, creada en 1993 en San José de Costa Rica, 
-            cuyo ámbito de trabajo es regional con énfasis en el área centroamericana, tal como lo demuestran las investigaciones, consultorías y 
-            asesorías brindadas y que se enlistan más adelante. Su principal objetivo es elaborar e implementar proyectos sociales y culturales que, 
-            incorporando la perspectiva de género, promuevan la equidad social.
-          </p>
+      <h1 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-[40px] text-2xl font-bold text-[#5B1780] ">
+        Noticias más recientes
+      </h1>
+
+      <article className="my-2 lg:my-8 gap-8 max-w-[1362px] mx-auto
+                      lg:grid-cols-2
+                      grid grid-cols-1 
+                        ">
+        <Reveal> 
+          <CardInicio
+            titulo="Secretaría Técnica de la REDNAM (2018-2019)"
+            descripcion="Entre 2018 y 2019, en GESO asumimos la Secretaría Técnica de la Red Nacional de Organizaciones Civiles para las 
+              Migraciones (REDNAM). Durante este período impulsamos la participación en la Conferencia Regional sobre Migración 
+              (CRM) y fortalecimos las acciones de ..."
+            enlace="/proyectos/migracion-y-derechos-humanos"
+            textoB="Leer más"
+          />
         </Reveal>
-        
-      </section>
+        <Reveal>
+          <CardInicio
+            titulo="Género y Comercio Internacional (2024)"
+            descripcion="En GESO investigamos y publicamos el ensayo “Género y Comercio Internacional: avances y desafíos, en alianza con 
+              FOMEECARD. Además, organizamos el foro “Desafíos de género para el comercio exterior de Costa Rica”. Con esta 
+              iniciativa buscamos ..."
+            enlace="/proyectos/democracia-de-genero-y-participacion-ciudadana"
+            textoB="Leer más"
+          />
+        </Reveal>
+        <Reveal>  
+          <CardInicio
+            titulo="Manual para periodistas sobre migración y refugio (2024)"
+            descripcion="En GESO elaboramos, junto con ACNUR, el Banco Mundial y Aacrom, un manual práctico para periodistas que cubren 
+              temas de migración y refugio. La publicación ofrece herramientas para ..."
+            enlace="/proyectos/medios-de-comunicacion-y-cultura"
+            textoB="Leer más"
+          />
+        </Reveal>  
+        <Reveal>
+          <CardInicio
+            titulo="Fortalecimiento de políticas públicas en Gobiernos Locales (2018)"
+            descripcion="En GESO implementamos este proyecto junto con la Unión Nacional de Gobiernos Locales (UNGL) y el Gobierno de 
+              Estados Unidos, con el objetivo de reforzar las capacidades técnicas de ..."
+            enlace="/proyectos/violencia-de-genero-y-prevencion"
+            textoB="Leer más"
+          />
+        </Reveal>
+      </article>
+      
+      <main>
+        <ImageButton
+          imageSrc="/images/inicio/imagen_colabora.webp"
+          title="Colabora con la Fundación GESO y ayúdanos a promover la equidad social."
+          description="Cada aporte que usted realiza se transforma en oportunidades reales para quienes más lo necesitan. Sus donaciones permiten financiar programas de educación, inclusión y desarrollo comunitario que buscan reducir las brechas sociales en nuestro país."
+          buttonText="Dona aquí"
+          buttonHref="/apoyanos"
+        />
+      </main>
+
     </>
   )
 }
+
+        

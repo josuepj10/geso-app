@@ -1,7 +1,9 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import Footer from "@/components/footer"
-import BarHeader from "@/components/barheader"
+import BarHeader from "@/components/menu/barheader"
+import MovilMenu from "@/components/menu/movilMenu"
+import * as React from "react"
 
 export const metadata: Metadata = {
   title: "GESO",
@@ -15,19 +17,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className="antialiased bg-white text-gray-900" suppressHydrationWarning>
-        {/* Navbar fijo en todas las páginas */}
-          <BarHeader/>
-  
-        
+      <body
+        className="antialiased text-base bg-white text-gray-900 overflow-x-hidden"
+        suppressHydrationWarning
+      >
+        {/* Navbar fijo */}
+        <BarHeader />
 
-        {/* Contenido de cada página */}
-        <main className="pt-20">
-          {children}</main>
+        {/* Menú móvil */}
+        <div className="lg:hidden">
+          <MovilMenu />
+        </div>
 
-        {/* Footer fijo en todas las páginas */}
+        {/* Contenido principal */}
+        <main className="pt-18 lg:pt-32">
+          <div className="max-w-[1362px] mx-auto md:px-6 2xl:px-0 px-4">
+            {children}
+          </div>
+        </main>
+
+        {/* Footer */}
         <Footer />
-
       </body>
     </html>
   )
