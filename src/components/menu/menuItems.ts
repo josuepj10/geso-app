@@ -5,6 +5,8 @@ export type MenuItem = {
   children?: { label: string; href: string }[]
 }
 
+// 
+
 export const menuItems: MenuItem[] = [
   { label: "Inicio", href: "/" },
   {
@@ -18,9 +20,9 @@ export const menuItems: MenuItem[] = [
     ],
   },
   { label: "Proyectos", href: "/proyectos" },
-  { label: "Eventos", href: "/eventos" },
-  { label: "GESO en medios", href: "/geso-en-medios" },
-  { label: "Impacto", href: "/impacto" },
   { label: "Publicaciones", href: "/publicaciones-y-recursos" },
   { label: "Apóyanos", href: "/apoyanos" },
 ]
+// { label: "Eventos", href: "/eventos" },
+// { label: "GESO en medios", href: "/geso-en-medios" },
+// { label: "Impacto", href: "/impacto" },

@@ -13,7 +13,7 @@ export default function Home() {
       {/* h2 text-2xl font-bold text-[#5B1780] */}
       {/*h1 md:text-3xl text-2xl font-bold text-[#5B1780] */}
         
-      <h1 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-3xl text-2xl font-bold text-[#5B1780] ">
+      <h1 className="mx-auto w-full p-6 text-center lg:mt-10 mt-6 md:text-[40px] text-2xl font-bold text-[#5B1780] ">
         Noticias más recientes
       </h1>
 
@@ -24,8 +24,8 @@ export default function Home() {
         <Reveal> 
           <CardInicio
             titulo="Secretaría Técnica de la REDNAM (2018-2019)"
-            descripcion="Entre 2018 y 2019, en GESO asumimos la Secretaría Técnica de la Red  Nacional de Organizaciones Civiles para las 
-              Migraciones (REDNAM).  Durante este período impulsamos la participación en la Conferencia Regional sobre Migración 
+            descripcion="Entre 2018 y 2019, en GESO asumimos la Secretaría Técnica de la Red Nacional de Organizaciones Civiles para las 
+              Migraciones (REDNAM). Durante este período impulsamos la participación en la Conferencia Regional sobre Migración 
               (CRM) y fortalecimos las acciones de ..."
             enlace="/proyectos/migracion-y-derechos-humanos"
             textoB="Leer más"
@@ -37,14 +37,14 @@ export default function Home() {
             descripcion="En GESO investigamos y publicamos el ensayo “Género y Comercio Internacional: avances y desafíos, en alianza con 
               FOMEECARD. Además, organizamos el foro “Desafíos de género para el comercio exterior de Costa Rica”. Con esta 
               iniciativa buscamos ..."
-            enlace="/proyectos/democracia-de-genero"
+            enlace="/proyectos/democracia-de-genero-y-participacion-ciudadana"
             textoB="Leer más"
           />
         </Reveal>
         <Reveal>  
           <CardInicio
             titulo="Manual para periodistas sobre migración y refugio (2024)"
-            descripcion="En GESO elaboramos, junto con ACNUR, el Banco Mundial y Aacrom , un manual práctico para periodistas que cubren 
+            descripcion="En GESO elaboramos, junto con ACNUR, el Banco Mundial y Aacrom, un manual práctico para periodistas que cubren 
               temas de migración y refugio. La publicación ofrece herramientas para ..."
             enlace="/proyectos/medios-de-comunicacion-y-cultura"
             textoB="Leer más"

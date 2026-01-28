@@ -16,31 +16,31 @@ export default function Proyectos() {
       <div className="flex flex-wrap justify-center gap-8 my-10 max-w-[1200px] mx-auto px-8">
         <Card
           title="Democracia de género y participación ciudadana"
-          image="/images/proyectos/manos.webp"
-          href="/proyectos/democracia-de-genero"
+          image="/images/proyectos/democracia de genero.webp"
+          href="/proyectos/democracia-de-genero-y-participacion-ciudadana"
         />
         
         <Card
           title="Violencia de género y prevención"
-          image="/images/ejemplo2.jpg"
+          image="/images/proyectos/violencia de genero y prevencion.webp"
           href="/proyectos/violencia-de-genero-y-prevencion"
         />
         
         <Card
           title="Migración y derechos humanos"
-          image="/images/proyectos/encuentro.webp"
+          image="/images/proyectos/migracion-y-derechos-humanos.webp"
           href="/proyectos/migracion-y-derechos-humanos"
         />
         
         <Card
           title="Medios de comunicación y cultura"
-          image="/images/ejemplo2.jpg"
+          image="/images/proyectos/medios de comunicacion.webp"
           href="/proyectos/medios-de-comunicacion-y-cultura"
         />
 
         <Card
           title="Género y comercio internacional"
-          image="/images/proyectos/trabajadora.webp"
+          image="/images/proyectos/genero-y-comercio-internacional.webp"
           href="/proyectos/genero-y-comercio-internacional"
         />
       </div>
