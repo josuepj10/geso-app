@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Reveal } from "@/components/reveal"
 import Verticales from "@/components/apoyanos/cardsVerticales"
