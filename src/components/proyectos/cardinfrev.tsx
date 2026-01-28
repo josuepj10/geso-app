@@ -8,7 +8,6 @@ interface CardProps {
   image: string
   button: string
   href: string
-  imageClass?: string
 }
 
 export default function Cardinfrev({ title, text, image, button, href }: CardProps) {

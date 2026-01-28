@@ -1,6 +1,5 @@
 "use client"
 
-import { Reveal } from "@/components/reveal"
 import ImageGESO from "@/components/imageGESO";
 import Mision from "@/components/nosotrosComponents/mision";
 import Vision from "@/components/nosotrosComponents/vision";
