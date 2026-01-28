@@ -1,10 +1,11 @@
 "use client";
 
-import Lottie from "lottie-react";
+import Lottie, { type LottieRefCurrentProps } from "lottie-react";
+import type { RefObject } from "react";
 import PartnershipAnimation from "@/lottie/Partnership.json";
 
 interface PartnershipIconProps {
-  lottieRef: React.RefObject<any>;
+  lottieRef: RefObject<LottieRefCurrentProps | null>;
 }
 
 export default function PartnershipIcon({ lottieRef }: PartnershipIconProps) {
@@ -14,7 +15,7 @@ export default function PartnershipIcon({ lottieRef }: PartnershipIconProps) {
       animationData={PartnershipAnimation}
       loop={false}
       autoplay={false}
-      className=" w-full max-w-80 h-full"
+      className="w-full max-w-80 h-full"
     />
   );
 }
