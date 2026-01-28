@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Navbar } from "@/components/menu/navbar"
 
 export default function BarHeader() {
+  
   return (
     <motion.div
       initial={{ y: -50, opacity: 0 }}

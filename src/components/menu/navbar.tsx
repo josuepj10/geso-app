@@ -32,7 +32,7 @@ export function Navbar() {
     <header className="w-full max-w-[1362px]">
       <div className="mx-auto flex justify-between items-center py-2 px-4 lg:px-0">
         {/* Logo */}
-        <Link href="/" className="py-2 pl-4 lg:pl-0">
+        <Link href="/" className="py-2 pl-4 md:pl-0">
           <Image
             src="/images/logo.png"
             alt="Logo Fundación"
@@ -43,12 +43,12 @@ export function Navbar() {
         </Link>
 
         {/* Menú Desktop */}
-        <nav className="hidden lg:flex lg:gap-4 xl:gap-6">
+        <nav className="hidden md:flex md:gap-8">
           {menuItems.map((item) => {
             const isChildActive = item.children?.some(
               (child) => pathname === child.href
             )
-            const isActive = pathname === item.href || isChildActive
+           // const isActive = pathname === item.href || isChildActive
             const isOpen = openDropdown === item.href
 
             // retorna el bloque dropdown

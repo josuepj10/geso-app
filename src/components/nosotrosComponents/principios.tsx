@@ -8,7 +8,7 @@ export default function Principios() {
 
         <section className="max-w-[1362px] mx-auto my-20 xl:my-35 md:px-4 lg:px-0">
 
-            <h2 className="xl:hidden text-center text-[#374151] mb-10 md:col-span-2 font-bold">
+            <h2 className="xl:hidden text-center text-lg text-[#374151] mb-10 md:col-span-2 font-bold">
                 En la Fundación GESO operamos bajo los siguientes principios rectores:
             </h2>
 
@@ -85,7 +85,7 @@ export default function Principios() {
                     place-items-center 
                     gap-6
                 ">
-                    <p className="text-center text-[#374151] mb-10 md:col-span-2 font-bold">
+                    <p className="text-center text-lg text-[#374151] mb-10 md:col-span-2 font-bold">
                         En la Fundación GESO operamos bajo los siguientes principios rectores:
                     </p>
 

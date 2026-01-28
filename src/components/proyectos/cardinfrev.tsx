@@ -4,14 +4,13 @@ import Link from "next/link"
 
 interface CardProps {
   title: string
-  text: string
+  text: React.ReactNode
   image: string
   button: string
   href: string
-  imageClass?: string
 }
 
-export default function Cardinfrev({ title, text, image, button, href, imageClass }: CardProps) {
+export default function Cardinfrev({ title, text, image, button, href }: CardProps) {
   return (
     <article
       className="w-full h-auto max-w-[750px]  
@@ -29,10 +28,12 @@ export default function Cardinfrev({ title, text, image, button, href, imageClas
         >
           <h2 className="text-center xl:text-left text-2xl font-bold text-[#5B1780]">{title}</h2>
 
-          <p 
+          <div 
             className="text-lg text-[#374151] mt-2 text-center xl:text-left [&_p]:mb-4 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:mt-3 [&_li]:mb-2 [&_strong]:font-semibold"
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></p>
+            
+          >
+            {text }
+          </div>
             
           {/* Se muestra botón solo si button y href tienen contenido) */}
           {button && href ? (
@@ -41,7 +42,7 @@ export default function Cardinfrev({ title, text, image, button, href, imageClas
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5B1780] rounded-4xl text-white hover:text-[#5B1780] hover:shadow-md text-lg w-full xl:w-76 py-4 
-              hover:bg-[#FFD11A] transition cursor-pointer inline-block text-center"
+              hover:bg-[#FFD11A] transition-colors duration-300 cursor-pointer inline-block text-center"
             >
               {button}
             </Link>

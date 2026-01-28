@@ -42,9 +42,6 @@ export default function Footer() {
               <span className="font-semibold mb-2 text-xl text-white">Enlaces rápidos</span>
               <Link href="/" className="hover:underline">Inicio</Link>
               <Link href="/proyectos" className="hover:underline">Proyectos</Link>
-              <Link href="/eventos" className="hover:underline">Eventos</Link>
-              <Link href="/geso-en-medios" className="hover:underline">GESO en medios</Link>
-              <Link href="/impacto" className="hover:underline">Impacto</Link>
               <Link href="/publicaciones-y-recursos" className="hover:underline">Publicaciones</Link>
               <Link href="/apoyanos" className="hover:underline">Apóyanos</Link>
             </div>
@@ -109,7 +106,7 @@ export default function Footer() {
           
           <div className="flex flex-col gap-5 lg:items-end">
             
-            <Link href="/colabora"> {/* Aquí poner la ruta deseada */}
+            <Link href="/apoyanos">
               <Button className="bg-[#FFD11A] text-[#5B1780] rounded-3xl text-lg px-8 py-6 cursor-pointer hover:bg-[#FFD11A]">
                 Colabora con nosotros
               </Button>
