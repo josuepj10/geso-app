@@ -19,11 +19,32 @@ export default function MigracionPage() {
     },
     {
       type: "normal", // Cardinf
-      title: "Mujeres sin fronteras ",
-      text: <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos minus blanditiis dignissimos voluptas mollitia labore atque commodi ipsam nam. 
-        Qui iste cum vitae cumque illo beatae consequatur, asperiores omnis dolor? </p>,
-      image: "/images/proyectos/migracion/mujeres sin fronteras.webp",
-      button: "Explorar sitio",
+      title: "Diagnóstico del contexto migratorio en Costa Rica (jun-ago 2017)",
+      text: <p>En GESO elaboramos este diagnóstico para la Dirección General de Migración y Extranjería (DGME), con apoyo de la Unión Europea 
+      (MIEUX). El estudio ofrece un panorama integral sobre inmigración y emigración en Costa Rica, abordando los procesos de integración social, 
+      los retos de las comunidades migrantes y las herramientas institucionales disponibles.</p>,
+      image: "/images/proyectos/migracion/Diagnóstico del contexto migratorio en Costa Rica.webp",
+      button: "Consultar diagnóstico",
+      href: "",
+    },
+    {
+      type: "reverse", // Cardinfrev
+      title: "Plataforma Regional sobre la Resolución 1325 (2016)",
+      text: <p>En GESO participamos en la I Reunión de la Plataforma Regional para la implementación de la Resolución 1325 de la ONU sobre mujeres, paz y 
+      seguridad. El encuentro, realizado en Guatemala, reunió a gobiernos, sociedad civil y organismos internacionales de Centroamérica, con el objetivo 
+      de fortalecer la participación de las mujeres en procesos de seguridad y justicia.</p>,
+      image: "/images/proyectos/migracion/Plataforma Regional sobre la Resolución 1325 (2016).webp",
+      button: "Más información",
+      href: "",
+    },
+    {
+      type: "normal", // Cardinf
+      title: "Mujeres sin fronteras (2002-2010)",
+      text: <p> Mujeres Sin Fronteras impulsa la defensa de los derechos humanos de mujeres migrantes y refugiadas. En su sitio oficial encontrará 
+        información sobre sus programas, acciones de acompañamiento, incidencia social y trabajo comunitario en favor de una migración 
+        digna e inclusiva. </p>,
+      image: "/images/proyectos/migracion/portada web.webp",
+      button: "Explorar sitio web",
       href: "https://www.mujeressinfronteras.org/",
     },
     {
@@ -36,18 +57,9 @@ export default function MigracionPage() {
       button: "Ver memorias del seminario",
       href: "http://www.generoysociedad.com/geso/wp-content/uploads/2011/08/Agenda-Provisional-seminario-migrantes-2006-1.pdf",
     },
+    
     {
       type: "normal", // Cardinf
-      title: "Diagnóstico del contexto migratorio en Costa Rica (jun-ago 2017)",
-      text: <p>En GESO elaboramos este diagnóstico para la Dirección General de Migración y Extranjería (DGME), con apoyo de la Unión Europea 
-      (MIEUX). El estudio ofrece un panorama integral sobre inmigración y emigración en Costa Rica, abordando los procesos de integración social, 
-      los retos de las comunidades migrantes y las herramientas institucionales disponibles.</p>,
-      image: "/images/proyectos/migracion/Diagnóstico del contexto migratorio en Costa Rica.webp",
-      button: "Consultar diagnóstico",
-      href: "",
-    },
-    {
-      type: "reverse", // Cardinfrev
       title: "OIT: trabajadoras migrantes y tráfico de mujeres (2001)",
       text: <p>En colaboración con la <strong>Organización Internacional del Trabajo (OIT)</strong>, en GESO realizamos un estudio sobre las condiciones de las trabajadoras migrantes 
       en Costa Rica y los riesgos asociados a la trata de personas. El informe se convirtió en un referente para la formulación de políticas laborales y de protección de derechos.</p>,
@@ -55,16 +67,7 @@ export default function MigracionPage() {
       button: "Descargar publicación OIT",
       href: "",
     },
-    {
-      type: "normal", // Cardinf
-      title: "Plataforma Regional sobre la Resolución 1325 (2016)",
-      text: <p>En GESO participamos en la I Reunión de la Plataforma Regional para la implementación de la Resolución 1325 de la ONU sobre mujeres, paz y 
-      seguridad. El encuentro, realizado en Guatemala, reunió a gobiernos, sociedad civil y organismos internacionales de Centroamérica, con el objetivo 
-      de fortalecer la participación de las mujeres en procesos de seguridad y justicia.</p>,
-      image: "/images/proyectos/migracion/Plataforma Regional sobre la Resolución 1325 (2016).webp",
-      button: "Más información",
-      href: "",
-    },
+    
     {
       type: "reverse", // Cardinfrev
       title: "Mujeres, niños y niñas migrantes (2000)",

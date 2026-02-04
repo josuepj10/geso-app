@@ -32,38 +32,6 @@ export default function DemocraciaPage() {
     {
       
       type: "normal", // Cardinf
-      title: "Gestión municipal y equidad de género (2005)",
-      text: <p>En GESO desarrollamos, junto con la Unión Nacional de Gobiernos Locales (UNGL), el proyecto “Gestión municipal y equidad de género”. 
-      A través de talleres y asesoría técnica, impulsamos la institucionalización del enfoque de género en los planes estratégicos municipales, 
-      creando las bases para políticas locales inclusivas.</p>,
-      image: "/images/proyectos/democracia/gestion municipal y equidad de genero.webp",
-      button: "Leer experiencia",
-      href: "",
-    },
-    {
-      
-      type: "reverse", // Cardinfrev
-      title: "Políticas locales en San José, Cartago y Alajuela (2005-2007)",
-      text: <p>Apoyamos a las municipalidades de San José, Cartago y Alajuela en el diseño y aprobación de sus políticas locales de igualdad y 
-      equidad de género. Nuestro aporte incluyó asistencia técnica, metodológica y la facilitación de procesos participativos con autoridades y 
-      comunidades.</p>,
-      image: "/images/proyectos/democracia/politicas locales en san jose, cartago y alajuela.webp",
-      button: "Ver resultados",
-      href: "",
-    },
-    {
-      
-      type: "normal", // Cardinf
-      title: "Observación electoral con enfoque de género (2010-2011)",
-      text: <p>Brindamos asistencia técnica en Guatemala y El Salvador, con el NDI y otras organizaciones, para promover la observación electoral con 
-      perspectiva de género. Además, compartimos experiencias de Costa Rica sobre la transición de cuotas mínimas a la paridad política.</p>,
-      image: "/images/proyectos/democracia/observacion electoral con enfoque de genero.webp",
-      button: "Ver memoria",
-      href: "",
-    },
-    {
-      
-      type: "reverse", // Cardinfrev
       title: "Consultorías en el SICA (2009-2012)",
       text: <p>Elaboramos diagnósticos y lineamientos para la Política Regional de Igualdad y Equidad de Género (PRIEG-SICA), en conjunto con COMMCA/SICA 
       e instituciones nacionales. Este trabajo sentó bases regionales para la transversalización de género en políticas de integración y seguridad.</p>,
@@ -72,7 +40,35 @@ export default function DemocraciaPage() {
       href: "",
     },
     {
-      
+      type: "reverse", // Cardinfrev
+      title: "Observación electoral con enfoque de género (2010-2011)",
+      text: <p>Brindamos asistencia técnica en Guatemala y El Salvador, con el NDI y otras organizaciones, para promover la observación electoral con 
+      perspectiva de género. Además, compartimos experiencias de Costa Rica sobre la transición de cuotas mínimas a la paridad política.</p>,
+      image: "/images/proyectos/democracia/observacion electoral con enfoque de genero.webp",
+      button: "Ver memoria",
+      href: "",
+    },
+    {     
+      type: "normal", // Cardinf
+      title: "Políticas locales en San José, Cartago y Alajuela (2005-2007)",
+      text: <p>Apoyamos a las municipalidades de San José, Cartago y Alajuela en el diseño y aprobación de sus políticas locales de igualdad y 
+      equidad de género. Nuestro aporte incluyó asistencia técnica, metodológica y la facilitación de procesos participativos con autoridades y 
+      comunidades.</p>,
+      image: "/images/proyectos/democracia/politicas locales en san jose, cartago y alajuela.webp",
+      button: "Ver resultados",
+      href: "",
+    },  
+    {     
+      type: "reverse", // Cardinfrev
+      title: "Gestión municipal y equidad de género (2005)",
+      text: <p>En GESO desarrollamos, junto con la Unión Nacional de Gobiernos Locales (UNGL), el proyecto “Gestión municipal y equidad de género”. 
+      A través de talleres y asesoría técnica, impulsamos la institucionalización del enfoque de género en los planes estratégicos municipales, 
+      creando las bases para políticas locales inclusivas.</p>,
+      image: "/images/proyectos/democracia/gestion municipal y equidad de genero.webp",
+      button: "Leer experiencia",
+      href: "",
+    },     
+    {     
       type: "normal", // Cardinf
       title: "Ciudadanía y Poder Local (2002)",
       text: <p>Producimos el programa radial “Ciudadanía y Poder Local” para el IFAM, con el fin de promover la participación ciudadana durante la primera 
