@@ -19,13 +19,12 @@ export default function MigracionPage() {
     },
     {
       type: "normal", // Cardinf
-      title: "Diagnóstico del contexto migratorio en Costa Rica (jun-ago 2017)",
-      text: <p>En GESO elaboramos este diagnóstico para la Dirección General de Migración y Extranjería (DGME), con apoyo de la Unión Europea 
-      (MIEUX). El estudio ofrece un panorama integral sobre inmigración y emigración en Costa Rica, abordando los procesos de integración social, 
-      los retos de las comunidades migrantes y las herramientas institucionales disponibles.</p>,
-      image: "/images/proyectos/migracion/Diagnóstico del contexto migratorio en Costa Rica.webp",
-      button: "Consultar diagnóstico",
-      href: "",
+      title: "Mujeres sin fronteras ",
+      text: <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos minus blanditiis dignissimos voluptas mollitia labore atque commodi ipsam nam. 
+        Qui iste cum vitae cumque illo beatae consequatur, asperiores omnis dolor? </p>,
+      image: "/images/proyectos/migracion/mujeres sin fronteras.webp",
+      button: "Explorar sitio",
+      href: "https://www.mujeressinfronteras.org/",
     },
     {
       type: "reverse", // Cardinfrev
@@ -39,12 +38,12 @@ export default function MigracionPage() {
     },
     {
       type: "normal", // Cardinf
-      title: "Plataforma Regional sobre la Resolución 1325 (2016)",
-      text: <p>En GESO participamos en la I Reunión de la Plataforma Regional para la implementación de la Resolución 1325 de la ONU sobre mujeres, paz y 
-      seguridad. El encuentro, realizado en Guatemala, reunió a gobiernos, sociedad civil y organismos internacionales de Centroamérica, con el objetivo 
-      de fortalecer la participación de las mujeres en procesos de seguridad y justicia.</p>,
-      image: "/images/proyectos/migracion/Plataforma Regional sobre la Resolución 1325 (2016).webp",
-      button: "Más información",
+      title: "Diagnóstico del contexto migratorio en Costa Rica (jun-ago 2017)",
+      text: <p>En GESO elaboramos este diagnóstico para la Dirección General de Migración y Extranjería (DGME), con apoyo de la Unión Europea 
+      (MIEUX). El estudio ofrece un panorama integral sobre inmigración y emigración en Costa Rica, abordando los procesos de integración social, 
+      los retos de las comunidades migrantes y las herramientas institucionales disponibles.</p>,
+      image: "/images/proyectos/migracion/Diagnóstico del contexto migratorio en Costa Rica.webp",
+      button: "Consultar diagnóstico",
       href: "",
     },
     {
@@ -56,9 +55,18 @@ export default function MigracionPage() {
       button: "Descargar publicación OIT",
       href: "",
     },
-    
     {
       type: "normal", // Cardinf
+      title: "Plataforma Regional sobre la Resolución 1325 (2016)",
+      text: <p>En GESO participamos en la I Reunión de la Plataforma Regional para la implementación de la Resolución 1325 de la ONU sobre mujeres, paz y 
+      seguridad. El encuentro, realizado en Guatemala, reunió a gobiernos, sociedad civil y organismos internacionales de Centroamérica, con el objetivo 
+      de fortalecer la participación de las mujeres en procesos de seguridad y justicia.</p>,
+      image: "/images/proyectos/migracion/Plataforma Regional sobre la Resolución 1325 (2016).webp",
+      button: "Más información",
+      href: "",
+    },
+    {
+      type: "reverse", // Cardinfrev
       title: "Mujeres, niños y niñas migrantes (2000)",
       text: <p>En GESO desarrollamos un estudio en colaboración con la <strong>OIM y FLACSO</strong>, como insumo para la V Conferencia Regional sobre Migración (Proceso Puebla). 
       El documento analiza la situación de mujeres, niños y niñas migrantes en la región y los principales desafíos en materia de protección y derechos humanos.</p>,

@@ -1,9 +1,8 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
-import { useState } from "react";
 import CardPublicaciones from "@/components/publicaciones/cardPublicaciones";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+
 
 export default function RecursosPage() {
   const cards = [
@@ -69,7 +68,7 @@ export default function RecursosPage() {
       href: "https://docs.google.com/document/d/e/2PACX-1vQOsA-QpmcKoB-7cOHAh9PtEIPIJulP1p3XDth_-TIbTFoq1jO0c8whWa8gNDMZuixtov05KHwQxFVN/pub",   
     },
     {
-      id: 7,     
+      id: 7,    
       title: "Violencia doméstica: intervenciones para su prevención y tratamiento (2002)",
       text: <p>Investigación de GESO publicada por el BID. Analiza planes nacionales contra la violencia doméstica en Brasil, Bolivia, Chile y 
             Costa Rica, presentando lecciones aprendidas y recomendaciones para nuevas políticas públicas. </p>,     
@@ -109,26 +108,9 @@ export default function RecursosPage() {
 
   ];
 
-  // Configuración de paginación
-  const itemsPerPage = 8;
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(cards.length / itemsPerPage);
-
-  // Calcular las cards visibles
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const visibleCards = cards.slice(startIndex, startIndex + itemsPerPage);
-
-  // Cambio de página
-  const handlePageChange = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
+  
   return (
-    <section>
-      {currentPage === 1 && (
+    <section>      
         <main className="leading-relaxed text-[#374151] text-center text-lg my-3 mx-auto max-w-[1050px]">
 
           <h1 className=" flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold ">
@@ -145,15 +127,14 @@ export default function RecursosPage() {
             </p>
           </Reveal>
         </main>
-      )}
-
+      
       <div className="grid grid-cols-1 items-center justify-center max-w-fit mx-auto
-                      xl:grid-cols-2 gap-8 ">
+                      xl:grid-cols-2 gap-8 my-8 ">
 
         {/* Cards visibles */}
-        {visibleCards.map((card) => 
+        {cards.map((card, index) => 
         <CardPublicaciones
-          key={card.id}
+          key={index}
           title={card.title}
           text={card.text}
           image={card.image}
@@ -162,36 +143,6 @@ export default function RecursosPage() {
         />
         )}
       </div>
-
-      {/* Paginación */}
-      <Pagination className="flex flex-col md:my-20 my-10 items-start">
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              onClick={() => handlePageChange(currentPage - 1)}
-              aria-disabled={currentPage === 1}
-            />
-          </PaginationItem>
-
-          {[...Array(totalPages)].map((_, index) => (
-            <PaginationItem key={index}>
-              <PaginationLink
-                isActive={currentPage === index + 1}
-                onClick={() => handlePageChange(index + 1)}
-              >
-                {index + 1}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-
-          <PaginationItem>
-            <PaginationNext
-              onClick={() => handlePageChange(currentPage + 1)}
-              aria-disabled={currentPage === totalPages}
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
     </section> 
   );
 }
