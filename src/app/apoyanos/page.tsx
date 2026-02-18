@@ -23,9 +23,9 @@ export default function ApoyoPage() {
 
       <Verticales/>
       
-      <div className="leading-relaxed text-[#374151] text-lg mb-9">
+      <div className="leading-relaxed text-[#374151] text-lg text-center my-12 mx-auto max-w-[1050px]">
           
-        <h2 className="text-center text-xl text-[#374151] font-bold pb-6">
+        <h2 className="flex justify-center pb-2 text-[32px] md:text-[44px] text-[#5B1780] font-bold mb-2 ">
           Tu compromiso transforma vidas
         </h2>
         <Reveal>

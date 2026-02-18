@@ -29,16 +29,6 @@ export default function MigracionPage() {
     },
     {
       type: "reverse", // Cardinfrev
-      title: "Seminario sobre política migratoria integral (2006)",
-      text: <p>En alianza con el Foro Permanente sobre Población Migrante y Refugiada, en GESO organizamos un seminario nacional en el Colegio de Abogados de 
-      Costa Rica. Con el apoyo de UNIFEM/ONU, se discutieron lineamientos para una política migratoria integral, aportando propuestas para la nueva Ley de 
-      Migración y Extranjería de Costa Rica.</p>,
-      image: "/images/proyectos/migracion/Seminario sobre política migratoria integral (2006).webp",
-      button: "Ver memorias del seminario",
-      href: "http://www.generoysociedad.com/geso/wp-content/uploads/2011/08/Agenda-Provisional-seminario-migrantes-2006-1.pdf",
-    },
-    {
-      type: "normal", // Cardinf
       title: "Plataforma Regional sobre la Resolución 1325 (2016)",
       text: <p>En GESO participamos en la I Reunión de la Plataforma Regional para la implementación de la Resolución 1325 de la ONU sobre mujeres, paz y 
       seguridad. El encuentro, realizado en Guatemala, reunió a gobiernos, sociedad civil y organismos internacionales de Centroamérica, con el objetivo 
@@ -48,7 +38,28 @@ export default function MigracionPage() {
       href: "",
     },
     {
+      type: "normal", // Cardinf
+      title: "Mujeres sin fronteras (2002-2010)",
+      text: <p> Mujeres Sin Fronteras impulsa la defensa de los derechos humanos de mujeres migrantes y refugiadas. En su sitio oficial encontrará 
+        información sobre sus programas, acciones de acompañamiento, incidencia social y trabajo comunitario en favor de una migración 
+        digna e inclusiva. </p>,
+      image: "/images/proyectos/migracion/portada web.webp",
+      button: "Explorar sitio web",
+      href: "https://www.mujeressinfronteras.org/",
+    },
+    {
       type: "reverse", // Cardinfrev
+      title: "Seminario sobre política migratoria integral (2006)",
+      text: <p>En alianza con el Foro Permanente sobre Población Migrante y Refugiada, en GESO organizamos un seminario nacional en el Colegio de Abogados de 
+      Costa Rica. Con el apoyo de UNIFEM/ONU, se discutieron lineamientos para una política migratoria integral, aportando propuestas para la nueva Ley de 
+      Migración y Extranjería de Costa Rica.</p>,
+      image: "/images/proyectos/migracion/Seminario sobre política migratoria integral (2006).webp",
+      button: "Ver memorias del seminario",
+      href: "http://www.generoysociedad.com/geso/wp-content/uploads/2011/08/Agenda-Provisional-seminario-migrantes-2006-1.pdf",
+    },
+    
+    {
+      type: "normal", // Cardinf
       title: "OIT: trabajadoras migrantes y tráfico de mujeres (2001)",
       text: <p>En colaboración con la <strong>Organización Internacional del Trabajo (OIT)</strong>, en GESO realizamos un estudio sobre las condiciones de las trabajadoras migrantes 
       en Costa Rica y los riesgos asociados a la trata de personas. El informe se convirtió en un referente para la formulación de políticas laborales y de protección de derechos.</p>,
@@ -58,7 +69,7 @@ export default function MigracionPage() {
     },
     
     {
-      type: "normal", // Cardinf
+      type: "reverse", // Cardinfrev
       title: "Mujeres, niños y niñas migrantes (2000)",
       text: <p>En GESO desarrollamos un estudio en colaboración con la <strong>OIM y FLACSO</strong>, como insumo para la V Conferencia Regional sobre Migración (Proceso Puebla). 
       El documento analiza la situación de mujeres, niños y niñas migrantes en la región y los principales desafíos en materia de protección y derechos humanos.</p>,
