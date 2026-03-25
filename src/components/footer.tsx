@@ -58,8 +58,8 @@ export default function Footer() {
             <div className="flex flex-col gap-2 text-left "> {/* lg:justify-self-end acomodo a la derecha, problemas de gap con responsive*/}
               <span className="font-semibold mb-2 text-xl  text-white">Contacto</span>
               <p>Oficina: Curridabat, Abedules II, </p>
-              <p>No. 14-, San José, Costa Rica.</p>
-              <p>Teléfono: (506) 2271-2247</p>
+              <p>No. 14-H, San José, Costa Rica.</p>
+              <p>Teléfono: (506) 2271-2383</p>
               <p>Email: info@generoysociedad.com</p>
             
             </div>
